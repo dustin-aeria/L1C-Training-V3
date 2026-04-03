@@ -1,8 +1,8 @@
 import fs from "fs";
 import path from "path";
 
-// Source content directory
-const CONTENT_DIR = path.resolve("C:/Users/Dusti/OneDrive/Desktop/level 1 Complex Training Page/New Material");
+// Source content directory - relative to project root
+const CONTENT_DIR = path.join(process.cwd(), "content", "courses");
 
 // Exam metadata
 export const exams = [

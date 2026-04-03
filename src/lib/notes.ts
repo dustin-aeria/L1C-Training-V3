@@ -3,8 +3,8 @@ import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
 
-// Source content directory
-const CONTENT_DIR = path.resolve("C:/Users/Dusti/OneDrive/Desktop/level 1 Complex Training Page/New Material");
+// Source content directory - relative to project root
+const CONTENT_DIR = path.join(process.cwd(), "content", "courses");
 
 // Module metadata (reuse from content.ts structure)
 export const studyNotes = [
