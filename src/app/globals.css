@@ -1,8 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+@import "mapbox-gl/dist/mapbox-gl.css";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
+@custom-variant print (@media print);
 
 @theme inline {
   --color-background: var(--background);
@@ -46,75 +49,97 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Custom Aeria colors for volume planner */
+  --color-flight-geography: oklch(0.62 0.22 255);
+  --color-contingency-volume: oklch(0.75 0.18 75);
+  --color-ground-risk-buffer: oklch(0.63 0.24 25);
+  --color-reference-teal: oklch(0.7 0.15 180);
 }
 
 :root {
+  /* Aeria Solutions Blue Brand - using oklch for consistency */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
+
+  /* Primary - Aeria Blue */
+  --primary: oklch(0.55 0.25 260);
+  --primary-foreground: oklch(1 0 0);
+
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
+  --muted: oklch(0.97 0.005 260);
+  --muted-foreground: oklch(0.45 0.02 260);
+  --accent: oklch(0.95 0.02 260);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
+  --border: oklch(0.9 0.01 260);
+  --input: oklch(0.9 0.01 260);
+  --ring: oklch(0.55 0.25 260);
+
+  /* Chart colors */
+  --chart-1: oklch(0.55 0.25 260);
+  --chart-2: oklch(0.75 0.18 75);
+  --chart-3: oklch(0.63 0.24 25);
+  --chart-4: oklch(0.7 0.15 180);
+  --chart-5: oklch(0.6 0.2 310);
+
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
+
+  /* Sidebar */
+  --sidebar: oklch(0.985 0.005 260);
   --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-primary: oklch(0.55 0.25 260);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.95 0.02 260);
   --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar-border: oklch(0.9 0.01 260);
+  --sidebar-ring: oklch(0.55 0.25 260);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: oklch(0.13 0.02 260);
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
+  --card: oklch(0.18 0.02 260);
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
+  --popover: oklch(0.18 0.02 260);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
+
+  /* Primary - Aeria Blue (lighter for dark mode) */
+  --primary: oklch(0.65 0.22 260);
+  --primary-foreground: oklch(0.13 0.02 260);
+
+  --secondary: oklch(0.25 0.02 260);
   --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
+  --muted: oklch(0.25 0.02 260);
+  --muted-foreground: oklch(0.65 0.05 260);
+  --accent: oklch(0.25 0.02 260);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
+  --ring: oklch(0.65 0.22 260);
+
+  /* Chart colors */
+  --chart-1: oklch(0.65 0.22 260);
+  --chart-2: oklch(0.75 0.18 75);
+  --chart-3: oklch(0.63 0.24 25);
+  --chart-4: oklch(0.7 0.15 180);
+  --chart-5: oklch(0.6 0.2 310);
+
+  /* Sidebar */
+  --sidebar: oklch(0.18 0.02 260);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary: oklch(0.65 0.22 260);
   --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent: oklch(0.25 0.02 260);
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --sidebar-ring: oklch(0.65 0.22 260);
 }
 
 @layer base {
@@ -122,9 +147,652 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
   }
   html {
-    @apply font-sans;
+    @apply font-sans scroll-smooth;
+  }
+
+  /* Smooth focus transitions */
+  a, button, input, select, textarea {
+    @apply transition-colors duration-200;
+  }
+
+  /* Focus visible styles for accessibility */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
+}
+
+/* Global animations */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+/* Animation utility classes */
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.4s ease-out;
+}
+
+.animate-fade-in-down {
+  animation: fade-in-down 0.4s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.3s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.4s ease-out;
+}
+
+/* Staggered animation delays for lists */
+.stagger-1 { animation-delay: 50ms; }
+.stagger-2 { animation-delay: 100ms; }
+.stagger-3 { animation-delay: 150ms; }
+.stagger-4 { animation-delay: 200ms; }
+.stagger-5 { animation-delay: 250ms; }
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300;
+}
+.card-hover:hover {
+  @apply shadow-lg -translate-y-1;
+}
+
+/* Link underline animation */
+.link-underline {
+  @apply relative;
+}
+.link-underline::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-current transition-all duration-300;
+}
+.link-underline:hover::after {
+  @apply w-full;
+}
+
+/* ===== KEYWORD-FOCUSED PRESENTATION STYLES ===== */
+
+/* Topic Pills - Inline regulation/topic tags */
+.topic-pill {
+  @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold tracking-wide mx-0.5;
+}
+
+.topic-pill.regulation {
+  @apply bg-teal-100 text-teal-800 border border-teal-200;
+}
+
+.topic-pill.topic {
+  @apply bg-blue-100 text-blue-800 border border-blue-200;
+}
+
+.topic-pill.emergency {
+  @apply bg-red-100 text-red-800 border border-red-200;
+}
+
+/* Keyword Headers with Icons */
+.keyword-header {
+  @apply flex items-center gap-3 text-xl sm:text-2xl font-bold mb-4 mt-8;
+}
+
+.keyword-header .header-icon {
+  @apply text-2xl flex-shrink-0;
+}
+
+.keyword-header .header-text {
+  @apply flex-1;
+}
+
+.keyword-header.warning {
+  @apply text-red-700;
+}
+
+.keyword-header.procedure {
+  @apply text-blue-700;
+}
+
+.keyword-header.key {
+  @apply text-amber-700;
+}
+
+/* Key Point Items - Icon + Bold Lead + Context */
+.key-point-item {
+  @apply flex items-start gap-3 py-2 !list-none;
+}
+
+.key-point-item::marker {
+  @apply hidden;
+}
+
+.key-point-icon {
+  @apply text-lg flex-shrink-0 mt-0.5;
+}
+
+.key-point-lead {
+  @apply font-bold text-slate-800;
+}
+
+.key-point-context {
+  @apply text-slate-600;
+}
+
+/* Quick Check Box */
+.quick-check-box {
+  @apply my-6 rounded-xl border-2 border-cyan-200 bg-gradient-to-br from-cyan-50 to-sky-50 overflow-hidden shadow-sm;
+}
+
+.quick-check-header {
+  @apply flex items-center gap-3 px-5 py-3 bg-gradient-to-r from-cyan-500 to-sky-500 text-white font-bold text-sm uppercase tracking-wide;
+}
+
+.quick-check-emoji {
+  @apply text-lg;
+}
+
+.quick-check-content {
+  @apply px-5 py-4 text-slate-700 leading-relaxed;
+}
+
+.quick-check-content p {
+  @apply mb-0;
+}
+
+/* Scenario Box */
+.scenario-box {
+  @apply my-6 rounded-xl border-2 border-indigo-200 bg-gradient-to-br from-indigo-50 to-purple-50 overflow-hidden shadow-sm;
+}
+
+.scenario-header {
+  @apply flex items-center gap-3 px-5 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-bold text-sm uppercase tracking-wide;
+}
+
+.scenario-emoji {
+  @apply text-lg;
+}
+
+.scenario-content {
+  @apply px-5 py-4 text-slate-700 leading-relaxed italic;
+}
+
+.scenario-content p {
+  @apply mb-0;
+}
+
+/* Reveal Sections - Collapsible Content */
+.reveal-section {
+  @apply my-6 rounded-xl overflow-hidden shadow-sm transition-all duration-300;
+}
+
+.reveal-section.is-open {
+  @apply shadow-md;
+}
+
+.reveal-header {
+  @apply w-full flex items-center justify-between gap-3 px-5 py-3 text-white font-bold text-sm uppercase tracking-wide cursor-pointer transition-all duration-200;
+}
+
+.reveal-header:hover {
+  @apply brightness-110;
+}
+
+.reveal-chevron {
+  @apply transition-transform duration-300;
+}
+
+.reveal-chevron.rotate-180 {
+  @apply rotate-180;
+}
+
+.reveal-content {
+  @apply overflow-hidden transition-all duration-300 ease-in-out;
+}
+
+.reveal-content.collapsed {
+  @apply max-h-0 opacity-0;
+}
+
+.reveal-content:not(.collapsed) {
+  @apply max-h-[2000px] opacity-100;
+}
+
+/* Discussion Prompt with Reveal */
+.discussion-prompt-box {
+  @apply border-2 border-amber-200 bg-gradient-to-br from-amber-50 to-orange-50;
+}
+
+.discussion-prompt-header {
+  @apply bg-gradient-to-r from-amber-500 to-orange-500;
+}
+
+.discussion-emoji {
+  @apply text-lg;
+}
+
+.discussion-content {
+  @apply px-5 py-4 text-slate-700 leading-relaxed;
+}
+
+.discussion-content p {
+  @apply mb-2 last:mb-0;
+}
+
+/* Instructor Notes with Reveal (Hidden by Default) */
+.instructor-note-box {
+  @apply border-2 border-purple-200 bg-gradient-to-br from-purple-50 to-violet-50;
+}
+
+.instructor-note-header {
+  @apply bg-gradient-to-r from-purple-600 to-violet-600;
+}
+
+.instructor-emoji {
+  @apply text-lg;
+}
+
+.instructor-content {
+  @apply px-5 py-4 text-slate-700 leading-relaxed;
+}
+
+.instructor-content p {
+  @apply mb-2 last:mb-0;
+}
+
+/* Info Callout with Icon */
+.info-callout {
+  @apply my-6 flex gap-4 pl-5 pr-4 py-4 border-l-4 border-teal-500 bg-gradient-to-r from-teal-50 to-cyan-50 rounded-r-lg;
+}
+
+.info-icon {
+  @apply text-xl flex-shrink-0;
+}
+
+.info-content {
+  @apply flex-1;
+}
+
+.info-content p {
+  @apply text-teal-800 mb-0 leading-relaxed;
+}
+
+.info-content strong {
+  @apply text-teal-900;
+}
+
+/* Comparison Headers (Before/After) */
+.comparison-header {
+  @apply flex items-center gap-3 px-4 py-2 rounded-lg font-bold text-sm uppercase tracking-wide my-4;
+}
+
+.comparison-emoji {
+  @apply text-lg;
+}
+
+.comparison-header.before {
+  @apply bg-gradient-to-r from-slate-500 to-slate-600 text-white;
+}
+
+.comparison-header.after {
+  @apply bg-gradient-to-r from-emerald-500 to-green-500 text-white;
+}
+
+/* Key Concept Box - Enhanced */
+.key-concept-box {
+  @apply my-6 rounded-xl border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden shadow-sm;
+}
+
+.key-concept-header {
+  @apply flex items-center gap-3 px-5 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-sm uppercase tracking-wide;
+}
+
+.key-concept-emoji {
+  @apply text-lg;
+}
+
+.key-concept-content {
+  @apply px-5 py-4 text-slate-700 leading-relaxed text-lg;
+}
+
+.key-concept-content p {
+  @apply mb-0 font-medium;
+}
+
+/* Capability headers (What L1C unlocks / does not authorize) */
+.capability-header {
+  @apply flex items-center gap-3 px-4 py-3 rounded-lg font-bold text-sm uppercase tracking-wide my-4;
+}
+
+.capability-emoji {
+  @apply text-xl flex-shrink-0;
+}
+
+.capability-header.unlocks {
+  @apply bg-gradient-to-r from-green-500 to-emerald-500 text-white;
+}
+
+.capability-header.restricts {
+  @apply bg-gradient-to-r from-red-500 to-rose-500 text-white;
+}
+
+/* Step markers for numbered steps */
+.step-marker {
+  @apply inline-flex items-center justify-center mr-3 -ml-2;
+}
+
+.step-number {
+  @apply px-3 py-1 bg-primary text-primary-foreground text-xs font-bold rounded-full uppercase tracking-wide;
+}
+
+/* Tier markers */
+.tier-marker {
+  @apply inline-block px-3 py-1 bg-slate-800 text-white text-xs font-bold rounded-full uppercase tracking-wide mr-2;
+}
+
+/* Slide content enhancements */
+.slide-content h2::before {
+  content: '';
+  @apply inline-block w-1 h-6 bg-primary rounded-full mr-3;
+}
+
+/* Override for keyword headers that already have icons */
+.slide-content h2.keyword-header::before {
+  @apply hidden;
+}
+
+.slide-content ul li::marker {
+  @apply text-primary font-bold;
+}
+
+/* Hide marker for key-point-items */
+.slide-content ul li.key-point-item::marker {
+  @apply hidden;
+}
+
+.slide-content ol li::marker {
+  @apply text-primary font-bold;
+}
+
+/* Table styling enhancements */
+.slide-content table {
+  @apply border border-slate-200 rounded-xl overflow-hidden;
+}
+
+.slide-content thead tr {
+  @apply bg-primary;
+}
+
+.slide-content thead th {
+  @apply text-primary-foreground border-0;
+}
+
+.slide-content tbody tr:hover {
+  @apply bg-blue-50/50;
+}
+
+/* Horizontal rule styling */
+.slide-content hr {
+  @apply border-0 h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent my-10;
+}
+
+/* Additional Content Pattern Headers */
+.important-details-header,
+.exam-info-header,
+.teaching-approach-header,
+.misconceptions-header,
+.learning-objectives-header {
+  @apply flex items-center gap-3 px-4 py-2 rounded-lg font-bold text-sm uppercase tracking-wide my-4;
+}
+
+.important-details-header {
+  @apply bg-gradient-to-r from-amber-500 to-orange-500 text-white;
+}
+
+.exam-info-header {
+  @apply bg-gradient-to-r from-blue-500 to-indigo-500 text-white;
+}
+
+.teaching-approach-header {
+  @apply bg-gradient-to-r from-purple-500 to-violet-500 text-white;
+}
+
+.misconceptions-header {
+  @apply bg-gradient-to-r from-red-500 to-rose-500 text-white;
+}
+
+.learning-objectives-header {
+  @apply bg-gradient-to-r from-teal-500 to-cyan-500 text-white;
+}
+
+.important-emoji,
+.exam-emoji,
+.teaching-emoji,
+.misconceptions-emoji,
+.objectives-emoji {
+  @apply text-lg;
+}
+
+/* Note callouts inline */
+.note-callout {
+  @apply flex items-start gap-2 bg-slate-100 px-4 py-3 rounded-lg border-l-4 border-slate-400;
+}
+
+.note-icon {
+  @apply text-lg flex-shrink-0;
+}
+
+/* Abbreviation pills */
+.abbr-pill {
+  @apply inline-flex items-center px-1.5 py-0.5 rounded text-xs font-bold bg-slate-200 text-slate-700 border-b border-dotted border-slate-500 cursor-help;
+}
+
+/* Operation type badges */
+.operation-type {
+  @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold tracking-wide;
+}
+
+.operation-type.bvlos {
+  @apply bg-indigo-100 text-indigo-800 border border-indigo-200;
+}
+
+.operation-type.evlos {
+  @apply bg-purple-100 text-purple-800 border border-purple-200;
+}
+
+/* Certificate type badges */
+.cert-type {
+  @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold tracking-wide;
+}
+
+.cert-type.rpoc {
+  @apply bg-emerald-100 text-emerald-800 border border-emerald-200;
+}
+
+/* ===== End Slide Content Styling ===== */
+
+/* Reduced motion preference - respect user's accessibility settings */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .card-hover:hover {
+    transform: none;
+  }
+}
+
+/* Print styles for study notes PDF export */
+@media print {
+  /* Hide navigation and UI elements */
+  nav,
+  header,
+  footer,
+  [data-print-hide] {
+    display: none !important;
+  }
+
+  /* Show print-only elements */
+  [data-print-show] {
+    display: block !important;
+  }
+
+  /* Reset background and colors for printing */
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  /* Page setup */
+  @page {
+    size: letter;
+    margin: 0.75in;
+  }
+
+  /* Prevent page breaks inside elements */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  p, li, blockquote {
+    orphans: 3;
+    widows: 3;
+  }
+
+  table, figure, img {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Keep headings with their content */
+  h2, h3, h4 {
+    page-break-after: avoid;
+  }
+
+  /* Table styling for print */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 10pt;
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+    text-align: left;
+  }
+
+  th {
+    background: #f5f5f5 !important;
+    font-weight: 600;
+  }
+
+  /* Blockquote styling for print */
+  blockquote {
+    border-left: 3px solid #333;
+    padding-left: 12px;
+    margin-left: 0;
+    background: #f9f9f9 !important;
+    padding: 8px 12px;
+  }
+
+  /* Links - show URL after link text */
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #666;
+  }
+
+  /* Code blocks */
+  pre, code {
+    background: #f5f5f5 !important;
+    border: 1px solid #ddd;
+    font-size: 9pt;
+  }
+
+  /* Aeria branding header for print */
+  .print-header {
+    border-bottom: 2px solid #1a56db;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+  }
+
+  /* Footer with page numbers */
+  .print-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 9pt;
+    color: #666;
   }
 }

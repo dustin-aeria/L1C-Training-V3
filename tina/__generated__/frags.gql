@@ -1,0 +1,35 @@
+fragment ModuleParts on Module {
+  __typename
+  title
+  moduleNumber
+  slug
+  description
+  duration
+  slides {
+    __typename
+    title
+    layout
+    content
+    image
+    videoUrl
+    instructorNotes
+  }
+}
+
+fragment QuizParts on Quiz {
+  __typename
+  title
+  slug
+  passingScore
+  questions {
+    __typename
+    question
+    type
+    options {
+      __typename
+      text
+      isCorrect
+    }
+    explanation
+  }
+}
