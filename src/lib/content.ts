@@ -17,8 +17,8 @@ export const modules = [
   { number: 9, slug: "flight-review-prep", title: "Flight Review Preparation", file: "L1C09_Flight_Review_Prep_Enhanced.md" },
 ];
 
-// Source content directory - use forward slashes for consistency
-const CONTENT_DIR = path.resolve("C:/Users/Dusti/OneDrive/Desktop/level 1 Complex Training Page/New Material");
+// Source content directory - relative to project root
+const CONTENT_DIR = path.join(process.cwd(), "content", "courses");
 
 export function getModuleBySlug(slug: string) {
   return modules.find((m) => m.slug === slug);
