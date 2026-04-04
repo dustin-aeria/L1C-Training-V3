@@ -1,5 +1,0 @@
-fragment CourseParts on Course {
-  __typename
-  title
-  body
-}
