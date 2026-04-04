@@ -1,3 +1,7 @@
+---
+title: "L1C00 — Course Introduction & Orientation"
+---
+
 # L1C00 — Course Introduction & Orientation
 
 > **Module Type:** Non-Exam Content — Orientation & Context Setting

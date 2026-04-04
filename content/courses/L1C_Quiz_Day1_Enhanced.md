@@ -1,3 +1,7 @@
+---
+title: "Aeria Solutions L1C Quiz — Day 1"
+---
+
 # Aeria Solutions L1C Quiz — Day 1
 
 > **Coverage:** L1C01 Air Law, L1C02 Systems

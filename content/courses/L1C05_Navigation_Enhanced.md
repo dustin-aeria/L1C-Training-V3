@@ -1,3 +1,7 @@
+---
+title: "L1C05 — Navigation"
+---
+
 # L1C05 — Navigation
 
 > **Module Type:** Exam Content — TP 15530 Section 5

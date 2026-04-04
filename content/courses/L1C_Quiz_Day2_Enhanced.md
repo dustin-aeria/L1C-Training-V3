@@ -1,3 +1,7 @@
+---
+title: "Aeria Solutions L1C Quiz — Day 2"
+---
+
 # Aeria Solutions L1C Quiz — Day 2
 
 > **Coverage:** L1C05 Navigation, L1C07 Theory of Flight, L1C08 Radiotelephony

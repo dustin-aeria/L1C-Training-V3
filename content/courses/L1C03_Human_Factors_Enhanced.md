@@ -1,3 +1,7 @@
+---
+title: "L1C03 — Human Factors"
+---
+
 # L1C03 — Human Factors
 
 > **Module Type:** Exam Content — TP 15530 Section 3

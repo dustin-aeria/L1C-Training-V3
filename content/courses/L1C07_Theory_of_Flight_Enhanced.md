@@ -1,3 +1,7 @@
+---
+title: "L1C07 — Theory of Flight"
+---
+
 # L1C07 — Theory of Flight
 
 > **Module Type:** Exam Content — TP 15530 Section 7
