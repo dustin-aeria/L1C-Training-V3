@@ -283,6 +283,8 @@ Exists in any space that is not Class A, B, C, D, E, or F. Class G is uncontroll
 
 Understanding the vertical structure of Canadian airspace is critical for identifying where Class G exists:
 
+![Canadian Airspace Cross Section](/images/air-law/Airpsace%20cross%20section.png)
+
 At a typical large airport: The control zone (Class B, C, or D) extends from the surface to 3,000 ft AAE (Above Aerodrome Elevation). A transition area (Class E) may begin at 700 ft AGL beyond the control zone. A control area extension (Class E) typically starts at 2,200 ft AGL further out. Above that, Class B airspace begins, with Class A starting at FL 180.
 
 Between airports: Class G extends from the surface up to where Class E begins (typically 700 ft AGL near transition areas, or higher in remote areas). In truly remote areas, Class G can extend from the surface to 12,500 ft ASL where the low-level airway system (Class B) begins.
@@ -384,6 +386,8 @@ The **Specific Operations Risk Assessment (SORA)** is an internationally recogni
 Understanding SORA transforms your perspective from "what rules must I follow?" to "what risks am I managing?" — which makes you a safer, more adaptable pilot.
 
 ### 5.5.2 Ground Risk vs Air Risk
+
+![Air Risk Class Diagram](/images/air-law/air%20risk%20class%20diagram.jpeg)
 
 SORA separates risk into two categories that require different mitigations:
 
@@ -502,11 +506,15 @@ These definitions have specific legal meaning within Part IX. Some were previous
 
 **BVLOS Operation:** An operation of an RPA that is not in VLOS, but does not include an extended VLOS (EVLOS) operation or a sheltered operation. This is important — EVLOS and sheltered operations are Advanced operations, NOT L1C operations, even though the aircraft goes beyond the pilot's direct visual contact.
 
+![BVLOS Operations Diagram](/images/air-law/BVLOS.png)
+
 **Contingency Procedures:** The procedures to be followed to address conditions that could lead to an unsafe situation.
 
 **Contingency Volume:** The area immediately surrounding the flight geography within which contingency procedures are intended to be used to return an RPA to the flight geography or safely terminate the flight.
 
 **Extended VLOS (EVLOS) Operation:** An operation of an RPA that is not in VLOS but during which unaided visual contact is maintained with the airspace in which the aircraft is operating in a manner sufficient to detect conflicting air traffic and other hazards and take action to avoid them. This is an Advanced operation under Division V.
+
+![EVLOS Operations Diagram](/images/air-law/EVLOS.png)
 
 **Flight Geography:** The area within which an RPA is intended to fly for a specific operation.
 
@@ -718,6 +726,8 @@ EVLOS allows the aircraft to fly beyond the pilot's direct visual contact, but a
 > **Key Distinction:** EVLOS is an Advanced operation, NOT an L1C operation, even though the aircraft is beyond the pilot's direct line of sight. The critical difference is that in EVLOS, a human observer is watching the airspace. In true BVLOS (L1C), there may be no human watching the airspace at all — detect-and-avoid relies on technology or procedural mitigations.
 
 ### 9.3 Sheltered Operations (CARs 901.74) — New Under SOR/2025-70
+
+![Sheltered Operations](/images/air-law/Sheltered.png)
 
 Sheltered operations allow BVLOS within close proximity of structures:
 

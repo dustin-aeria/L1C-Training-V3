@@ -77,6 +77,8 @@ Civil aviation authorities and airlines train crew members in human factors beca
 
 ### 2.1 Visual Scanning for Visual Observers
 
+![Visual Observer Detect and Avoid](/images/human-factors/VO DAA.png)
+
 A Transportation Safety Board (TSB) of Canada study shows it typically takes a pilot **12.5 seconds** to identify and react to conflicting aircraft, progressing through four stages:
 
 1. **Seeing** — The aircraft enters the observer's field of vision
@@ -154,6 +156,8 @@ Resentment of rules, procedures, and oversight. Leads to skipping checklists, ig
 
 ### 3.2 James Reason's Unsafe Acts Model — The Swiss Cheese Model
 
+![Swiss Cheese Model](/images/human-factors/Swiss Cheese.png)
+
 James Reason's model describes how accidents occur when multiple layers of defence are breached simultaneously — like the holes in slices of Swiss cheese aligning to allow a hazard to pass through every barrier.
 
 Each "slice of cheese" represents a layer of defence: regulations, training, SOPs, checklists, equipment redundancy, crew cross-checks. Each "hole" represents a weakness in that layer. Accidents rarely result from a single failure — they result from a chain of failures where multiple holes align.
@@ -168,6 +172,8 @@ Each "slice of cheese" represents a layer of defence: regulations, training, SOP
 **Violations (deliberate deviations):**
 - **Routine violations** — Habitual non-compliance that has become normalized within the operation. Example: Routinely skipping the compass calibration because "it always works fine."
 - **Exceptional violations** — One-time deviations from rules driven by unusual circumstances. Example: Flying beyond the declared operational boundary because the client's asset of interest is 200 m outside the planned area.
+
+![10 Year Unsafe Acts Study](/images/human-factors/10 year unsafe acts study.png)
 
 ### 3.3 The HFACS Framework
 

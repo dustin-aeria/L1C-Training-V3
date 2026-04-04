@@ -53,6 +53,8 @@ After completing this module, you will be able to:
 
 ### 1.1 Forces Acting on an Aircraft
 
+![The four forces acting on an aircraft in flight](/images/theory-of-flight/four forces.png)
+
 Every aircraft in flight is subject to four forces:
 
 **Lift** — The aerodynamic force acting perpendicular to the relative wind, opposing weight. Produced by wings (fixed-wing) or rotors (rotary-wing/multirotor).
@@ -87,6 +89,9 @@ Newton's Three Laws of Motion are fundamental to understanding how aircraft fly:
 
 - An **airfoil** (wing) deflects air downward → the wing is pushed upward (lift)
 - A propeller pushes air **backward** → the engine/motor is pushed **forward** (thrust)
+
+![Engine thrust created by pushing airflow backward](/images/theory-of-flight/engine pushed forward airflow.png)
+
 - A foil deflected **up** pushes air up → aircraft nose pitches **down**
 - A foil deflected **down** pushes air down → aircraft nose pitches **up**
 
@@ -97,6 +102,10 @@ This action/reaction principle applies to every aerodynamic surface — wings, p
 ## SECTION 2: Principles of Flight — How Different RPA Types Generate Lift
 
 ### 2.1 Fixed-Wing RPA
+
+![Airfoil generating lift through pressure differential](/images/theory-of-flight/airfoil image action.png)
+
+![Airflow over a wing surface](/images/theory-of-flight/airflow image.png)
 
 Fixed-wing aircraft generate lift through forward motion of air over an airfoil-shaped wing. The wing's shape (curved upper surface, flatter lower surface) creates a pressure differential — lower pressure above, higher pressure below — that produces lift. This is a combination of Bernoulli's principle (faster airflow over the curved surface creates lower pressure) and Newton's Third Law (the wing deflects air downward, producing an upward reaction force).
 
@@ -115,6 +124,8 @@ Fixed-wing aircraft generate lift through forward motion of air over an airfoil-
 **Dynamic rollover in a crosswind:** During takeoff or landing, if the aircraft is on one skid and the pilot applies excessive cyclic input, the aircraft can roll past the tipping point on the grounded skid. Crosswinds increase this risk by adding a rolling moment. Recovery is difficult once the roll rate exceeds a critical point. Relevant for larger helicopter-type RPA with skid landing gear — prevent by limiting cyclic inputs during ground contact in crosswind conditions.
 
 ### 2.3 Multirotor RPA (Quadcopter Focus)
+
+![Quadcopter flight principles showing motor rotation and control](/images/theory-of-flight/quadcopter principles.png)
 
 **Basic configuration:** Four rotors provide lift. Two pairs of identically pitched propellers rotate in opposite directions — clockwise pair and counterclockwise pair. This arrangement cancels torque in hover without needing a tail rotor.
 
@@ -166,6 +177,8 @@ A propeller is an airfoil that pushes air backward, causing a reaction force (th
 
 ### 4.1 Aircraft Axes
 
+![The three aircraft axes: longitudinal, lateral, and vertical](/images/theory-of-flight/aircraft axes.png)
+
 An aircraft rotates around three axes, all intersecting at the centre of gravity:
 
 **Longitudinal (roll) axis** — Runs from nose to tail. Roll is rotation around this axis (wings tilting). Controlled by ailerons (fixed-wing) or differential left/right thrust (multirotor).
@@ -192,6 +205,8 @@ An aircraft rotates around three axes, all intersecting at the centre of gravity
 
 ### 5.1 Control Surfaces — Conventional Aircraft
 
+![Flight control surfaces on a conventional aircraft](/images/theory-of-flight/flgiht ontrol conventional aircarft.gif)
+
 The original course materials show a labeled diagram (Jaworski, 2006) identifying the four primary flight control components:
 
 **A — Aileron:** Located on the trailing edge of each wing, near the tips. Move in opposite directions (one up, one down) to create differential lift between the wings, causing the aircraft to roll. Connected to the lateral stick input.
@@ -211,6 +226,8 @@ Trim allows the pilot to set a control surface to hold a desired position withou
 ## SECTION 6: Load Factor
 
 ### 6.1 What is Load Factor?
+
+![Load factor diagram showing forces in banked flight](/images/theory-of-flight/load factor.gif)
 
 Load factor (n) is the ratio of total lift to the weight of the aircraft. In straight and level flight, n = 1 (1G — lift equals weight). The original course materials include a diagram (Deeday-UK, 2010) showing the forces in level flight: θ = 0° (no bank), n = 1, with vectors for lift force (upward), weight (downward), centrifugal force (zero in level flight), and vector sum of all body forces.
 

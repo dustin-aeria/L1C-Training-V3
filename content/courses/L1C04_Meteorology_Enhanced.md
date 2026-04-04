@@ -102,6 +102,8 @@ Any deviation from ISA conditions affects altimeter readings, air density, and R
 
 ### 1.4 Atmospheric Density
 
+![Atmospheric density and its relationship to altitude, temperature, and humidity](/images/meteorology/Atmospheric Density.png)
+
 Air density directly affects RPAS performance because propellers and rotors generate lift by accelerating air — denser air produces more lift per revolution:
 
 - **Warm air is less dense** than cooler air (warm air takes up more volume)
@@ -126,6 +128,8 @@ Air density directly affects RPAS performance because propellers and rotors gene
 
 ### 2.2 Pressure Systems and Weather
 
+![Atmospheric pressure and how it varies with altitude](/images/meteorology/Atmospheric Pressure.png)
+
 Atmospheric pressure determines the weather that is likely to occur:
 
 **High pressure areas** = Fair weather, clear air. In the Northern Hemisphere, air flows clockwise and outward (diverging) from high-pressure centres. Air descends in high-pressure systems, warming and drying as it sinks.
@@ -135,6 +139,8 @@ Atmospheric pressure determines the weather that is likely to occur:
 **The mnemonic:** Air flows from high to low pressure. The steeper the pressure gradient (closer isobars on a weather map), the stronger the wind.
 
 ### 2.3 Effects of Temperature on Pressure
+
+![Effects of temperature on atmospheric pressure and altimeter readings](/images/meteorology/Effects of Temperature.png)
 
 Temperature affects the rate of change in pressure with height:
 
@@ -299,6 +305,8 @@ Wind is caused by differences in air pressure from uneven heating of Earth's sur
 
 ### 7.3 Urban Airflow
 
+![Urban airflow patterns showing wind effects around buildings](/images/meteorology/urban airflow.jpg)
+
 Transport Canada's Urban Airflow guidance identifies five key wind effects near buildings (SDSTV): Speed, Direction, Shear, Turbulence, and Vorticity. Wind speed at 400 ft AGL (122 m) is approximately 1.5 times the weather station's reported hourly wind speed at 10 m. At building rooftop level, vortex shedding creates side-to-side oscillation that can destabilize multirotor aircraft. The venturi effect between buildings can double the local wind speed. While L1C operations are typically in rural/unpopulated areas, understanding urban airflow is valuable for pre-positioning, transit, and Advanced operations.
 
 ---
@@ -321,6 +329,8 @@ A front is the boundary between two different air masses. The interaction betwee
 
 ## SECTION 9: Thunderstorms
 
+![Lifting processes that lead to thunderstorm development](/images/meteorology/Lifting Process Thuinderstorms.png)
+
 ### 9.1 Thunderstorm Hazards for RPAS
 
 Thunderstorms are one of the few absolute no-go conditions for RPAS operations. They produce multiple simultaneous hazards that can individually or collectively destroy an RPAS:
@@ -336,6 +346,8 @@ Thunderstorms are one of the few absolute no-go conditions for RPAS operations. 
 **Icing:** Severe icing in the cumulonimbus cloud and in associated precipitation.
 
 ### 9.2 Surface Characteristics of an Approaching Thunderstorm
+
+![Thunderstorm development stages and characteristics](/images/meteorology/Thunderstorm Development.png)
 
 Advance indicators include increasing cumulus cloud development, darkening sky to the west or northwest, increasing wind speed and gustiness, falling barometric pressure, distant lightning or thunder, and potentially a gust front or roll cloud ahead of the storm.
 

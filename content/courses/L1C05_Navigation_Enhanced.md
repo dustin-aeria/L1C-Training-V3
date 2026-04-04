@@ -58,6 +58,10 @@ L1C pilots must be proficient with several types of aeronautical charts. Each se
 
 **VNC Grid System:** VNCs use a grid system for quick reference. The grid is formed by latitude and longitude lines at regular intervals. Each grid cell can be referenced by its coordinates. When communicating positions, pilots can reference the nearest grid intersection or use the alpha-numeric grid reference system shown in the chart margins.
 
+![Latitude and longitude grid system on aeronautical charts](/images/navigation/lat long grids.png)
+
+![Zoomed view of latitude and longitude grid intersections](/images/navigation/lat long grids zoomed in.png)
+
 **VFR Terminal Area Chart (VTA)** — Scale 1:250,000 (twice the detail of VNC). Printed for high-density airport areas. Used for VFR navigation in congested airspace. While L1C operations will typically be 5+ NM from aerodromes (and thus outside VTA coverage), VTAs are valuable for understanding the airspace structure around airports near your operating area.
 
 **World Aeronautical Chart (WAC)** — Scale 1:1,000,000 (half the detail of VNC). Used for general orientation and long-distance planning.
@@ -153,6 +157,8 @@ Understanding the difference between terrain models is critical for BVLOS obstac
 
 **Operator-generated DEM:** Operators can create their own DEMs using photogrammetry or LiDAR from previous survey flights. These can be more current and higher resolution than published DEMs but must be validated against official sources.
 
+![Digital elevation model showing terrain data for flight planning](/images/navigation/digital elevation model.png)
+
 > **Key Concept:** DEMs have limitations. They represent terrain and surfaces at the time of capture. A new cell tower, wind turbine, or construction crane that was built after the DEM was captured will NOT appear in the data. Always cross-reference DEM data with NOTAMs, VNC obstacle depictions, and recent satellite imagery. For BVLOS operations, consider that the data you trust your aircraft's life to may be outdated.
 
 ---
@@ -178,6 +184,8 @@ Population density is the regulatory gate between different L1C operational path
 
 **Statistics Canada Population Density by Dissemination Area:**
 The primary official source. Access through the Statistics Canada website (www150.statcan.gc.ca/n1/en/geo). Select your area of interest and view the population density per square kilometre by Dissemination Area (DA) — the smallest geographic unit for which census data is published. The data shows population, land area, and population density per square kilometre.
+
+![Statistics Canada population density data interface](/images/navigation/stats can.png)
 
 **NRCAN Drone Site Selection Tool 2 (DSST-2):**
 The DSST-2 is specifically designed for RPAS flight planning and integrates population density data with aerodrome locations, airspace boundaries, and other relevant information. For BVLOS operations, the DSST-2 includes CFS and CWAS aerodromes.
@@ -298,6 +306,8 @@ L1C pilots should be proficient with flight planning software that integrates ae
 **NRCAN DSST-2:** Drone-specific site selection tool with population density, aerodrome proximity, and airspace analysis.
 
 **Google Earth Pro:** 3D terrain visualization, satellite imagery, and measurement tools. Useful for visual site assessment but NOT an official aviation data source.
+
+![GIS data integration for BVLOS flight planning](/images/navigation/gis data.png)
 
 ### 8.2 Reconciling Data Sources
 

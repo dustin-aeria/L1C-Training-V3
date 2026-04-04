@@ -49,6 +49,8 @@ After completing this module, you will be able to:
 
 ## SECTION 1: VHF Radio for RPAS Operations
 
+![Various aviation radios used in RPAS operations](/images/radiotelephony/radios.jpg)
+
 ### 1.1 Characteristics of Very High Frequency (VHF) Radios
 
 VHF radios operate in the 30 to 300 MHz range. The aeronautical frequency allocations within VHF are:
@@ -60,6 +62,8 @@ VHF radios operate in the 30 to 300 MHz range. The aeronautical frequency alloca
 - **Limited to line of sight** — VHF signals do not bend around terrain or follow the Earth's curvature. If there is a hill between your radio and the aircraft you're trying to hear, you may not receive their transmission.
 - **Affected by transmit power and receiver sensitivity** — Range depends on both how powerful the transmitter is and how sensitive the receiver is.
 - **Handheld units can transmit 5–10 NM but receive transmissions from much further** — This is important: even if you cannot transmit far enough to be heard by distant aircraft, you CAN hear their transmissions, building situational awareness of traffic in the area.
+
+![Handheld VHF radios for RPAS operations](/images/radiotelephony/Handhelds.jpg)
 
 > **Original course note:** "Ideal for communications with control towers, but suitable for close-in low-altitude aircraft. Great situational awareness tool for monitoring operations in controlled airspace."
 
@@ -86,6 +90,8 @@ Aviation frequencies can be found on aviation maps (VNC/VTA) and in the Canada F
 ---
 
 ## SECTION 2: Radio Station Licences and Certification
+
+![Radio communication tower](/images/radiotelephony/radio tower.jpg)
 
 ### 2.1 Radio Station Licence (Voice)
 
@@ -192,6 +198,8 @@ L1C pilots must know how to find the appropriate enroute frequency for their ope
 ---
 
 ## SECTION 4: Inter-Crew Communication
+
+![Drone and control station for RPAS operations](/images/radiotelephony/drone and control.jpg)
 
 ### 4.1 Communication Planning for BVLOS
 

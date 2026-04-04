@@ -396,6 +396,8 @@ From your mapping/terrain data sources:
 
 **Step 6: Sum all components**
 
+![Flight Geography Components](/images/flight-ops/Flgiht GEogrpahy.png)
+
 ```
 FLIGHT GEOGRAPHY (one side)
   Path definition error:        ±___ m
@@ -415,6 +417,8 @@ GROUND RISK BUFFER (one side)
 TOTAL ONE SIDE:                 ___ m
 TOTAL CORRIDOR WIDTH:           ___ m (× 2)
 ```
+
+![Operational Volume Diagram](/images/flight-ops/Operational Volume.png)
 
 ### 4.3 Terrain Analysis Workflow
 
@@ -1104,6 +1108,8 @@ APPROACH TO SQUAMISH (if route continues toward town)
 | **TOTAL CORRIDOR WIDTH** | **~684 m** | |
 
 **Result:** Operational volume corridor is approximately 684 m wide — within our 1 km planned buffer.
+
+![Operational Volume Example - Squamish Valley](/images/flight-ops/operational volume example.png)
 
 **Terrain analysis:**
 - Elevation profile shows variation along route

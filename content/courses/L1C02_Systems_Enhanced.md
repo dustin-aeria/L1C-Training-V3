@@ -109,12 +109,16 @@ Standard 922.09 requires that the probability of any combination of failures res
 
 ### 3.1 ICAO Aircraft Classification
 
+![ICAO Aircraft Classification Framework](/images/systems/Airframe classes.png)
+
 RPAS are classified within the broader ICAO aircraft classification framework. For L1C purposes, the key distinctions are by configuration and propulsion:
 
 **By Configuration:**
 - **Fixed-wing** — Generate lift through forward motion over aerodynamic surfaces (wings). Efficient for long-range, high-speed operations. Cannot hover. Require launch and recovery systems (runway, catapult, hand launch, VTOL hybrid).
 - **Rotary-wing (multirotor)** — Generate lift through powered rotors. Can hover, take off and land vertically. Less efficient for long-range flight. Most common consumer/commercial RPAS configuration (quadcopter, hexacopter, octocopter).
 - **Hybrid VTOL** — Combine fixed-wing efficiency with vertical take-off and landing capability. Transition between hover and forward flight modes. Increasingly common for BVLOS survey operations.
+
+![Quadcopter Component Layout](/images/systems/Quadcopter components.png)
 
 **By Propulsion:**
 - Electric motor (most common for small RPAS)
@@ -156,6 +160,8 @@ RPAS electrical systems include power sources (batteries, generators), distribut
 
 ### 3.2 Servos
 
+![Flight Control System Architecture](/images/systems/flight control architecture.png)
+
 A **servo** is an electromechanical actuator that converts electrical signals into precise mechanical movement. In RPAS, servos control flight surfaces (ailerons, elevator, rudder on fixed-wing), camera gimbals, payload release mechanisms, and other mechanical functions.
 
 **Actions of a servo:** The flight controller sends a PWM (Pulse Width Modulation) signal to the servo, which moves to and holds a specific position. The servo contains a motor, gear train, potentiometer (for position feedback), and control circuit.
@@ -166,6 +172,8 @@ A **servo** is an electromechanical actuator that converts electrical signals in
 - Servo moving to an incorrect or extreme position
 - Unusual current draw on the affected channel
 - Physical symptoms: grinding noise, heat, or smell from the servo location
+
+![Flight Control Surface Movement](/images/systems/Flight Control.gif)
 
 ### 3.3 Environmental Protection
 
@@ -469,6 +477,8 @@ The magnetometer measures the Earth's magnetic field and provides a heading refe
 
 **Magnetic field anomalies:** Some geographic locations have unusual magnetic field variations caused by iron ore deposits, volcanic rock, or other geological features. Urban environments with steel structures, rebar, and underground utilities can also distort the magnetic field. In BVLOS, the aircraft may fly through areas with different magnetic characteristics than the launch site — this can cause compass errors that affect navigation.
 
+![Magnetometer Sensor](/images/systems/magnatometer.jpg)
+
 > **Key Concept:** Quadcopter motors generate their own magnetic fields that can interfere with compass readings. This is why many RPAS designs mount the compass sensor on a mast or as far from the motors as possible. If your compass is showing erratic readings, motor interference or environmental magnetic anomalies should be your first suspicion.
 
 ### 10.2 Altimeter/Barometer
@@ -513,6 +523,8 @@ GNSS uses satellites for autonomous geo-positioning. Modern RPAS receivers can u
 - **Galileo** — European Union (30 satellites)
 
 Using multiple constellations provides more visible satellites, better geometric diversity, and improved accuracy and availability — especially important in challenging environments like valleys, urban areas, or high-latitude operations in northern Canada.
+
+![GNSS Satellite Navigation System](/images/systems/GNSS motiongrpahic.gif)
 
 ### 11.2 GPS Error Sources
 
