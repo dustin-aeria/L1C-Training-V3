@@ -82,10 +82,8 @@ export type Query = {
   collections: Array<Collection>;
   node: Node;
   document: DocumentNode;
-  module: Module;
-  moduleConnection: ModuleConnection;
-  quiz: Quiz;
-  quizConnection: QuizConnection;
+  course: Course;
+  courseConnection: CourseConnection;
 };
 
 
@@ -110,38 +108,22 @@ export type QueryDocumentArgs = {
 };
 
 
-export type QueryModuleArgs = {
+export type QueryCourseArgs = {
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
 
-export type QueryModuleConnectionArgs = {
+export type QueryCourseConnectionArgs = {
   before?: InputMaybe<Scalars['String']['input']>;
   after?: InputMaybe<Scalars['String']['input']>;
   first?: InputMaybe<Scalars['Float']['input']>;
   last?: InputMaybe<Scalars['Float']['input']>;
   sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<ModuleFilter>;
-};
-
-
-export type QueryQuizArgs = {
-  relativePath?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-export type QueryQuizConnectionArgs = {
-  before?: InputMaybe<Scalars['String']['input']>;
-  after?: InputMaybe<Scalars['String']['input']>;
-  first?: InputMaybe<Scalars['Float']['input']>;
-  last?: InputMaybe<Scalars['Float']['input']>;
-  sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<QuizFilter>;
+  filter?: InputMaybe<CourseFilter>;
 };
 
 export type DocumentFilter = {
-  module?: InputMaybe<ModuleFilter>;
-  quiz?: InputMaybe<QuizFilter>;
+  course?: InputMaybe<CourseFilter>;
 };
 
 export type DocumentConnectionEdges = {
@@ -181,26 +163,12 @@ export type CollectionDocumentsArgs = {
   folder?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type DocumentNode = Module | Quiz | Folder;
+export type DocumentNode = Course | Folder;
 
-export type ModuleSlides = {
-  __typename?: 'ModuleSlides';
+export type Course = Node & Document & {
+  __typename?: 'Course';
   title: Scalars['String']['output'];
-  layout?: Maybe<Scalars['String']['output']>;
-  content?: Maybe<Scalars['JSON']['output']>;
-  image?: Maybe<Scalars['String']['output']>;
-  videoUrl?: Maybe<Scalars['String']['output']>;
-  instructorNotes?: Maybe<Scalars['String']['output']>;
-};
-
-export type Module = Node & Document & {
-  __typename?: 'Module';
-  title: Scalars['String']['output'];
-  moduleNumber: Scalars['Float']['output'];
-  slug: Scalars['String']['output'];
-  description?: Maybe<Scalars['String']['output']>;
-  duration?: Maybe<Scalars['String']['output']>;
-  slides?: Maybe<Array<Maybe<ModuleSlides>>>;
+  body?: Maybe<Scalars['JSON']['output']>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
@@ -213,120 +181,28 @@ export type StringFilter = {
   in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
-export type NumberFilter = {
-  lt?: InputMaybe<Scalars['Float']['input']>;
-  lte?: InputMaybe<Scalars['Float']['input']>;
-  gte?: InputMaybe<Scalars['Float']['input']>;
-  gt?: InputMaybe<Scalars['Float']['input']>;
-  eq?: InputMaybe<Scalars['Float']['input']>;
-  exists?: InputMaybe<Scalars['Boolean']['input']>;
-  in?: InputMaybe<Array<InputMaybe<Scalars['Float']['input']>>>;
-};
-
 export type RichTextFilter = {
   startsWith?: InputMaybe<Scalars['String']['input']>;
   eq?: InputMaybe<Scalars['String']['input']>;
   exists?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
-export type ImageFilter = {
-  startsWith?: InputMaybe<Scalars['String']['input']>;
-  eq?: InputMaybe<Scalars['String']['input']>;
-  exists?: InputMaybe<Scalars['Boolean']['input']>;
-  in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
-export type ModuleSlidesFilter = {
+export type CourseFilter = {
   title?: InputMaybe<StringFilter>;
-  layout?: InputMaybe<StringFilter>;
-  content?: InputMaybe<RichTextFilter>;
-  image?: InputMaybe<ImageFilter>;
-  videoUrl?: InputMaybe<StringFilter>;
-  instructorNotes?: InputMaybe<StringFilter>;
+  body?: InputMaybe<RichTextFilter>;
 };
 
-export type ModuleFilter = {
-  title?: InputMaybe<StringFilter>;
-  moduleNumber?: InputMaybe<NumberFilter>;
-  slug?: InputMaybe<StringFilter>;
-  description?: InputMaybe<StringFilter>;
-  duration?: InputMaybe<StringFilter>;
-  slides?: InputMaybe<ModuleSlidesFilter>;
-};
-
-export type ModuleConnectionEdges = {
-  __typename?: 'ModuleConnectionEdges';
+export type CourseConnectionEdges = {
+  __typename?: 'CourseConnectionEdges';
   cursor: Scalars['String']['output'];
-  node?: Maybe<Module>;
+  node?: Maybe<Course>;
 };
 
-export type ModuleConnection = Connection & {
-  __typename?: 'ModuleConnection';
+export type CourseConnection = Connection & {
+  __typename?: 'CourseConnection';
   pageInfo: PageInfo;
   totalCount: Scalars['Float']['output'];
-  edges?: Maybe<Array<Maybe<ModuleConnectionEdges>>>;
-};
-
-export type QuizQuestionsOptions = {
-  __typename?: 'QuizQuestionsOptions';
-  text?: Maybe<Scalars['String']['output']>;
-  isCorrect?: Maybe<Scalars['Boolean']['output']>;
-};
-
-export type QuizQuestions = {
-  __typename?: 'QuizQuestions';
-  question: Scalars['String']['output'];
-  type?: Maybe<Scalars['String']['output']>;
-  options?: Maybe<Array<Maybe<QuizQuestionsOptions>>>;
-  explanation?: Maybe<Scalars['String']['output']>;
-};
-
-export type Quiz = Node & Document & {
-  __typename?: 'Quiz';
-  title: Scalars['String']['output'];
-  slug: Scalars['String']['output'];
-  passingScore?: Maybe<Scalars['Float']['output']>;
-  questions?: Maybe<Array<Maybe<QuizQuestions>>>;
-  id: Scalars['ID']['output'];
-  _sys: SystemInfo;
-  _values: Scalars['JSON']['output'];
-};
-
-export type BooleanFilter = {
-  eq?: InputMaybe<Scalars['Boolean']['input']>;
-  exists?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-export type QuizQuestionsOptionsFilter = {
-  text?: InputMaybe<StringFilter>;
-  isCorrect?: InputMaybe<BooleanFilter>;
-};
-
-export type QuizQuestionsFilter = {
-  question?: InputMaybe<StringFilter>;
-  type?: InputMaybe<StringFilter>;
-  options?: InputMaybe<QuizQuestionsOptionsFilter>;
-  explanation?: InputMaybe<StringFilter>;
-};
-
-export type QuizFilter = {
-  title?: InputMaybe<StringFilter>;
-  slug?: InputMaybe<StringFilter>;
-  passingScore?: InputMaybe<NumberFilter>;
-  questions?: InputMaybe<QuizQuestionsFilter>;
-};
-
-export type QuizConnectionEdges = {
-  __typename?: 'QuizConnectionEdges';
-  cursor: Scalars['String']['output'];
-  node?: Maybe<Quiz>;
-};
-
-export type QuizConnection = Connection & {
-  __typename?: 'QuizConnection';
-  pageInfo: PageInfo;
-  totalCount: Scalars['Float']['output'];
-  edges?: Maybe<Array<Maybe<QuizConnectionEdges>>>;
+  edges?: Maybe<Array<Maybe<CourseConnectionEdges>>>;
 };
 
 export type Mutation = {
@@ -336,10 +212,8 @@ export type Mutation = {
   deleteDocument: DocumentNode;
   createDocument: DocumentNode;
   createFolder: DocumentNode;
-  updateModule: Module;
-  createModule: Module;
-  updateQuiz: Quiz;
-  createQuiz: Quiz;
+  updateCourse: Course;
+  createCourse: Course;
 };
 
 
@@ -376,160 +250,62 @@ export type MutationCreateFolderArgs = {
 };
 
 
-export type MutationUpdateModuleArgs = {
+export type MutationUpdateCourseArgs = {
   relativePath: Scalars['String']['input'];
-  params: ModuleMutation;
+  params: CourseMutation;
 };
 
 
-export type MutationCreateModuleArgs = {
+export type MutationCreateCourseArgs = {
   relativePath: Scalars['String']['input'];
-  params: ModuleMutation;
-};
-
-
-export type MutationUpdateQuizArgs = {
-  relativePath: Scalars['String']['input'];
-  params: QuizMutation;
-};
-
-
-export type MutationCreateQuizArgs = {
-  relativePath: Scalars['String']['input'];
-  params: QuizMutation;
+  params: CourseMutation;
 };
 
 export type DocumentUpdateMutation = {
-  module?: InputMaybe<ModuleMutation>;
-  quiz?: InputMaybe<QuizMutation>;
+  course?: InputMaybe<CourseMutation>;
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type DocumentMutation = {
-  module?: InputMaybe<ModuleMutation>;
-  quiz?: InputMaybe<QuizMutation>;
+  course?: InputMaybe<CourseMutation>;
 };
 
-export type ModuleSlidesMutation = {
+export type CourseMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
-  layout?: InputMaybe<Scalars['String']['input']>;
-  content?: InputMaybe<Scalars['JSON']['input']>;
-  image?: InputMaybe<Scalars['String']['input']>;
-  videoUrl?: InputMaybe<Scalars['String']['input']>;
-  instructorNotes?: InputMaybe<Scalars['String']['input']>;
+  body?: InputMaybe<Scalars['JSON']['input']>;
 };
 
-export type ModuleMutation = {
-  title?: InputMaybe<Scalars['String']['input']>;
-  moduleNumber?: InputMaybe<Scalars['Float']['input']>;
-  slug?: InputMaybe<Scalars['String']['input']>;
-  description?: InputMaybe<Scalars['String']['input']>;
-  duration?: InputMaybe<Scalars['String']['input']>;
-  slides?: InputMaybe<Array<InputMaybe<ModuleSlidesMutation>>>;
-};
+export type CoursePartsFragment = { __typename: 'Course', title: string, body?: any | null };
 
-export type QuizQuestionsOptionsMutation = {
-  text?: InputMaybe<Scalars['String']['input']>;
-  isCorrect?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-export type QuizQuestionsMutation = {
-  question?: InputMaybe<Scalars['String']['input']>;
-  type?: InputMaybe<Scalars['String']['input']>;
-  options?: InputMaybe<Array<InputMaybe<QuizQuestionsOptionsMutation>>>;
-  explanation?: InputMaybe<Scalars['String']['input']>;
-};
-
-export type QuizMutation = {
-  title?: InputMaybe<Scalars['String']['input']>;
-  slug?: InputMaybe<Scalars['String']['input']>;
-  passingScore?: InputMaybe<Scalars['Float']['input']>;
-  questions?: InputMaybe<Array<InputMaybe<QuizQuestionsMutation>>>;
-};
-
-export type ModulePartsFragment = { __typename: 'Module', title: string, moduleNumber: number, slug: string, description?: string | null, duration?: string | null, slides?: Array<{ __typename: 'ModuleSlides', title: string, layout?: string | null, content?: any | null, image?: string | null, videoUrl?: string | null, instructorNotes?: string | null } | null> | null };
-
-export type QuizPartsFragment = { __typename: 'Quiz', title: string, slug: string, passingScore?: number | null, questions?: Array<{ __typename: 'QuizQuestions', question: string, type?: string | null, explanation?: string | null, options?: Array<{ __typename: 'QuizQuestionsOptions', text?: string | null, isCorrect?: boolean | null } | null> | null } | null> | null };
-
-export type ModuleQueryVariables = Exact<{
+export type CourseQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type ModuleQuery = { __typename?: 'Query', module: { __typename: 'Module', id: string, title: string, moduleNumber: number, slug: string, description?: string | null, duration?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, slides?: Array<{ __typename: 'ModuleSlides', title: string, layout?: string | null, content?: any | null, image?: string | null, videoUrl?: string | null, instructorNotes?: string | null } | null> | null } };
+export type CourseQuery = { __typename?: 'Query', course: { __typename: 'Course', id: string, title: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
 
-export type ModuleConnectionQueryVariables = Exact<{
+export type CourseConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
   after?: InputMaybe<Scalars['String']['input']>;
   first?: InputMaybe<Scalars['Float']['input']>;
   last?: InputMaybe<Scalars['Float']['input']>;
   sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<ModuleFilter>;
+  filter?: InputMaybe<CourseFilter>;
 }>;
 
 
-export type ModuleConnectionQuery = { __typename?: 'Query', moduleConnection: { __typename?: 'ModuleConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ModuleConnectionEdges', cursor: string, node?: { __typename: 'Module', id: string, title: string, moduleNumber: number, slug: string, description?: string | null, duration?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, slides?: Array<{ __typename: 'ModuleSlides', title: string, layout?: string | null, content?: any | null, image?: string | null, videoUrl?: string | null, instructorNotes?: string | null } | null> | null } | null } | null> | null } };
+export type CourseConnectionQuery = { __typename?: 'Query', courseConnection: { __typename?: 'CourseConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'CourseConnectionEdges', cursor: string, node?: { __typename: 'Course', id: string, title: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
-export type QuizQueryVariables = Exact<{
-  relativePath: Scalars['String']['input'];
-}>;
-
-
-export type QuizQuery = { __typename?: 'Query', quiz: { __typename: 'Quiz', id: string, title: string, slug: string, passingScore?: number | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, questions?: Array<{ __typename: 'QuizQuestions', question: string, type?: string | null, explanation?: string | null, options?: Array<{ __typename: 'QuizQuestionsOptions', text?: string | null, isCorrect?: boolean | null } | null> | null } | null> | null } };
-
-export type QuizConnectionQueryVariables = Exact<{
-  before?: InputMaybe<Scalars['String']['input']>;
-  after?: InputMaybe<Scalars['String']['input']>;
-  first?: InputMaybe<Scalars['Float']['input']>;
-  last?: InputMaybe<Scalars['Float']['input']>;
-  sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<QuizFilter>;
-}>;
-
-
-export type QuizConnectionQuery = { __typename?: 'Query', quizConnection: { __typename?: 'QuizConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'QuizConnectionEdges', cursor: string, node?: { __typename: 'Quiz', id: string, title: string, slug: string, passingScore?: number | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, questions?: Array<{ __typename: 'QuizQuestions', question: string, type?: string | null, explanation?: string | null, options?: Array<{ __typename: 'QuizQuestionsOptions', text?: string | null, isCorrect?: boolean | null } | null> | null } | null> | null } | null } | null> | null } };
-
-export const ModulePartsFragmentDoc = gql`
-    fragment ModuleParts on Module {
+export const CoursePartsFragmentDoc = gql`
+    fragment CourseParts on Course {
   __typename
   title
-  moduleNumber
-  slug
-  description
-  duration
-  slides {
-    __typename
-    title
-    layout
-    content
-    image
-    videoUrl
-    instructorNotes
-  }
+  body
 }
     `;
-export const QuizPartsFragmentDoc = gql`
-    fragment QuizParts on Quiz {
-  __typename
-  title
-  slug
-  passingScore
-  questions {
-    __typename
-    question
-    type
-    options {
-      __typename
-      text
-      isCorrect
-    }
-    explanation
-  }
-}
-    `;
-export const ModuleDocument = gql`
-    query module($relativePath: String!) {
-  module(relativePath: $relativePath) {
+export const CourseDocument = gql`
+    query course($relativePath: String!) {
+  course(relativePath: $relativePath) {
     ... on Document {
       _sys {
         filename
@@ -542,13 +318,13 @@ export const ModuleDocument = gql`
       }
       id
     }
-    ...ModuleParts
+    ...CourseParts
   }
 }
-    ${ModulePartsFragmentDoc}`;
-export const ModuleConnectionDocument = gql`
-    query moduleConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: ModuleFilter) {
-  moduleConnection(
+    ${CoursePartsFragmentDoc}`;
+export const CourseConnectionDocument = gql`
+    query courseConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: CourseFilter) {
+  courseConnection(
     before: $before
     after: $after
     first: $first
@@ -578,83 +354,20 @@ export const ModuleConnectionDocument = gql`
           }
           id
         }
-        ...ModuleParts
+        ...CourseParts
       }
     }
   }
 }
-    ${ModulePartsFragmentDoc}`;
-export const QuizDocument = gql`
-    query quiz($relativePath: String!) {
-  quiz(relativePath: $relativePath) {
-    ... on Document {
-      _sys {
-        filename
-        basename
-        hasReferences
-        breadcrumbs
-        path
-        relativePath
-        extension
-      }
-      id
-    }
-    ...QuizParts
-  }
-}
-    ${QuizPartsFragmentDoc}`;
-export const QuizConnectionDocument = gql`
-    query quizConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: QuizFilter) {
-  quizConnection(
-    before: $before
-    after: $after
-    first: $first
-    last: $last
-    sort: $sort
-    filter: $filter
-  ) {
-    pageInfo {
-      hasPreviousPage
-      hasNextPage
-      startCursor
-      endCursor
-    }
-    totalCount
-    edges {
-      cursor
-      node {
-        ... on Document {
-          _sys {
-            filename
-            basename
-            hasReferences
-            breadcrumbs
-            path
-            relativePath
-            extension
-          }
-          id
-        }
-        ...QuizParts
-      }
-    }
-  }
-}
-    ${QuizPartsFragmentDoc}`;
+    ${CoursePartsFragmentDoc}`;
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
-      module(variables: ModuleQueryVariables, options?: C): Promise<{data: ModuleQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: ModuleQueryVariables, query: string}> {
-        return requester<{data: ModuleQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: ModuleQueryVariables, query: string}, ModuleQueryVariables>(ModuleDocument, variables, options);
+      course(variables: CourseQueryVariables, options?: C): Promise<{data: CourseQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: CourseQueryVariables, query: string}> {
+        return requester<{data: CourseQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: CourseQueryVariables, query: string}, CourseQueryVariables>(CourseDocument, variables, options);
       },
-    moduleConnection(variables?: ModuleConnectionQueryVariables, options?: C): Promise<{data: ModuleConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: ModuleConnectionQueryVariables, query: string}> {
-        return requester<{data: ModuleConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: ModuleConnectionQueryVariables, query: string}, ModuleConnectionQueryVariables>(ModuleConnectionDocument, variables, options);
-      },
-    quiz(variables: QuizQueryVariables, options?: C): Promise<{data: QuizQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: QuizQueryVariables, query: string}> {
-        return requester<{data: QuizQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: QuizQueryVariables, query: string}, QuizQueryVariables>(QuizDocument, variables, options);
-      },
-    quizConnection(variables?: QuizConnectionQueryVariables, options?: C): Promise<{data: QuizConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: QuizConnectionQueryVariables, query: string}> {
-        return requester<{data: QuizConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: QuizConnectionQueryVariables, query: string}, QuizConnectionQueryVariables>(QuizConnectionDocument, variables, options);
+    courseConnection(variables?: CourseConnectionQueryVariables, options?: C): Promise<{data: CourseConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: CourseConnectionQueryVariables, query: string}> {
+        return requester<{data: CourseConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: CourseConnectionQueryVariables, query: string}, CourseConnectionQueryVariables>(CourseConnectionDocument, variables, options);
       }
     };
   }

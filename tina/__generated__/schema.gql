@@ -54,15 +54,12 @@ type Query {
   collections: [Collection!]!
   node(id: String): Node!
   document(collection: String, relativePath: String): DocumentNode!
-  module(relativePath: String): Module!
-  moduleConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: ModuleFilter): ModuleConnection!
-  quiz(relativePath: String): Quiz!
-  quizConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: QuizFilter): QuizConnection!
+  course(relativePath: String): Course!
+  courseConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: CourseFilter): CourseConnection!
 }
 
 input DocumentFilter {
-  module: ModuleFilter
-  quiz: QuizFilter
+  course: CourseFilter
 }
 
 type DocumentConnectionEdges {
@@ -88,24 +85,11 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Module | Quiz | Folder
+union DocumentNode = Course | Folder
 
-type ModuleSlides {
+type Course implements Node & Document {
   title: String!
-  layout: String
-  content: JSON
-  image: String
-  videoUrl: String
-  instructorNotes: String
-}
-
-type Module implements Node & Document {
-  title: String!
-  moduleNumber: Float!
-  slug: String!
-  description: String
-  duration: String
-  slides: [ModuleSlides]
+  body: JSON
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
@@ -118,113 +102,26 @@ input StringFilter {
   in: [String]
 }
 
-input NumberFilter {
-  lt: Float
-  lte: Float
-  gte: Float
-  gt: Float
-  eq: Float
-  exists: Boolean
-  in: [Float]
-}
-
 input RichTextFilter {
   startsWith: String
   eq: String
   exists: Boolean
 }
 
-input ImageFilter {
-  startsWith: String
-  eq: String
-  exists: Boolean
-  in: [String]
-}
-
-input ModuleSlidesFilter {
+input CourseFilter {
   title: StringFilter
-  layout: StringFilter
-  content: RichTextFilter
-  image: ImageFilter
-  videoUrl: StringFilter
-  instructorNotes: StringFilter
+  body: RichTextFilter
 }
 
-input ModuleFilter {
-  title: StringFilter
-  moduleNumber: NumberFilter
-  slug: StringFilter
-  description: StringFilter
-  duration: StringFilter
-  slides: ModuleSlidesFilter
-}
-
-type ModuleConnectionEdges {
+type CourseConnectionEdges {
   cursor: String!
-  node: Module
+  node: Course
 }
 
-type ModuleConnection implements Connection {
+type CourseConnection implements Connection {
   pageInfo: PageInfo!
   totalCount: Float!
-  edges: [ModuleConnectionEdges]
-}
-
-type QuizQuestionsOptions {
-  text: String
-  isCorrect: Boolean
-}
-
-type QuizQuestions {
-  question: String!
-  type: String
-  options: [QuizQuestionsOptions]
-  explanation: String
-}
-
-type Quiz implements Node & Document {
-  title: String!
-  slug: String!
-  passingScore: Float
-  questions: [QuizQuestions]
-  id: ID!
-  _sys: SystemInfo!
-  _values: JSON!
-}
-
-input BooleanFilter {
-  eq: Boolean
-  exists: Boolean
-}
-
-input QuizQuestionsOptionsFilter {
-  text: StringFilter
-  isCorrect: BooleanFilter
-}
-
-input QuizQuestionsFilter {
-  question: StringFilter
-  type: StringFilter
-  options: QuizQuestionsOptionsFilter
-  explanation: StringFilter
-}
-
-input QuizFilter {
-  title: StringFilter
-  slug: StringFilter
-  passingScore: NumberFilter
-  questions: QuizQuestionsFilter
-}
-
-type QuizConnectionEdges {
-  cursor: String!
-  node: Quiz
-}
-
-type QuizConnection implements Connection {
-  pageInfo: PageInfo!
-  totalCount: Float!
-  edges: [QuizConnectionEdges]
+  edges: [CourseConnectionEdges]
 }
 
 type Mutation {
@@ -233,58 +130,22 @@ type Mutation {
   deleteDocument(collection: String, relativePath: String!): DocumentNode!
   createDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
   createFolder(collection: String, relativePath: String!): DocumentNode!
-  updateModule(relativePath: String!, params: ModuleMutation!): Module!
-  createModule(relativePath: String!, params: ModuleMutation!): Module!
-  updateQuiz(relativePath: String!, params: QuizMutation!): Quiz!
-  createQuiz(relativePath: String!, params: QuizMutation!): Quiz!
+  updateCourse(relativePath: String!, params: CourseMutation!): Course!
+  createCourse(relativePath: String!, params: CourseMutation!): Course!
 }
 
 input DocumentUpdateMutation {
-  module: ModuleMutation
-  quiz: QuizMutation
+  course: CourseMutation
   relativePath: String
 }
 
 input DocumentMutation {
-  module: ModuleMutation
-  quiz: QuizMutation
+  course: CourseMutation
 }
 
-input ModuleSlidesMutation {
+input CourseMutation {
   title: String
-  layout: String
-  content: JSON
-  image: String
-  videoUrl: String
-  instructorNotes: String
-}
-
-input ModuleMutation {
-  title: String
-  moduleNumber: Float
-  slug: String
-  description: String
-  duration: String
-  slides: [ModuleSlidesMutation]
-}
-
-input QuizQuestionsOptionsMutation {
-  text: String
-  isCorrect: Boolean
-}
-
-input QuizQuestionsMutation {
-  question: String
-  type: String
-  options: [QuizQuestionsOptionsMutation]
-  explanation: String
-}
-
-input QuizMutation {
-  title: String
-  slug: String
-  passingScore: Float
-  questions: [QuizQuestionsMutation]
+  body: JSON
 }
 
 schema {
