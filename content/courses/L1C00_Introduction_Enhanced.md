@@ -1,5 +1,5 @@
 ---
-title: "L1C00 — Course Introduction & Orientation"
+title: L1C00 — Course Introduction & Orientation
 ---
 
 # L1C00 — Course Introduction & Orientation
@@ -9,7 +9,7 @@ title: "L1C00 — Course Introduction & Orientation"
 > **TP 15530 Mapping:** General orientation; sets context for all eight knowledge domains
 > **Prerequisites:** Students should have already passed the Advanced Operations exam (or be enrolled to do so)
 
----
+***
 
 <div class="instructor-note-box">
 <div class="instructor-note-header">
@@ -22,14 +22,15 @@ This module is the foundation for the entire Level 1 Complex ground school. It a
 **Teaching approach:** This module should feel like a conversation, not a lecture. Many students arrive with significant Advanced operations experience and may assume L1C is "just BVLOS." Use this module to respectfully challenge that assumption — BVLOS fundamentally changes the risk profile of every flight, and the regulations, training, and operational procedures reflect that shift.
 
 **Common student misconceptions to address early:**
-- "I already fly BVLOS under an SFOC, so this is just paperwork." → L1C creates a *standardized* pathway that replaces case-by-case SFOC approvals for defined low-risk BVLOS operations. The knowledge requirements are broader and deeper than most SFOC-holders expect.
-- "This is just for big commercial operators." → L1C applies to anyone conducting BVLOS with small or medium RPA in uncontrolled airspace, including independent operators, surveyors, agricultural users, and pipeline inspectors.
-- "I'll just memorize the rules and pass the exam." → The TC exam tests application and analysis, not just recall. More importantly, BVLOS operations leave no room for pilots who don't deeply understand their environment.
+
+* "I already fly BVLOS under an SFOC, so this is just paperwork." → L1C creates a *standardized* pathway that replaces case-by-case SFOC approvals for defined low-risk BVLOS operations. The knowledge requirements are broader and deeper than most SFOC-holders expect.
+* "This is just for big commercial operators." → L1C applies to anyone conducting BVLOS with small or medium RPA in uncontrolled airspace, including independent operators, surveyors, agricultural users, and pipeline inspectors.
+* "I'll just memorize the rules and pass the exam." → The TC exam tests application and analysis, not just recall. More importantly, BVLOS operations leave no room for pilots who don't deeply understand their environment.
 
 </div>
 </div>
 
----
+***
 
 ## SECTION 1: Welcome to Level 1 Complex Operations
 
@@ -40,18 +41,20 @@ You are training to become one of Canada's first generation of regulation-certif
 With an L1C certificate, you will be authorized to conduct routine BVLOS operations in defined conditions without needing individual TC approval for each mission. This is the single most significant expansion of RPAS privileges since Canada created Part IX of the Canadian Aviation Regulations in 2019.
 
 **What L1C unlocks:**
-- Beyond Visual Line of Sight (BVLOS) flights with small RPA (250 g – 25 kg) and medium RPA (25 kg – 150 kg)
-- Operations in uncontrolled (Class G) airspace at or below 400 ft AGL
-- Flights more than 5 NM from aerodromes listed in the CFS or CWAS
-- Operations over unpopulated areas (with a Safety Assurance Declaration) and sparsely populated areas (small RPA with a Pre-Validated Declaration)
+
+* Beyond Visual Line of Sight (BVLOS) flights with small RPA (250 g – 25 kg) and medium RPA (25 kg – 150 kg)
+* Operations in uncontrolled (Class G) airspace at or below 400 ft AGL
+* Flights more than 5 NM from aerodromes listed in the CFS or CWAS
+* Operations over unpopulated areas (with a Safety Assurance Declaration) and sparsely populated areas (small RPA with a Pre-Validated Declaration)
 
 **What L1C does NOT authorize:**
-- BVLOS in controlled airspace (Class C, D, or E)
-- BVLOS over populated areas
-- Operations above 400 ft AGL
-- Operations within 5 NM of aerodromes
-- Carriage of dangerous goods
-- Operations with RPA over 150 kg
+
+* BVLOS in controlled airspace (Class C, D, or E)
+* BVLOS over populated areas
+* Operations above 400 ft AGL
+* Operations within 5 NM of aerodromes
+* Carriage of dangerous goods
+* Operations with RPA over 150 kg
 
 > **Key Concept — The BVLOS Paradigm Shift:** In VLOS operations, your eyes are your primary safety system. You can see traffic, terrain, weather, and your aircraft's attitude in real time. In BVLOS, *every single one of those inputs disappears or is replaced by an instrument or system.* This course is fundamentally about preparing you to make safe, informed decisions when you can no longer see your aircraft.
 
@@ -93,16 +96,16 @@ The operation must be conducted under the authority of an RPOC. This means the p
 **PLATFORM — Safety Assurance Declaration (CARs 901.95, Standard 922)**
 The RPAS itself must hold a valid manufacturer declaration appropriate for the intended L1C operation. This is not a one-size-fits-all declaration — the type of declaration required depends on the aircraft weight class and the specific operation:
 
-| Operation | Small RPA (250g–25kg) | Medium RPA (25–150kg) |
-|---|---|---|
-| BVLOS, ≥1 km from populated area | SAD 922.08(1,2) + 922.09–922.11 | SAD 922.08(3,4,5,6) + 922.09–922.11 |
-| BVLOS, <1 km from populated area OR over sparsely populated area | PVD 922.07 + 922.09–922.12 | Not permitted under L1C |
+| Operation                                                         | Small RPA (250g–25kg)           | Medium RPA (25–150kg)               |
+| ----------------------------------------------------------------- | ------------------------------- | ----------------------------------- |
+| BVLOS, ≥1 km from populated area                                  | SAD 922.08(1,2) + 922.09–922.11 | SAD 922.08(3,4,5,6) + 922.09–922.11 |
+| BVLOS, \<1 km from populated area OR over sparsely populated area | PVD 922.07 + 922.09–922.12      | Not permitted under L1C             |
 
 *SAD = Safety Assurance Declaration; PVD = Pre-Validated Declaration*
 
 > **Key Concept — All Three Must Align:** You cannot fly BVLOS with a valid pilot certificate on an undeclared aircraft. You cannot fly BVLOS with a declared aircraft but no RPOC. You cannot operate under an RPOC without a qualified pilot. If any one of the three P's is missing, the operation is not legal under Division VI.
 
----
+***
 
 ## SECTION 2: Your Certification Pathway
 
@@ -133,13 +136,15 @@ Submit your application through the Drone Management Portal. The certificate cos
 The TC exam is administered directly by Transport Canada through the Drone Management Portal — your training provider does not administer or have access to exam questions. This protects exam integrity and ensures all candidates are assessed against the same standard.
 
 **Exam format:**
-- 50 multiple-choice questions
-- 90-minute time limit
-- 80% pass mark (40/50)
-- Administered online via the Drone Management Portal
-- Available in English or French (no translation assistance permitted)
+
+* 50 multiple-choice questions
+* 90-minute time limit
+* 80% pass mark (40/50)
+* Administered online via the Drone Management Portal
+* Available in English or French (no translation assistance permitted)
 
 **Exam content areas (mapped to TP 15530):**
+
 1. Air Law, Air Traffic Rules and Procedures
 2. RPA Airframes, Power Plants, Propulsion, and Systems
 3. Human Factors
@@ -147,13 +152,14 @@ The TC exam is administered directly by Transport Canada through the Drone Manag
 5. Navigation
 6. Flight Operations
 7. Theory of Flight
-8. Radiotelephony
+8. Radiotelephony (ROC-A is also highly recommended)
 
 **Important details:**
-- If you fail, you may rewrite after 24 hours
-- Your results letter will identify *general subject areas* where you answered incorrectly, but will NOT reveal specific questions
-- You are advised to have pencil and paper available during the exam for calculations and diagrams
-- Copying, sharing, or receiving help during the exam is prohibited under CARs 901.58, 901.67, and 901.95
+
+* If you fail, you may rewrite after 24 hours
+* Your results letter will identify *general subject areas* where you answered incorrectly, but will NOT reveal specific questions
+* You are advised to have pencil and paper available during the exam for calculations and diagrams
+* Copying, sharing, or receiving help during the exam is prohibited under CARs 901.58, 901.67, and 901.95
 
 > **Instructor Note:** Emphasize that the exam tests *application*, not just memorization. Students should expect questions like "Given these conditions, can this L1C operation proceed?" rather than simple definition recall. Each module in this course includes practice questions at the level of difficulty they should expect.
 
@@ -161,14 +167,14 @@ The TC exam is administered directly by Transport Canada through the Drone Manag
 
 After obtaining your L1C certificate, you must maintain currency by meeting recency requirements within every 24-month period (CARs 901.91). You can satisfy recency through any one of:
 
-- Attending a safety seminar endorsed by Transport Canada
-- Completing an RPAS recurrent training program covering human factors, environmental factors, route planning, operations near aerodromes, and applicable regulations
-- Completing TC's endorsed self-paced study program (available on the TC drone safety website)
-- Writing and passing any RPAS pilot exam (Basic, Advanced, or L1C) — but note that *failing* an exam attempted for recency purposes will NOT meet the requirement
+* Attending a safety seminar endorsed by Transport Canada
+* Completing an RPAS recurrent training program covering human factors, environmental factors, route planning, operations near aerodromes, and applicable regulations
+* Completing TC's endorsed self-paced study program (available on the TC drone safety website)
+* Writing and passing any RPAS pilot exam (Basic, Advanced, or L1C) — but note that *failing* an exam attempted for recency purposes will NOT meet the requirement
 
 > **Discussion Prompt #2:** *"Recency requirements exist because knowledge degrades over time, regulations change, and complacency develops. Why do you think TC requires ongoing education rather than just logging flight hours? How does this compare to manned aviation recency?"*
 
----
+***
 
 ## SECTION 3: Course Structure & What You Will Learn
 
@@ -176,52 +182,51 @@ After obtaining your L1C certificate, you must maintain currency by meeting rece
 
 This ground school is organized into eight knowledge modules that mirror the structure of TP 15530, plus this introduction and a flight review preparation module:
 
-| Module | Title | TP 15530 Section | Key Focus |
-|---|---|---|---|
-| L1C00 | Introduction & Orientation | — | Course overview, certification pathway, context |
-| L1C01 | Air Law | Section 1 (APK) | CARs Part IX, airspace, regulations vs. standards |
-| L1C02 | Systems | Section 2 (KNO) | Airframes, C2 links, DAA, GNSS, redundancies |
-| L1C03 | Human Factors | Section 3 (SAW/KNO/LTW/WLM/PSB) | BVLOS-specific human factors, CRM, ADM |
-| L1C04 | Meteorology | Section 4 (APK/KNO) | Weather impacts on BVLOS, altimetry, turbulence |
-| L1C05 | Navigation | Section 5 (APK/KNO/SAW/PSD) | Charts, flight planning, critical point calculations |
-| L1C06 | Flight Operations | Section 6 (WLM/SAW/KNO/LTW) | Risk management, ConOps, site surveys |
-| L1C07 | Theory of Flight | Section 7 (KNO/FPM) | Aerodynamics, stability, performance |
-| L1C08 | Radiotelephony | Section 8 (APK/KNO/PSD/COM) | VHF procedures, crew communication |
-| L1C09 | Flight Review Preparation | — | Practical assessment expectations and preparation |
+| Module | Title                      | TP 15530 Section                | Key Focus                                            |
+| ------ | -------------------------- | ------------------------------- | ---------------------------------------------------- |
+| L1C00  | Introduction & Orientation | —                               | Course overview, certification pathway, context      |
+| L1C01  | Air Law                    | Section 1 (APK)                 | CARs Part IX, airspace, regulations vs. standards    |
+| L1C02  | Systems                    | Section 2 (KNO)                 | Airframes, C2 links, DAA, GNSS, redundancies         |
+| L1C03  | Human Factors              | Section 3 (SAW/KNO/LTW/WLM/PSB) | BVLOS-specific human factors, CRM, ADM               |
+| L1C04  | Meteorology                | Section 4 (APK/KNO)             | Weather impacts on BVLOS, altimetry, turbulence      |
+| L1C05  | Navigation                 | Section 5 (APK/KNO/SAW/PSD)     | Charts, flight planning, critical point calculations |
+| L1C06  | Flight Operations          | Section 6 (WLM/SAW/KNO/LTW)     | Risk management, ConOps, site surveys                |
+| L1C07  | Theory of Flight           | Section 7 (KNO/FPM)             | Aerodynamics, stability, performance                 |
+| L1C08  | Radiotelephony             | Section 8 (APK/KNO/PSD/COM)     | VHF procedures, crew communication                   |
+| L1C09  | Flight Review Preparation  | —                               | Practical assessment expectations and preparation    |
 
 ### 3.2 How This Course is Designed
 
 This course uses a **competency-based training** approach aligned with ICAO standards. That means we are not just teaching you facts to pass an exam — we are developing nine pilot competencies that Transport Canada has mapped throughout TP 15530:
 
-- **APK** — Application of Procedures and compliance with regulations
-- **COM** — Communication
-- **FPA/FPM** — Flight Path Management (Auto and Manual RPA Control)
-- **KNO** — Knowledge
-- **LTW** — Leadership and Teamwork
-- **PSD** — Problem Solving and Decision Making
-- **SAW** — Situational Awareness
-- **WLM** — Workload Management
-- **PSB** — Professional Standards and Behaviours (applies to Human Factors)
+* **APK** — Application of Procedures and compliance with regulations
+* **COM** — Communication
+* **FPA/FPM** — Flight Path Management (Auto and Manual RPA Control)
+* **KNO** — Knowledge
+* **LTW** — Leadership and Teamwork
+* **PSD** — Problem Solving and Decision Making
+* **SAW** — Situational Awareness
+* **WLM** — Workload Management
+* **PSB** — Professional Standards and Behaviours (applies to Human Factors)
 
 Each module includes:
-- **Learning objectives** tied to specific TP 15530 requirements
-- **Expanded content** that goes beyond the minimum to build genuine understanding
-- **Real-world scenarios** that put concepts in operational context
-- **Knowledge check questions** at multiple difficulty levels (recall, application, analysis)
-- **Discussion prompts** that develop your decision-making skills
-- **Regulatory cross-references** so you know exactly where each requirement lives in the CARs
+
+* **Learning objectives** tied to specific TP 15530 requirements
+* **Expanded content** that goes beyond the minimum to build genuine understanding
+* **Real-world scenarios** that put concepts in operational context
+* **Knowledge check questions** at multiple difficulty levels (recall, application, analysis)
+* **Discussion prompts** that develop your decision-making skills
+* **Regulatory cross-references** so you know exactly where each requirement lives in the CARs
 
 ### 3.3 The SORA Connection
 
 You will hear us reference **SORA** — the Specific Operations Risk Assessment — throughout this course. SORA is the JARUS risk framework that Transport Canada used to define the boundaries of Level 1 Complex operations. Understanding SORA is NOT required for your L1C exam, but we teach it because:
 
 1. **It explains the "why" behind every L1C restriction.** Why 400 ft? Why uncontrolled airspace only? Why 5 NM from aerodromes? Why unpopulated and sparsely populated areas? Every one of these boundaries was derived from SORA's ground risk and air risk analysis.
-
 2. **It prepares you for Level 2, Level 3, and SFOC operations.** As the regulatory framework expands, SORA will become increasingly central to your work. Any SFOC application for operations beyond L1C already effectively requires a SORA-based Operational Risk Assessment per AC 903-001.
-
 3. **It makes you a better decision-maker.** Pilots who understand the risk model behind their regulations don't just follow rules — they understand *consequences*. When you're 8 km from your GCS in a BVLOS mission and conditions are changing, understanding risk at a fundamental level is what keeps people safe.
 
----
+***
 
 ## SECTION 4: Key Definitions & Terminology
 
@@ -263,7 +268,7 @@ These definitions are operationally critical for L1C because they determine whic
 
 **Ground Risk Buffer:** The area on the ground that could be affected if the RPA departs its operational volume. This is determined by the aircraft's kinetic energy, glide performance, and any containment systems (parachutes, geofencing).
 
----
+***
 
 ## SECTION 5: Understanding the Regulatory Hierarchy
 
@@ -288,7 +293,7 @@ These provide guidance, knowledge requirements, and operational information. TP 
 
 > **Discussion Prompt #3:** *"If an Advisory Circular says one thing and a regulation says another, which do you follow? What if your company's RPAS Operations Manual has a stricter procedure than the regulation requires — can you argue the regulation allows you to do less?"*
 
----
+***
 
 ## SECTION 6: The RPAS Operator Certificate (RPOC)
 
@@ -303,39 +308,44 @@ The RPOC is issued to the *operator* (which can be an individual or an organizat
 To hold an RPOC, you need:
 
 **An RPAS Operations Manual (CARs 901.217)** that documents:
-- Roles and responsibilities of all crew members
-- Roles and responsibilities of all operational and maintenance personnel
-- Safety program/processes (or full SMS depending on operation complexity)
-- Normal and emergency procedures
-- Training program and personnel qualifications
-- Maintenance program
+
+* Roles and responsibilities of all crew members
+* Roles and responsibilities of all operational and maintenance personnel
+* Safety program/processes (or full SMS depending on operation complexity)
+* Normal and emergency procedures
+* Training program and personnel qualifications
+* Maintenance program
 
 **A Maintenance Control Manual (CARs 901.221)** that covers:
-- RPA servicing and ground handling procedures
-- Maintenance schedules and procedures
-- Record-keeping requirements
+
+* RPA servicing and ground handling procedures
+* Maintenance schedules and procedures
+* Record-keeping requirements
 
 **A Training Program (CARs 901.219)** that includes:
-- Indoctrination training for new personnel
-- Initial and annual training for all operational roles
-- Competency evaluations to assess training effectiveness
-- Documentation within the RPAS Operations Manual
+
+* Indoctrination training for new personnel
+* Initial and annual training for all operational roles
+* Competency evaluations to assess training effectiveness
+* Documentation within the RPAS Operations Manual
 
 ### 6.3 Quality Assurance
 
 RPOC holders must maintain quality assurance processes as described in AC QUA-001. The six QAP elements are: management control, QAP documentation, qualified auditors, an audit program, a finding and corrective action process, and record keeping. TC conducts risk-based compliance inspections on RPOC holders.
 
----
+***
 
 ## SECTION 7: Knowledge Check — Introduction Module
 
 ### Recall-Level Questions
 
 **Q1.** What is the minimum age to hold a Level 1 Complex pilot certificate?
-- A) 14 years
-- B) 16 years
-- C) 18 years
-- D) 21 years
+
+* A) 14 years
+* B) 16 years
+* C) 18 years
+* D) 21 years
+
 <details>
 <summary>Click to reveal answer</summary>
 
@@ -344,10 +354,12 @@ RPOC holders must maintain quality assurance processes as described in AC QUA-00
 </details>
 
 **Q2.** How many questions are on the TC Level 1 Complex Operations exam, and what is the pass mark?
-- A) 35 questions, 65%
-- B) 50 questions, 80%
-- C) 100 questions, 70%
-- D) 50 questions, 75%
+
+* A) 35 questions, 65%
+* B) 50 questions, 80%
+* C) 100 questions, 70%
+* D) 50 questions, 75%
+
 <details>
 <summary>Click to reveal answer</summary>
 
@@ -356,10 +368,12 @@ RPOC holders must maintain quality assurance processes as described in AC QUA-00
 </details>
 
 **Q3.** What are the "3Ps" of Level 1 Complex operations?
-- A) Plan, Prepare, Proceed
-- B) Pilot, Procedure, Platform
-- C) Permit, Person, Performance
-- D) Pre-flight, Performance, Post-flight
+
+* A) Plan, Prepare, Proceed
+* B) Pilot, Procedure, Platform
+* C) Permit, Person, Performance
+* D) Pre-flight, Performance, Post-flight
+
 <details>
 <summary>Click to reveal answer</summary>
 
@@ -370,10 +384,12 @@ RPOC holders must maintain quality assurance processes as described in AC QUA-00
 ### Application-Level Questions
 
 **Q4.** A 17-year-old employee of an RPOC-holding company has passed the Advanced exam and completed the 20-hour ground school. Can they conduct L1C BVLOS operations?
-- A) Yes, they have met all training requirements
-- B) Yes, but only after passing the L1C exam
-- C) No, but they may participate under the direct supervision of an L1C certificate holder
-- D) No, persons under 18 may not participate in L1C operations under any circumstances
+
+* A) Yes, they have met all training requirements
+* B) Yes, but only after passing the L1C exam
+* C) No, but they may participate under the direct supervision of an L1C certificate holder
+* D) No, persons under 18 may not participate in L1C operations under any circumstances
+
 <details>
 <summary>Click to reveal answer</summary>
 
@@ -382,10 +398,12 @@ RPOC holders must maintain quality assurance processes as described in AC QUA-00
 </details>
 
 **Q5.** A pilot holds a valid L1C certificate and wants to fly a small drone BVLOS over a sparsely populated area (12 persons/km²) in uncontrolled airspace at 350 ft AGL, 7 NM from the nearest aerodrome. The drone holds a Safety Assurance Declaration under 922.08(1). Is this operation permitted under L1C?
-- A) Yes, all conditions are met
-- B) No, the drone needs a Pre-Validated Declaration (PVD) for sparsely populated areas
-- C) No, the altitude is too high
-- D) No, sparsely populated areas are not permitted under L1C
+
+* A) Yes, all conditions are met
+* B) No, the drone needs a Pre-Validated Declaration (PVD) for sparsely populated areas
+* C) No, the altitude is too high
+* D) No, sparsely populated areas are not permitted under L1C
+
 <details>
 <summary>Click to reveal answer</summary>
 
@@ -404,84 +422,92 @@ RPOC holders must maintain quality assurance processes as described in AC QUA-00
 
 </details>
 
----
+***
 
 ## SECTION 8: Discussion Prompts for Instructor-Led Session
 
 ### Opening Discussion (5-10 minutes)
+
 *"Before we dive into the technical content over the coming hours, I want each of you to think about this: What is the single biggest thing that changes when you can no longer see your aircraft? We're not talking about regulations or paperwork — what fundamentally changes about your ability to keep people safe?"*
 
 **Instructor facilitation notes:** Guide students toward recognizing that VLOS provides simultaneous, real-time awareness of the aircraft's relationship to traffic, terrain, structures, people, and weather. In BVLOS, each of those inputs must be replaced by a technological or procedural substitute — and each substitute introduces its own failure modes, latencies, and limitations. This sets up the entire course.
 
 ### Regulatory Framework Discussion (5-10 minutes)
+
 *"Looking at the five tiers of Canadian RPAS operations, why do you think Transport Canada chose to define Level 1 Complex as the specific combination of uncontrolled airspace, below 400 ft, away from aerodromes, and over low-density population areas? Why these boundaries and not others?"*
 
 **Instructor facilitation notes:** Lead students to understand that these boundaries represent the lowest-risk BVLOS environment: minimal air traffic (uncontrolled, below 400 ft, away from aerodromes), minimal ground risk (low population density), and manageable terrain (below 400 ft AGL). TC used SORA to identify the conditions where BVLOS risk could be managed through pilot training, operational procedures, and aircraft capability declarations rather than individual operation-by-operation TC review.
 
 ### Career Planning Discussion (5 minutes)
+
 *"What types of BVLOS operations do you plan to conduct with your L1C certificate? Let's map those against the L1C boundaries and see if your planned operations fit, or whether you'll also need SFOC capability."*
 
 **Instructor facilitation notes:** Use the table from the original Aeria materials (Advanced vs. L1C vs. SFOC) to ground this discussion:
 
-| Operation Type | Advanced | L1C | SFOC |
-|---|---|---|---|
-| RPAS / mRPAS VLOS training | ✓ | | |
-| Bridge/roof/tower/flare stack inspection | ✓ | | |
-| Recreational BVLOS/FPV | ✓ | | |
-| Large area survey flights | | ✓ | |
-| BVLOS RPAS with onboard DAA | | ✓ | |
-| Foreign pilots | | ✓ | |
-| BVLOS without VO DAA | | ✓ | ✓ |
-| Carriage of dangerous goods | | | ✓ |
+| Operation Type                           | Advanced | L1C | SFOC |
+| ---------------------------------------- | -------- | --- | ---- |
+| RPAS / mRPAS VLOS training               | ✓        |     |      |
+| Bridge/roof/tower/flare stack inspection | ✓        |     |      |
+| Recreational BVLOS/FPV                   | ✓        |     |      |
+| Large area survey flights                |          | ✓   |      |
+| BVLOS RPAS with onboard DAA              |          | ✓   |      |
+| Foreign pilots                           |          | ✓   |      |
+| BVLOS without VO DAA                     |          | ✓   | ✓    |
+| Carriage of dangerous goods              |          |     | ✓    |
 
----
+***
 
 ## SECTION 9: Key References for This Course
 
 Students should be familiar with the following documents, which form the regulatory and operational foundation for everything covered in this course:
 
 **Primary Regulatory Documents:**
-- Aeronautics Act (R.S.C., 1985, c. A-2)
-- Canadian Aviation Regulations, Part IX (SOR/96-433, as amended by SOR/2025-70)
-- Standard 921 — Remotely Piloted Aircraft (pilot certification and training)
-- Standard 922 — RPAS Safety Assurance Declarations
-- Standard 923 — Vision-Based Detect and Avoid
+
+* Aeronautics Act (R.S.C., 1985, c. A-2)
+* Canadian Aviation Regulations, Part IX (SOR/96-433, as amended by SOR/2025-70)
+* Standard 921 — Remotely Piloted Aircraft (pilot certification and training)
+* Standard 922 — RPAS Safety Assurance Declarations
+* Standard 923 — Vision-Based Detect and Avoid
 
 **Advisory Circulars:**
-- AC 903-001 Issue 02 — Operational Risk Assessment (SORA-based)
-- AC 901-002 — RPOC Manual Development
-- AC 922-001 Issue 02 — Technical Means of Compliance for Standard 922
-- AC QUA-001 — Quality Assurance Programs
+
+* AC 903-001 Issue 02 — Operational Risk Assessment (SORA-based)
+* AC 901-002 — RPOC Manual Development
+* AC 922-001 Issue 02 — Technical Means of Compliance for Standard 922
+* AC QUA-001 — Quality Assurance Programs
 
 **Transport Publications:**
-- TP 15530 — Knowledge Requirements for L1C Operations (your exam blueprint)
-- TP 14371 (AIM) — Aeronautical Information Manual, RPA Chapter
-- TP 15263 — Knowledge Requirements for Basic/Advanced Operations
-- TP 15395 — Flight Reviewer's Guide for RPAS Pilots
-- TP 12863 / TP 12864 — Human Factors for Aviation
+
+* TP 15530 — Knowledge Requirements for L1C Operations (your exam blueprint)
+* TP 14371 (AIM) — Aeronautical Information Manual, RPA Chapter
+* TP 15263 — Knowledge Requirements for Basic/Advanced Operations
+* TP 15395 — Flight Reviewer's Guide for RPAS Pilots
+* TP 12863 / TP 12864 — Human Factors for Aviation
 
 **Operational Tools:**
-- NAV Drone (NAV CANADA) — Flight planning and controlled airspace authorization
-- Drone Management Portal (Transport Canada) — Certification, exams, registration
-- Canada Flight Supplement (CFS) — Aerodrome information
-- VNC / VTA Charts — Visual navigation and terminal area charts
 
----
+* NAV Drone (NAV CANADA) — Flight planning and controlled airspace authorization
+* Drone Management Portal (Transport Canada) — Certification, exams, registration
+* Canada Flight Supplement (CFS) — Aerodrome information
+* VNC / VTA Charts — Visual navigation and terminal area charts
+
+***
 
 ## SECTION 10: Course Administration
 
 ### 10.1 Student Portal
 
 The **Student Portal** is your central hub for all course resources and materials:
-- Contains all course resources and links
-- Serves as confirmation that you have taken the training
-- Ensures your course certificate is issued after the completion of exams and assignments
-- Access the portal regularly throughout the course for updates and supplementary materials
+
+* Contains all course resources and links
+* Serves as confirmation that you have taken the training
+* Ensures your course certificate is issued after the completion of exams and assignments
+* Access the portal regularly throughout the course for updates and supplementary materials
 
 ### 10.2 Instructor Introduction
 
-**Instructor: [Name]**
-[Insert background, credentials, etc. here.]
+**Instructor: \[Name]**
+\[Insert background, credentials, etc. here.]
 
 > **Note:** This is not a review of the Advanced RPAS course. While L1C builds on Advanced knowledge, this course covers BVLOS-specific content at a much deeper level than the Advanced curriculum.
 
@@ -490,67 +516,71 @@ The **Student Portal** is your central hub for all course resources and material
 The course schedule can be found in your **L1C Training Student Handout**. See the table of links in your L1C Training Student Handout for quick access to all resources. See your L1C Training Student Handout for more information about course logistics and requirements.
 
 **Course Assessment Structure:**
-- **Two quizzes** — Formative assessments after Day 1 and Day 2 modules
-- **TC L1C Exam** — 50 questions, 80% pass mark, administered through the Drone Management Portal
+
+* **Two quizzes** — Formative assessments after Day 1 and Day 2 modules
+* **TC L1C Exam** — 50 questions, 80% pass mark, administered through the Drone Management Portal
 
 ### 10.4 Mandatory Links & Software
 
 The following tools must be installed and accessible throughout the course — you will need to access them frequently:
 
-| Tool | Platform | Purpose |
-|------|----------|---------|
-| **FltPlan.com** | Web | Flight planning, VNC/VTA chart viewing, CFS data |
-| **FltPlan Go** | iOS/Android | Mobile flight planning and chart access |
-| **NAV Drone** | Web | RPAS flight planning, airspace authorization, NOTAM checking |
-| **Google Earth Pro** | Desktop | Terrain visualization, DEM analysis, operational volume mapping |
+| Tool                 | Platform    | Purpose                                                         |
+| -------------------- | ----------- | --------------------------------------------------------------- |
+| **FltPlan.com**      | Web         | Flight planning, VNC/VTA chart viewing, CFS data                |
+| **FltPlan Go**       | iOS/Android | Mobile flight planning and chart access                         |
+| **NAV Drone**        | Web         | RPAS flight planning, airspace authorization, NOTAM checking    |
+| **Google Earth Pro** | Desktop     | Terrain visualization, DEM analysis, operational volume mapping |
 
 > **Instructor Demonstration:** The instructor will demonstrate how to install FltPlan Go, how to use Binders, and how to view common frequency areas during the Navigation module.
 
 ### 10.5 Course Logistics
-- This ground school meets the 20-hour minimum required by CARs 901.90(c) and Standard 921
-- All instruction is delivered by qualified instructors under the authority of our Chief Ground Instructor who holds an L1C pilot certificate with a Flight Reviewer rating
-- Attendance at all modules is required for course completion
-- You will receive a certificate of completion after finishing all ground school modules
+
+* This ground school meets the 20-hour minimum required by CARs 901.90(c) and Standard 921
+* All instruction is delivered by qualified instructors under the authority of our Chief Ground Instructor who holds an L1C pilot certificate with a Flight Reviewer rating
+* Attendance at all modules is required for course completion
+* You will receive a certificate of completion after finishing all ground school modules
 
 ### 10.2 After Ground School
-- You will write the TC L1C exam through the Drone Management Portal (not administered by us)
-- You will need to complete an in-person flight review within 12 months of your certificate application
-- You will need to apply for (or already hold) an RPOC before conducting L1C operations
-- Your RPAS must hold the appropriate Safety Assurance Declaration for your intended operations
+
+* You will write the TC L1C exam through the Drone Management Portal (not administered by us)
+* You will need to complete an in-person flight review within 12 months of your certificate application
+* You will need to apply for (or already hold) an RPOC before conducting L1C operations
+* Your RPAS must hold the appropriate Safety Assurance Declaration for your intended operations
 
 ### 10.3 How to Get the Most From This Course
-- **Ask questions.** BVLOS operations have nuances that only surface through discussion.
-- **Think operationally.** For every regulation or concept, ask yourself: "How does this affect my actual flights?"
-- **Connect the modules.** Air law, systems, human factors, meteorology, navigation, operations, theory of flight, and radio are taught separately but they all happen simultaneously on every BVLOS mission.
-- **Practice with the knowledge checks.** The TC exam tests application, not just recall. If you can answer the analysis-level questions in each module, the exam will be straightforward.
 
----
+* **Ask questions.** BVLOS operations have nuances that only surface through discussion.
+* **Think operationally.** For every regulation or concept, ask yourself: "How does this affect my actual flights?"
+* **Connect the modules.** Air law, systems, human factors, meteorology, navigation, operations, theory of flight, and radio are taught separately but they all happen simultaneously on every BVLOS mission.
+* **Practice with the knowledge checks.** The TC exam tests application, not just recall. If you can answer the analysis-level questions in each module, the exam will be straightforward.
 
----
+***
+
+***
 
 ## REFERENCES
 
-- Aeronautics Act (R.S.C., 1985, c. A-2)
-- Canadian Aviation Regulations (SOR/96-433), Part IX — Remotely Piloted Aircraft Systems
-- Standard 921 — Remotely Piloted Aircraft
-- Standard 922 — RPAS Safety Assurance Declarations
-- Standard 923 — Vision-Based Detect and Avoid
-- Advisory Circular AC 903-001 Issue 02 — Operational Risk Assessment
-- Advisory Circular AC 901-002 — RPOC Manual Development
-- Advisory Circular AC 922-001 Issue 02 — Technical Means of Compliance for Standard 922
-- Advisory Circular AC QUA-001 — Quality Assurance Programs
-- Transport Publication TP 15530 — Knowledge Requirements for L1C Operations
-- Transport Publication TP 14371 (AIM) — Aeronautical Information Manual, RPA Chapter
-- Transport Publication TP 15263 — Knowledge Requirements for Basic/Advanced Operations
-- Transport Publication TP 15395 — Flight Reviewer's Guide for RPAS Pilots
-- Transport Publication TP 12863 / TP 12864 — Human Factors for Aviation
-- NAV Drone — https://www.navcanada.ca/en/flight-planning/drone-flight-planning.aspx
-- Drone Management Portal — https://drone-drone.tc.gc.ca/
-- Canada Flight Supplement (CFS) — NAV CANADA
-- FltPlan Go — https://www.fltplan.com/
-- Google Earth Pro — https://www.google.com/earth/versions/#earth-pro
+* Aeronautics Act (R.S.C., 1985, c. A-2)
+* Canadian Aviation Regulations (SOR/96-433), Part IX — Remotely Piloted Aircraft Systems
+* Standard 921 — Remotely Piloted Aircraft
+* Standard 922 — RPAS Safety Assurance Declarations
+* Standard 923 — Vision-Based Detect and Avoid
+* Advisory Circular AC 903-001 Issue 02 — Operational Risk Assessment
+* Advisory Circular AC 901-002 — RPOC Manual Development
+* Advisory Circular AC 922-001 Issue 02 — Technical Means of Compliance for Standard 922
+* Advisory Circular AC QUA-001 — Quality Assurance Programs
+* Transport Publication TP 15530 — Knowledge Requirements for L1C Operations
+* Transport Publication TP 14371 (AIM) — Aeronautical Information Manual, RPA Chapter
+* Transport Publication TP 15263 — Knowledge Requirements for Basic/Advanced Operations
+* Transport Publication TP 15395 — Flight Reviewer's Guide for RPAS Pilots
+* Transport Publication TP 12863 / TP 12864 — Human Factors for Aviation
+* NAV Drone — [https://www.navcanada.ca/en/flight-planning/drone-flight-planning.aspx](https://www.navcanada.ca/en/flight-planning/drone-flight-planning.aspx)
+* Drone Management Portal — [https://drone-drone.tc.gc.ca/](https://drone-drone.tc.gc.ca/)
+* Canada Flight Supplement (CFS) — NAV CANADA
+* FltPlan Go — [https://www.fltplan.com/](https://www.fltplan.com/)
+* Google Earth Pro — [https://www.google.com/earth/versions/#earth-pro](https://www.google.com/earth/versions/#earth-pro)
 
----
+***
 
 *End of Module L1C00 — Introduction & Orientation*
 *Next Module: L1C01 — Air Law, Air Traffic Rules and Procedures*
