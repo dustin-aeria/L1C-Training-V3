@@ -12,11 +12,8 @@ title: "L1C06 — Flight Operations"
 
 ---
 
-<div class="instructor-note-box">
-<div class="instructor-note-header">
-<span class="instructor-emoji">📝</span> Instructor Notes — Module Purpose
-</div>
-<div class="instructor-content">
+<details>
+<summary>Instructor Notes — Module Purpose</summary>
 
 This is the **integration module** — everything learned in Air Law, Systems, Human Factors, Meteorology, Navigation, and Theory of Flight converges here into practical mission planning and execution. Students should leave this module able to **plan a complete BVLOS operation from start to finish**, not just understand the concepts.
 
@@ -29,8 +26,7 @@ This is the **integration module** — everything learned in Air Law, Systems, H
 
 **Critical teaching point:** The Squamish Valley scenario is deliberately complex — it involves transitions between L1C and Advanced operations, multiple population density zones, aerodrome proximity considerations, and real-world obstacles. This complexity is intentional. Students who can plan THIS operation can plan ANY L1C operation.
 
-</div>
-</div>
+</details>
 
 ---
 

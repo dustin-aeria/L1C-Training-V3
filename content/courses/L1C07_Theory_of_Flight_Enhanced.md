@@ -12,18 +12,14 @@ title: "L1C07 — Theory of Flight"
 
 ---
 
-<div class="instructor-note-box">
-<div class="instructor-note-header">
-<span class="instructor-emoji">📝</span> Instructor Notes — Module Purpose
-</div>
-<div class="instructor-content">
+<details>
+<summary>Instructor Notes — Module Purpose</summary>
 
 Theory of Flight provides the aerodynamic foundation for understanding why aircraft fly, how they are controlled, and what happens when conditions change. For L1C pilots, this knowledge is essential because in BVLOS, you cannot see your aircraft's behaviour — you must interpret aerodynamic effects through telemetry. If you don't understand that increasing load factor in a turn requires more power, you won't understand why battery consumption spikes during survey pattern turns. If you don't understand how CG affects stability, you won't recognize why a payload change makes the aircraft handle differently.
 
 **Teaching approach:** Use physical demonstrations where possible — spinning propellers at different pitches, showing how tilting a multirotor directs thrust. The quadcopter dynamics section benefits enormously from having an actual quadcopter to demonstrate hover, yaw, pitch, and roll with the motors visible. Reference the Johnson-Laird "Basic Physics of Drones" YouTube video for students who want visual reinforcement.
 
-</div>
-</div>
+</details>
 
 ---
 

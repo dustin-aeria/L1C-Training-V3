@@ -12,11 +12,8 @@ title: "L1C01 — Air Law, Air Traffic Rules and Procedures"
 
 ---
 
-<div class="instructor-note-box">
-<div class="instructor-note-header">
-<span class="instructor-emoji">📝</span> Instructor Notes — Module Purpose
-</div>
-<div class="instructor-content">
+<details>
+<summary>Instructor Notes — Module Purpose</summary>
 
 This is the densest module in the entire L1C ground school. Air Law establishes the legal framework within which every other module operates — systems, human factors, meteorology, navigation, flight operations, theory of flight, and radiotelephony all exist within the boundaries defined here. Students who do not thoroughly understand Air Law will struggle to apply knowledge from other modules in operationally meaningful ways.
 
@@ -29,8 +26,7 @@ This is the densest module in the entire L1C ground school. Air Law establishes 
 
 **Recommended session split:** Cover Sections 1–5 (Aeronautics Act through Part VI Airspace) in Session 1. Cover Sections 6–12 (Part IX Divisions through SFOC) in Session 2.
 
-</div>
-</div>
+</details>
 
 ---
 

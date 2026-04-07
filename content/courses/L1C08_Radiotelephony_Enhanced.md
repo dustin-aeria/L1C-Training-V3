@@ -12,18 +12,14 @@ title: "L1C08 — Radiotelephony"
 
 ---
 
-<div class="instructor-note-box">
-<div class="instructor-note-header">
-<span class="instructor-emoji">📝</span> Instructor Notes — Module Purpose
-</div>
-<div class="instructor-content">
+<details>
+<summary>Instructor Notes — Module Purpose</summary>
 
 Radiotelephony covers two distinct communication domains for L1C pilots: aeronautical VHF radio communication with other airspace users and ATC, and inter-crew communication between the pilot, visual observers, and other crew members. Both are critical for BVLOS safety. VHF monitoring provides awareness of manned traffic in the vicinity — an important supplement to DAA. Inter-crew communication IS the DAA system when using Standard 923 vision-based detect and avoid. If inter-crew communication fails, the DAA system has failed.
 
 **Teaching approach:** Practice radio calls during this module. Have students compose and deliver blind broadcasts, routine ATC calls, and emergency (flyaway) broadcasts out loud. Radio communication is a skill that requires practice, not just knowledge. Play examples of real aviation radio traffic so students learn to parse radio communications at speed.
 
-</div>
-</div>
+</details>
 
 ---
 

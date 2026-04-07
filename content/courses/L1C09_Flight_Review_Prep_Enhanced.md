@@ -12,11 +12,8 @@ title: "L1C09 — Flight Review Preparation"
 
 ---
 
-<div class="instructor-note-box">
-<div class="instructor-note-header">
-<span class="instructor-emoji">📝</span> Instructor Notes — Module Purpose
-</div>
-<div class="instructor-content">
+<details>
+<summary>Instructor Notes — Module Purpose</summary>
 
 This is the **demonstration module** — students have learned how to plan a BVLOS operation in L1C06; now they learn how to PRESENT and DEMONSTRATE that competence to a flight reviewer. The focus shifts from "how to do it" to "how to show that you can do it."
 
@@ -26,8 +23,7 @@ This is the **demonstration module** — students have learned how to plan a BVL
 
 **The key shift:** L1C06 taught HOW to plan. This module teaches HOW TO SHOW that you can plan. The flight reviewer is assessing not just the plan, but your understanding of WHY you planned it that way.
 
-</div>
-</div>
+</details>
 
 ---
 

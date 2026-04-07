@@ -12,11 +12,8 @@ title: "L1C05 — Navigation"
 
 ---
 
-<div class="instructor-note-box">
-<div class="instructor-note-header">
-<span class="instructor-emoji">📝</span> Instructor Notes — Module Purpose
-</div>
-<div class="instructor-content">
+<details>
+<summary>Instructor Notes — Module Purpose</summary>
 
 Navigation for BVLOS is fundamentally different from VLOS. In VLOS, you navigate by looking at the aircraft and the environment around it. In BVLOS, navigation is entirely instrument-based — your aircraft's position, altitude, and track exist only as numbers and lines on a screen, derived from GPS, barometric sensors, and flight planning software. This module teaches students to plan BVLOS flights using aeronautical charts, digital terrain data, population density tools, and energy calculations — and to understand the errors and limitations inherent in each of these tools.
 
@@ -24,8 +21,7 @@ Navigation for BVLOS is fundamentally different from VLOS. In VLOS, you navigate
 
 **Critical BVLOS insight:** In VLOS, you can see obstacles. In BVLOS, obstacles exist only if they are on your chart, in your DEM, or in a NOTAM. An unmarked wire, an uncharted tower, a new wind turbine that went up since the DEM was captured — these are invisible to your flight planning and to your aircraft. The thoroughness of your navigation preparation directly determines whether your aircraft hits something.
 
-</div>
-</div>
+</details>
 
 ---
 

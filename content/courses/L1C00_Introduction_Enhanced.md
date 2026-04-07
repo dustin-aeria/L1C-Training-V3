@@ -11,11 +11,8 @@ title: L1C00 — Course Introduction & Orientation
 
 ***
 
-<div class="instructor-note-box">
-<div class="instructor-note-header">
-<span class="instructor-emoji">📝</span> Instructor Notes — Module Purpose
-</div>
-<div class="instructor-content">
+<details>
+<summary>Instructor Notes — Module Purpose</summary>
 
 This module is the foundation for the entire Level 1 Complex ground school. It accomplishes three critical goals: (1) it establishes **why** Level 1 Complex operations exist within the Canadian regulatory framework and what they unlock, (2) it gives students a clear roadmap of the certification pathway so they know exactly what is expected of them, and (3) it sets the tone for a professional, safety-oriented learning environment.
 
@@ -27,8 +24,7 @@ This module is the foundation for the entire Level 1 Complex ground school. It a
 * "This is just for big commercial operators." → L1C applies to anyone conducting BVLOS with small or medium RPA in uncontrolled airspace, including independent operators, surveyors, agricultural users, and pipeline inspectors.
 * "I'll just memorize the rules and pass the exam." → The TC exam tests application and analysis, not just recall. More importantly, BVLOS operations leave no room for pilots who don't deeply understand their environment.
 
-</div>
-</div>
+</details>
 
 ***
 
