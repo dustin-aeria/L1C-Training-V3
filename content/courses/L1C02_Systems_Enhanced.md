@@ -114,17 +114,23 @@ Standard 922.09 requires that the probability of any combination of failures res
 RPAS are classified within the broader ICAO aircraft classification framework. For L1C purposes, the key distinctions are by configuration and propulsion:
 
 **By Configuration:**
-- **Fixed-wing** — Generate lift through forward motion over aerodynamic surfaces (wings). Efficient for long-range, high-speed operations. Cannot hover. Require launch and recovery systems (runway, catapult, hand launch, VTOL hybrid).
-- **Rotary-wing (multirotor)** — Generate lift through powered rotors. Can hover, take off and land vertically. Less efficient for long-range flight. Most common consumer/commercial RPAS configuration (quadcopter, hexacopter, octocopter).
-- **Hybrid VTOL** — Combine fixed-wing efficiency with vertical take-off and landing capability. Transition between hover and forward flight modes. Increasingly common for BVLOS survey operations.
+
+| Configuration | Description |
+|---------------|-------------|
+| **Fixed-wing** | Generate lift through forward motion over aerodynamic surfaces (wings). Efficient for long-range, high-speed operations. Cannot hover. Require launch and recovery systems (runway, catapult, hand launch, VTOL hybrid). |
+| **Rotary-wing (multirotor)** | Generate lift through powered rotors. Can hover, take off and land vertically. Less efficient for long-range flight. Most common consumer/commercial RPAS configuration (quadcopter, hexacopter, octocopter). |
+| **Hybrid VTOL** | Combine fixed-wing efficiency with vertical take-off and landing capability. Transition between hover and forward flight modes. Increasingly common for BVLOS survey operations. |
 
 ![Quadcopter Component Layout](/images/systems/Quadcopter components.png)
 
 **By Propulsion:**
-- Electric motor (most common for small RPAS)
-- Internal combustion engine (common for larger/longer-endurance platforms)
-- Hydrogen fuel cell
-- Hybrid electric/combustion
+
+| Propulsion Type | Description |
+|-----------------|-------------|
+| **Electric motor** | Most common for small RPAS |
+| **Internal combustion engine** | Common for larger/longer-endurance platforms |
+| **Hydrogen fuel cell** | Emerging technology for extended endurance |
+| **Hybrid electric/combustion** | Combines benefits of both power sources |
 
 ### 1.2 Applicable Operational Principles
 
