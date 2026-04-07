@@ -377,9 +377,12 @@ Different antenna types have different characteristics that affect C2 link perfo
 | **Phased array** | Electronically steerable — can track a moving aircraft without physical movement. Increasingly used in advanced GCS systems. |
 
 **Key antenna concepts:**
-- **EIRP (Effective Isotropic Radiated Power)** — The effective power output considering antenna gain. Regulated by ISED.
-- **Radiation pattern** — The three-dimensional shape of the antenna's signal output. Determines where the signal is strongest and where there are "null" zones.
-- **Polarization** — Vertical, horizontal, circular left, or circular right. The transmitting and receiving antennas must use matching polarization for optimal signal reception. Mismatched polarization can cause signal loss of 20 dB or more.
+
+| Concept | Description |
+|---------|-------------|
+| **EIRP (Effective Isotropic Radiated Power)** | The effective power output considering antenna gain. Regulated by ISED. |
+| **Radiation pattern** | The three-dimensional shape of the antenna's signal output. Determines where the signal is strongest and where there are "null" zones. |
+| **Polarization** | Vertical, horizontal, circular left, or circular right. The transmitting and receiving antennas must use matching polarization for optimal signal reception. Mismatched polarization can cause signal loss of 20 dB or more. |
 
 ### 9.3 Signal Propagation Effects
 
