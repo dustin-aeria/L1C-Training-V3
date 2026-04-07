@@ -222,10 +222,13 @@ Density Altitude = Pressure Altitude + (120 × ISA Deviation)
 ```
 
 **Step-by-step:**
-1. **Pressure Altitude** = Site Elevation + [(29.92 − Altimeter Setting) × 1,000]
-2. **ISA Temperature** = 15°C − (2°C × Elevation in thousands of feet)
-3. **ISA Deviation** = Actual OAT − ISA Temperature
-4. **Density Altitude** = Pressure Altitude + (120 × ISA Deviation)
+
+| Step | What to Calculate | Formula |
+|------|-------------------|---------|
+| 1 | Pressure Altitude | Site Elevation + [(29.92 − Altimeter Setting) × 1,000] |
+| 2 | ISA Temperature | 15°C − (2°C × Elevation in thousands of feet) |
+| 3 | ISA Deviation | Actual OAT − ISA Temperature |
+| 4 | Density Altitude | Pressure Altitude + (120 × ISA Deviation) |
 
 **Or skip the math:** Use the **Density Altitude Calculator** in the Reference section of this platform. Enter your values, get instant results with performance impact assessment.
 
@@ -267,10 +270,14 @@ Check your RPAS manual for density altitude or operating ceiling specifications:
 #### Worked Example — Canmore Pipeline Survey
 
 **Scenario:** Planning an afternoon survey near Canmore, AB
-- **Site elevation:** 4,500 ft (1,372 m)
-- **Forecast high temperature:** 28°C
-- **METAR altimeter:** 29.85 inHg
-- **Aircraft:** Rated 45 min endurance, 2.7 kg payload capacity at sea level
+
+| Parameter | Value |
+|-----------|-------|
+| Site elevation | 4,500 ft (1,372 m) |
+| Forecast high temperature | 28°C |
+| METAR altimeter | 29.85 inHg |
+| Aircraft rated endurance | 45 min (at sea level) |
+| Aircraft rated payload | 2.7 kg (at sea level) |
 
 **Calculation:**
 
