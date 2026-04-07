@@ -87,7 +87,7 @@ The atmosphere behaves as a fluid with properties that directly affect flight:
 
 ### 1.3 The Standard Atmosphere (ISA)
 
-![Standard atmosphere reference values](/images/meteorology/standard atmospherioc refrence 1.jpg)
+![Standard atmosphere reference values](/images/meteorology/standard-atmospherioc-refrence-1.jpg)
 
 The International Standard Atmosphere defines baseline conditions against which actual conditions are compared:
 
@@ -102,7 +102,7 @@ Any deviation from ISA conditions affects altimeter readings, air density, and R
 
 ### 1.4 Atmospheric Density
 
-![Atmospheric density and its relationship to altitude, temperature, and humidity](/images/meteorology/Atmospheric Density.png)
+![Atmospheric density and its relationship to altitude, temperature, and humidity](/images/meteorology/Atmospheric-Density.png)
 
 Air density directly affects RPAS performance because propellers and rotors generate lift by accelerating air — denser air produces more lift per revolution:
 
@@ -129,9 +129,9 @@ Air density directly affects RPAS performance because propellers and rotors gene
 
 ### 2.2 Pressure Systems and Weather
 
-![Atmospheric pressure and how it varies with altitude](/images/meteorology/Atmospheric Pressure.png)
+![Atmospheric pressure and how it varies with altitude](/images/meteorology/Atmospheric-Pressure.png)
 
-![High pressure vs low pressure systems and associated weather](/images/meteorology/high vs low presure systems.jpg)
+![High pressure vs low pressure systems and associated weather](/images/meteorology/high-vs-low-presure-systems.jpg)
 
 Atmospheric pressure determines the weather that is likely to occur:
 
@@ -144,9 +144,9 @@ Atmospheric pressure determines the weather that is likely to occur:
 
 ### 2.3 Effects of Temperature on Pressure
 
-![Effects of temperature on atmospheric pressure and altimeter readings](/images/meteorology/Effects of Temperature.png)
+![Effects of temperature on atmospheric pressure and altimeter readings](/images/meteorology/Effects-of-Temperature.png)
 
-![Temperature effects on pressure altitude](/images/meteorology/temperature effect.jpg)
+![Temperature effects on pressure altitude](/images/meteorology/temperature-effect.jpg)
 
 Temperature affects the rate of change in pressure with height:
 
@@ -165,7 +165,7 @@ This has a direct implication: **"High to low, watch out below."** When flying f
 
 ### 3.1 Altimeter Setting Region vs. Standard Pressure Region
 
-![RPAS altitude reference compared to manned aircraft](/images/meteorology/RPAS altituyde reference.jpg)
+![RPAS altitude reference compared to manned aircraft](/images/meteorology/RPAS-altituyde-reference.jpg)
 
 This distinction is important for understanding how manned aircraft and RPAS reference altitude differently:
 
@@ -329,7 +329,7 @@ Check your RPAS manual for density altitude or operating ceiling specifications:
 
 ### 4.1 Moisture, Clouds, and Fog
 
-![Cloud formation process - rising air cooling to dew point](/images/meteorology/Cloud Formation Process.gif)
+![Cloud formation process - rising air cooling to dew point](/images/meteorology/Cloud-Formation-Process.gif)
 
 **Lapse rate and cloud formation:** As air rises, it cools. The rate of cooling depends on whether the air is saturated (wet adiabatic lapse rate: approximately 1.5°C/1,000 ft) or unsaturated (dry adiabatic lapse rate: approximately 3°C/1,000 ft). When rising air cools to the dew point temperature, water vapour condenses and clouds form. The height of the cloud base can be estimated from the temperature-dew point spread at the surface.
 
@@ -374,7 +374,7 @@ Icing is one of the most dangerous weather hazards for RPAS, and RPAS are MORE v
 
 ### 5.1 Air Mass Characteristics
 
-![Stable vs unstable air masses and their characteristics](/images/meteorology/stable vs unstable air.jpg)
+![Stable vs unstable air masses and their characteristics](/images/meteorology/stable-vs-unstable-air.jpg)
 
 | Air Mass Type | Vertical Motion | Turbulence | Visibility | Precipitation | Cloud Type |
 |---------------|-----------------|------------|------------|---------------|------------|
@@ -389,7 +389,7 @@ Stable conditions near the surface can trap pollutants and reduce visibility —
 
 ### 6.1 Types of Turbulence
 
-![Types of turbulence affecting RPAS operations](/images/meteorology/types of turbluence.png)
+![Types of turbulence affecting RPAS operations](/images/meteorology/types-of-turbluence.png)
 
 | Turbulence Type | Cause | Characteristics |
 |-----------------|-------|-----------------|
@@ -410,7 +410,7 @@ Stable conditions near the surface can trap pollutants and reduce visibility —
 
 ## SECTION 7: Wind
 
-![Wind speed vs ground speed relationship](/images/meteorology/wind speed ground speed.gif)
+![Wind speed vs ground speed relationship](/images/meteorology/wind-speed-ground-speed.gif)
 
 ### 7.1 Wind Fundamentals
 
@@ -435,7 +435,7 @@ Wind is caused by differences in air pressure from uneven heating of Earth's sur
 
 ### 7.3 Urban Airflow
 
-![Urban airflow patterns showing wind effects around buildings](/images/meteorology/urban airflow.jpg)
+![Urban airflow patterns showing wind effects around buildings](/images/meteorology/urban-airflow.jpg)
 
 Transport Canada's Urban Airflow guidance identifies five key wind effects near buildings (SDSTV): Speed, Direction, Shear, Turbulence, and Vorticity. Wind speed at 400 ft AGL (122 m) is approximately 1.5 times the weather station's reported hourly wind speed at 10 m. At building rooftop level, vortex shedding creates side-to-side oscillation that can destabilize multirotor aircraft. The venturi effect between buildings can double the local wind speed. While L1C operations are typically in rural/unpopulated areas, understanding urban airflow is valuable for pre-positioning, transit, and Advanced operations.
 
@@ -451,9 +451,9 @@ Fronts are the #1 cause of rapid weather deterioration that catches pilots off-g
 
 ### 8.2 Cold Front vs Warm Front — Operational Comparison
 
-![Cold front movement and weather](/images/meteorology/cold front.gif)
+![Cold front movement and weather](/images/meteorology/cold-front.gif)
 
-![Warm front movement and weather](/images/meteorology/warm front.gif)
+![Warm front movement and weather](/images/meteorology/warm-front.gif)
 
 | Characteristic | Cold Front | Warm Front |
 |----------------|------------|------------|
@@ -564,7 +564,7 @@ YOUR RPAS — instant ice accumulation on all surfaces
 
 ## SECTION 9: Thunderstorms
 
-![Lifting processes that lead to thunderstorm development](/images/meteorology/Lifting Process Thuinderstorms.png)
+![Lifting processes that lead to thunderstorm development](/images/meteorology/Lifting-Process-Thuinderstorms.png)
 
 ### 9.1 Thunderstorm Hazards for RPAS
 
@@ -580,7 +580,7 @@ Thunderstorms are one of the few absolute no-go conditions for RPAS operations. 
 
 ### 9.2 Surface Characteristics of an Approaching Thunderstorm
 
-![Thunderstorm development stages and characteristics](/images/meteorology/Thunderstorm Development.png)
+![Thunderstorm development stages and characteristics](/images/meteorology/Thunderstorm-Development.png)
 
 Advance indicators include increasing cumulus cloud development, darkening sky to the west or northwest, increasing wind speed and gustiness, falling barometric pressure, distant lightning or thunder, and potentially a gust front or roll cloud ahead of the storm.
 
@@ -603,7 +603,7 @@ The only safe strategy is avoidance. Do not launch if thunderstorms are forecast
 
 ### 10.2 Aviation Weather Reports
 
-![METAR vs TAF - observation vs forecast](/images/meteorology/metar-vs-taf - one is observation other is forecastr.webp)
+![METAR vs TAF - observation vs forecast](/images/meteorology/metar-vs-taf---one-is-observation-other-is-forecastr.webp)
 
 **METAR (Aviation Routine Weather Report):** Current observed conditions at an aerodrome. Includes wind, visibility, weather phenomena, clouds, temperature, dew point, and pressure. L1C pilots must be able to decipher METAR reports.
 
