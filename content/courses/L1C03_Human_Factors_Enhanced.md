@@ -81,8 +81,6 @@ Civil aviation authorities and airlines train crew members in human factors beca
 
 ### 2.1 Visual Scanning for Visual Observers
 
-![Visual Observer Detect and Avoid](/images/human-factors/VO DAA.png)
-
 ![12.5 Second Detection Timeline](/images/human-factors/12.5%20second%20detection%20timeline.png)
 
 A Transportation Safety Board (TSB) of Canada study shows it typically takes a pilot **12.5 seconds** to identify and react to conflicting aircraft, progressing through four stages:
