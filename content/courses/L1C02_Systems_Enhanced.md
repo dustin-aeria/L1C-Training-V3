@@ -291,6 +291,8 @@ The C2 link is the data connection between the GCS and the RPA. It carries comma
 | Best for | Most L1C BVLOS operations | Urban/suburban areas with good coverage | Remote areas beyond cell coverage |
 | Key limitation | Requires radio LOS; terrain masking | Coverage gaps in rural/remote areas | High latency makes real-time control challenging |
 
+![Latency Visualization](/images/systems/latency.gif)
+
 > **Key Concept — Latency Matters for BVLOS:** In direct manual control, latency determines how quickly the aircraft responds to your inputs. At 50 ms latency (typical direct radio), the delay is imperceptible. At 500 ms (satellite), there is a noticeable lag that makes precise manual control difficult. This is why most satellite-linked BVLOS operations use autonomous flight modes with human monitoring rather than direct stick control.
 
 ### 8.3 Data Transmission Properties
@@ -322,6 +324,8 @@ Video transmission requires **100–1000 times** more bandwidth than C2 commands
 
 ### 8.4 Unlicensed Frequency Characteristics
 
+![Frequency Characteristics Comparison](/images/systems/frequency%20characteristics%20visual.webp)
+
 | Characteristic | 900 MHz | 2.4 GHz | 5.8 GHz |
 |---|---|---|---|
 | Frequency Range | ~902–928 MHz (ISM band, North America) | ~2,400–2,483.5 MHz (worldwide ISM) | ~5,725–5,875 MHz (ISM band) |
@@ -351,11 +355,15 @@ Lost-link behaviour must be consistent and programmable. The operator must know 
 
 ### 9.1 The Inverse-Square Law
 
+![Inverse-Square Law](/images/systems/inverse%20square.webp)
+
 The intensity of radiated energy (including radio signals) is inversely proportional to the square of the distance from the source. This means that if you double the distance, the signal strength drops to one-quarter. If you triple the distance, it drops to one-ninth.
 
 **Practical implication:** Signal strength decreases rapidly with distance. A C2 link that works perfectly at 1 km may be marginal at 3 km and unusable at 5 km, even with perfect line of sight. Your maximum theoretical range is NOT your reliable operational range — always plan with significant margin.
 
 ### 9.2 Antennas
+
+![Types of Antennas](/images/systems/types%20of%20antennas.jpg)
 
 Different antenna types have different characteristics that affect C2 link performance:
 
@@ -375,6 +383,8 @@ Different antenna types have different characteristics that affect C2 link perfo
 
 ### 9.3 Signal Propagation Effects
 
+![Fresnel Zone](/images/systems/fresnel%20zone%201.png)
+
 | Propagation Effect | Description |
 |--------------------|-------------|
 | **Attenuation** | The gradual weakening of a signal as it travels through the atmosphere. Affected by distance (inverse-square law), atmospheric conditions (rain, fog), and obstacles. |
@@ -384,6 +394,8 @@ Different antenna types have different characteristics that affect C2 link perfo
 | **Doppler spread** | The frequency shift caused by relative motion between the transmitter and receiver. In high-speed fixed-wing BVLOS operations, Doppler effects can affect some C2 link protocols. Generally not significant at typical multirotor speeds. |
 
 ### 9.4 Electromagnetic Interference (EMI)
+
+![EMI Sources](/images/systems/EMI%20Sources.png)
 
 EMI is defined by the ITU as the effect of unwanted energy upon reception in a radiocommunication system, manifested by performance degradation, misinterpretation, or loss of information.
 
@@ -418,6 +430,10 @@ The majority of consumer and commercial RPAS use **Lithium Polymer (LiPo)** or *
 
 ### 10.2 Variables Affecting Battery Performance
 
+![Battery Discharge Curve](/images/systems/battery%20discharge%20curve.webp)
+
+![Cold Weather Battery Performance](/images/systems/cold%20weather%20batery%20performance.png)
+
 | Variable | Effect on Performance |
 |----------|----------------------|
 | **Age** | Battery capacity degrades with each charge/discharge cycle. A battery rated at 10,000 mAh when new may only deliver 7,000 mAh after 200 cycles. |
@@ -427,9 +443,13 @@ The majority of consumer and commercial RPAS use **Lithium Polymer (LiPo)** or *
 
 ### 10.3 Assessing Battery Voltages
 
+![Cell Voltage Monitoring](/images/systems/Cell%20Voltage%20Monitoring.png)
+
 Monitoring individual cell voltages (not just total pack voltage) is critical for detecting developing battery problems. A cell that is significantly lower than others indicates degradation or a developing failure. Most telemetry systems display per-cell voltage during pre-flight checks.
 
 ### 10.4 Battery Hazards
+
+![LiPo Battery Fire](/images/systems/lipo-battery-fire.jpg)
 
 **Transport risks:** Lithium-ion batteries are classified as dangerous goods for transport. They can experience thermal runaway (a self-accelerating exothermic reaction) if damaged, short-circuited, or exposed to excessive heat. Transport regulations (IATA DGR, TDG Regulations) specify packaging, labelling, and quantity limits.
 
@@ -452,6 +472,8 @@ RPAS autopilots operate on a spectrum from full manual control to full autonomy:
 | **Human-off-the-Loop** | The system operates fully autonomously without pilot monitoring. NOT currently permitted under L1C regulations — the pilot must maintain awareness and the ability to intervene. |
 
 ### 11.2 Autopilot Components and Control Loops
+
+![Control Loop Architecture](/images/systems/control%20loop%20architecture.png)
 
 A typical autopilot consists of:
 
@@ -493,6 +515,8 @@ The magnetometer measures the Earth's magnetic field and provides a heading refe
 - Prone to interference from motors, batteries, power lines, metal structures, and geological formations
 - Requires calibration before use, and recalibration when operating in a new location or after system changes
 - The difference between magnetic north and true north is called **magnetic declination** (or variation), which varies by location
+
+![Magnetic Declination Explained](/images/systems/declination_explanation.webp)
 
 **Magnetic field anomalies:** Some geographic locations have unusual magnetic field variations caused by iron ore deposits, volcanic rock, or other geological features. Urban environments with steel structures, rebar, and underground utilities can also distort the magnetic field. In BVLOS, the aircraft may fly through areas with different magnetic characteristics than the launch site — this can cause compass errors that affect navigation.
 
@@ -545,9 +569,17 @@ GNSS uses satellites for autonomous geo-positioning. Modern RPAS receivers can u
 
 Using multiple constellations provides more visible satellites, better geometric diversity, and improved accuracy and availability — especially important in challenging environments like valleys, urban areas, or high-latitude operations in northern Canada.
 
+![Multiple Constellation GNSS](/images/systems/multiple%20constellation%20gns.png)
+
 ![GNSS Satellite Navigation System](/images/systems/GNSS motiongrpahic.gif)
 
 ### 13.2 GPS Error Sources
+
+![DOP Visualization](/images/systems/DOP%20visualization.jpg)
+
+![Terrain Masking](/images/systems/terain%20masking.webp)
+
+![GPS Multipath Illustration](/images/systems/GPS%20mulitpath%20illustration.png)
 
 **Satellite errors:** Gravitational effects of the Sun and Moon can pull satellites from their planned orbital paths. Solar radiation creates EMI that affects signals before they reach the atmosphere. These errors are generally small and correctable using differential GPS (DGPS) or RTK systems.
 
@@ -588,6 +620,8 @@ However, Standard 922.10 is **optional** — manufacturers may choose not to dec
 | **Combination systems** | Multiple sensor types fused for comprehensive detection |
 
 ### 14.2 Transponder Types
+
+> **Video Resource:** [Transponder Types Evolution](https://youtu.be/eHVjbUmnQSg?si=Hw1FoBy4L1mO-z0V) — Excellent overview of Mode A, C, S, and ADS-B transponder technology.
 
 Understanding transponder types helps you evaluate what traffic your DAA system can and cannot detect:
 
