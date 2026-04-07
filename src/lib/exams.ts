@@ -141,10 +141,19 @@ function determineQuestionType(content: string, options: QuestionOption[]): Ques
 function parseCorrectAnswers(answerBlock: string): string[] {
   const answers: string[] = [];
 
-  // Match patterns like "Answer: a)", "Answer: a) and b)", "Answer: a), b), c)"
-  const answerLine = answerBlock.split("\n")[0];
+  // Find the line containing "**Answer:" - skip empty lines
+  const lines = answerBlock.split("\n");
+  let answerLine = "";
+  for (const line of lines) {
+    if (line.includes("**Answer:") || line.includes("**Answer ")) {
+      answerLine = line;
+      break;
+    }
+  }
 
-  // Extract letter patterns
+  if (!answerLine) return answers;
+
+  // Extract letter patterns like "a)", "b)", etc.
   const letterMatches = answerLine.match(/\b([a-z])\)/g);
   if (letterMatches) {
     for (const match of letterMatches) {
