@@ -36,20 +36,22 @@ Human Factors is arguably the most important module for BVLOS operations. In VLO
 
 After completing this module, you will be able to:
 
-1. Describe good scanning techniques for visual observers detecting conflicting aircraft
-2. Describe perspective illusion and its impact on judging distance to aircraft
-3. Describe factors that affect alertness and the negative impact of fatigue on operations
-4. Describe the effects of environmental factors on RPA operator performance
-5. List the five hazardous attitudes in aviation and their antidotes
-6. Describe the Dirty Dozen human factors preconditions
-7. Recall James Reason's Unsafe Acts Model (slips, lapses, mistakes, violations)
-8. Describe the full HFACS framework and apply it to incident analysis
-9. Describe the importance of CRM in RPAS operations
-10. Describe RPAS-specific human factors: lack of shared fate, automation complacency, and situational awareness degradation in BVLOS
-11. Explain the IM SAFE checklist and crew fitness requirements including alcohol and cannabis rules
-12. Describe the risk management process and apply the risk rating matrix
-13. Describe the safety processes required under CARs 901.218 and the four pillars of SMS
-14. Explain the benefits of SOPs, how to manage checklist interruptions, and the effects of reliance on automation
+| # | Objective |
+|---|-----------|
+| 1 | Describe good scanning techniques for visual observers detecting conflicting aircraft |
+| 2 | Describe perspective illusion and its impact on judging distance to aircraft |
+| 3 | Describe factors that affect alertness and the negative impact of fatigue on operations |
+| 4 | Describe the effects of environmental factors on RPA operator performance |
+| 5 | List the five hazardous attitudes in aviation and their antidotes |
+| 6 | Describe the Dirty Dozen human factors preconditions |
+| 7 | Recall James Reason's Unsafe Acts Model (slips, lapses, mistakes, violations) |
+| 8 | Describe the full HFACS framework and apply it to incident analysis |
+| 9 | Describe the importance of CRM in RPAS operations |
+| 10 | Describe RPAS-specific human factors: lack of shared fate, automation complacency, and situational awareness degradation in BVLOS |
+| 11 | Explain the IM SAFE checklist and crew fitness requirements including alcohol and cannabis rules |
+| 12 | Describe the risk management process and apply the risk rating matrix |
+| 13 | Describe the safety processes required under CARs 901.218 and the four pillars of SMS |
+| 14 | Explain the benefits of SOPs, how to manage checklist interruptions, and the effects of reliance on automation |
 
 ---
 
