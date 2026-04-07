@@ -12,11 +12,8 @@ title: "L1C04 — Meteorology"
 
 ---
 
-<div class="instructor-note-box">
-<div class="instructor-note-header">
-<span class="instructor-emoji">📝</span> Instructor Notes — Module Purpose
-</div>
-<div class="instructor-content">
+<details>
+<summary>Instructor Notes — Module Purpose</summary>
 
 Meteorology affects RPAS operations differently than manned aviation in several critical ways. RPAS are lighter, have less kinetic energy to penetrate wind and turbulence, rely on barometric sensors that are affected by pressure changes, and — critically for BVLOS — the pilot cannot feel the weather. A manned pilot feels turbulence through the seat, sees rain on the windscreen, and senses temperature changes. An RPAS pilot in BVLOS sees only what the telemetry reports, and flight controllers can mask turbulence effects by automatically compensating — drawing more power while hiding the problem from the pilot until battery reserves are unexpectedly depleted.
 
@@ -24,8 +21,7 @@ Meteorology affects RPAS operations differently than manned aviation in several 
 
 **Critical RPAS-specific insight to emphasize:** In manned aircraft, the pilot feels turbulence. In RPAS, the flight controller compensates for turbulence automatically — the aircraft appears to fly smoothly on the GCS display while consuming significantly more energy. The pilot may not realize they are flying in dangerous turbulence until the battery runs critically low. This is one of the most important meteorological concepts unique to RPAS.
 
-</div>
-</div>
+</details>
 
 ---
 
@@ -70,15 +66,13 @@ Water vapour is the most variable component and is the primary driver of weather
 
 The atmosphere is divided into distinct layers, each with different characteristics relevant to aviation:
 
-**Troposphere** — Surface to approximately 36,000 ft (11 km) at mid-latitudes. This is where virtually all weather occurs and where all L1C operations take place. Temperature generally decreases with altitude at approximately 2°C per 1,000 ft (the standard lapse rate). Contains approximately 75% of the atmosphere's mass.
-
-**Stratosphere** — Above the troposphere to approximately 160,000 ft (50 km). Temperature is relatively stable or increases with altitude due to ozone absorption of UV radiation. Very little weather. Not relevant to L1C operations.
-
-**Mesosphere** — Above the stratosphere. Temperature decreases. Typically where meteorites burn up. Not relevant to L1C operations.
-
-**Thermosphere** — Above the mesosphere. Temperature rises due to absorption of solar radiation. Very few air molecules. Not relevant to L1C operations.
-
-**Exosphere** — The outermost layer, transitioning to space. Not relevant to L1C operations.
+| Layer | Altitude | Characteristics | L1C Relevance |
+|-------|----------|-----------------|---------------|
+| Troposphere | Surface to ~36,000 ft (11 km) | Where virtually all weather occurs; temperature decreases ~2°C per 1,000 ft; contains ~75% of atmosphere's mass | All L1C operations occur here |
+| Stratosphere | ~36,000 to ~160,000 ft (50 km) | Temperature stable or increases due to ozone; very little weather | Not relevant |
+| Mesosphere | Above stratosphere | Temperature decreases; where meteorites burn up | Not relevant |
+| Thermosphere | Above mesosphere | Temperature rises from solar radiation; very few air molecules | Not relevant |
+| Exosphere | Outermost layer | Transitions to space | Not relevant |
 
 ### 1.2 Atmospheric Properties
 
@@ -93,10 +87,12 @@ The atmosphere behaves as a fluid with properties that directly affect flight:
 
 The International Standard Atmosphere defines baseline conditions against which actual conditions are compared:
 
-- Sea level pressure: 1013.25 hPa (29.92 inHg)
-- Sea level temperature: 15°C
-- Temperature lapse rate: 2°C per 1,000 ft (6.5°C per 1,000 m) in the troposphere
-- Sea level density: 1.225 kg/m³
+| Parameter | ISA Value |
+|-----------|-----------|
+| Sea level pressure | 1013.25 hPa (29.92 inHg) |
+| Sea level temperature | 15°C |
+| Temperature lapse rate | 2°C per 1,000 ft (6.5°C per 1,000 m) in troposphere |
+| Sea level density | 1.225 kg/m³ |
 
 Any deviation from ISA conditions affects altimeter readings, air density, and RPAS performance. The Standard Atmosphere is a model, not reality — actual conditions will always differ.
 
@@ -106,9 +102,11 @@ Any deviation from ISA conditions affects altimeter readings, air density, and R
 
 Air density directly affects RPAS performance because propellers and rotors generate lift by accelerating air — denser air produces more lift per revolution:
 
-- **Warm air is less dense** than cooler air (warm air takes up more volume)
-- **Density varies with relative humidity** — humid air is actually less dense than dry air (water vapour molecules are lighter than nitrogen and oxygen molecules)
-- **Density decreases with altitude** — air particles are most dense near the surface
+| Factor | Effect on Density | Why |
+|--------|-------------------|-----|
+| Temperature | Warm air is less dense | Warm air expands, takes up more volume |
+| Humidity | Humid air is less dense | Water vapour molecules lighter than nitrogen/oxygen |
+| Altitude | Density decreases with altitude | Air particles most dense near surface |
 
 > **Key Concept for RPAS:** On a hot, humid, high-altitude day, your RPAS will produce less lift per watt of motor power. Flight times will be shorter, maximum payload capacity will be reduced, and the aircraft may be sluggish in response to control inputs. This is density altitude in action.
 
@@ -118,13 +116,12 @@ Air density directly affects RPAS performance because propellers and rotors gene
 
 ### 2.1 Pressure Definitions
 
-**Atmospheric pressure:** The weight of the air column above a given point. Decreases with altitude.
-
-**Station pressure:** The actual atmospheric pressure at a weather observation station, uncorrected for altitude.
-
-**Sea level pressure (SLP):** Station pressure corrected to sea level equivalent. Allows comparison of pressure between stations at different elevations.
-
-**Altimeter setting:** The pressure value set on an altimeter so that it reads the correct altitude above sea level at a known reference point. In Canada, expressed in inches of mercury (inHg). The standard setting is 29.92 inHg.
+| Term | Definition |
+|------|------------|
+| Atmospheric pressure | The weight of the air column above a given point; decreases with altitude |
+| Station pressure | The actual atmospheric pressure at a weather observation station, uncorrected for altitude |
+| Sea level pressure (SLP) | Station pressure corrected to sea level equivalent; allows comparison between stations at different elevations |
+| Altimeter setting | The pressure value set on an altimeter so it reads correct altitude ASL at a known reference point; in Canada expressed in inHg; standard setting is 29.92 inHg |
 
 ### 2.2 Pressure Systems and Weather
 
@@ -132,9 +129,10 @@ Air density directly affects RPAS performance because propellers and rotors gene
 
 Atmospheric pressure determines the weather that is likely to occur:
 
-**High pressure areas** = Fair weather, clear air. In the Northern Hemisphere, air flows clockwise and outward (diverging) from high-pressure centres. Air descends in high-pressure systems, warming and drying as it sinks.
-
-**Low pressure areas** = Unsettled weather, clouds, precipitation. In the Northern Hemisphere, air flows counterclockwise and inward (converging) toward low-pressure centres, then rises. Rising air cools, and if it reaches the dew point, condensation occurs — forming clouds and potentially precipitation.
+| Pressure System | Weather | Air Flow (Northern Hemisphere) | Air Movement |
+|-----------------|---------|-------------------------------|--------------|
+| High pressure | Fair weather, clear air | Clockwise and outward (diverging) | Descends, warming and drying as it sinks |
+| Low pressure | Unsettled weather, clouds, precipitation | Counterclockwise and inward (converging) | Rises, cools, condensation forms clouds |
 
 **The mnemonic:** Air flows from high to low pressure. The steeper the pressure gradient (closer isobars on a weather map), the stronger the wind.
 
@@ -159,42 +157,34 @@ This has a direct implication: **"High to low, watch out below."** When flying f
 
 This distinction is important for understanding how manned aircraft and RPAS reference altitude differently:
 
-**Altimeter Setting Region:**
-- Aircraft operate using an altimeter setting from the closest weather station (e.g., 30.25 inHg)
-- Essential for vertical separation between aircraft
-- Corrected to provide altitude "above sea level" (ASL)
-- Used by manned aircraft in the lower atmosphere
+| Region | Altimeter Setting | Purpose | Reference |
+|--------|-------------------|---------|-----------|
+| Altimeter Setting Region | From closest weather station (e.g., 30.25 inHg) | Vertical separation in lower atmosphere | Altitude ASL |
+| Standard Pressure Region | Standard 29.92 inHg | Constant vertical separation at high altitude | Pressure altitude (flight levels) |
+| RPAS Altitude | Barometric + GPS from launch point | Operational reference | Altitude AGL from launch site |
 
-**Standard Pressure Region:**
-- Aircraft operate using a standard pressure altimeter setting (29.92 inHg) en route
-- Ensures constant vertical separation between aircraft at high altitude
-- NOT corrected to an altitude "above sea level" — readings are pressure altitudes (flight levels)
-- Used above the transition altitude (18,000 ft ASL in Southern Domestic Airspace)
-
-**What are RPAS altitudes derived from?**
-- Barometric pressure, possibly referenced to a GPS altitude
-- **Note: Not the same as altitudes indicated on manned aircraft altimeters.** Most RPAS reference altitude AGL from the launch point, using a combination of barometric and GPS data. This means the altitude displayed on your GCS is relative to where you launched, not corrected to a regional altimeter setting or sea level. If terrain elevation changes significantly along your BVLOS route, your "400 ft AGL" at the launch site may be considerably more or less than 400 ft AGL at a distant waypoint.
+**Critical Note:** RPAS altitudes are NOT the same as manned aircraft altimeter-referenced altitudes. Most RPAS reference altitude AGL from the launch point, using a combination of barometric and GPS data. This means the altitude displayed on your GCS is relative to where you launched, not corrected to a regional altimeter setting or sea level. If terrain elevation changes significantly along your BVLOS route, your "400 ft AGL" at the launch site may be considerably more or less than 400 ft AGL at a distant waypoint.
 
 ### 3.2 Density Altitude
 
-Density altitude is the altitude in the Standard Atmosphere at which the current air density would be found. Factors that increase density altitude (reduce performance):
+Density altitude is the altitude in the Standard Atmosphere at which the current air density would be found.
 
-- Higher temperature
-- Higher humidity
-- Higher altitude (lower station pressure)
-- Lower atmospheric pressure
+| Factor | Effect on Density Altitude | Effect on Performance |
+|--------|---------------------------|----------------------|
+| Higher temperature | Increases density altitude | Reduces performance |
+| Higher humidity | Increases density altitude | Reduces performance |
+| Higher elevation | Increases density altitude | Reduces performance |
+| Lower atmospheric pressure | Increases density altitude | Reduces performance |
 
 **Assessing density altitude for RPAS operations:** Before launch, assess the current density altitude and compare it to your RPAS's performance data. Manufacturers typically rate performance at or near ISA conditions. On a hot day at a high-altitude site, your actual endurance, climb rate, and payload capacity may be significantly less than published specifications.
 
 ### 3.3 Altimeter Errors
 
-Three types of altimeter errors are particularly relevant:
-
-**Pressure Source Error:** Barometric pressure varies from place to place. Corrected by altimeter settings (inches of mercury), but altimeter settings require constant updating as you move between areas of different pressure. The mnemonic "High to low — watch out below" captures this: flying from high pressure into low pressure without updating the altimeter setting results in the altimeter reading HIGH while the aircraft is actually LOWER than indicated.
-
-**Temperature Error:** The altimeter is calibrated to indicate true altitude in the International Standard Atmosphere (ISA). Any deviation from ISA causes deviations from true altitude. In colder-than-ISA conditions, the aircraft is lower than indicated.
-
-**Mountain Effect Error:** Wind funnelled around mountains causes a localized pressure decrease (Bernoulli's Principle). Mountain waves can create altimeter errors of up to 3,000 ft. While this extreme is unlikely at L1C altitudes, even smaller mountain-effect errors can be significant when operating near terrain at 400 ft AGL.
+| Error Type | Cause | Effect | Mitigation |
+|------------|-------|--------|------------|
+| Pressure Source Error | Barometric pressure varies by location | Flying high-to-low pressure: altimeter reads HIGH, aircraft is actually LOWER | Update altimeter settings; "High to low — watch out below" |
+| Temperature Error | Altimeter calibrated for ISA; actual temps differ | In cold air: aircraft is lower than indicated | Apply temperature corrections; "Hot to cold — watch out below" |
+| Mountain Effect Error | Wind funnelled around mountains causes local pressure decrease (Bernoulli) | Can create errors up to 3,000 ft in extreme cases | Account for mountain wave effects; maintain extra terrain clearance |
 
 > **Discussion Prompt #1:** *"You launch a BVLOS survey at a site that is 500 m ASL. Your survey route takes the aircraft over terrain that drops to 200 m ASL 8 km away. Your GCS shows the aircraft at 120 m (approximately 400 ft) — but that's 120 m above your launch site, not 120 m AGL at the aircraft's current position. What is the aircraft's actual altitude AGL at the far end of the route? Is it still within the 400 ft AGL limit?"*
 
@@ -228,12 +218,15 @@ Icing is one of the most dangerous weather hazards for RPAS, and RPAS are MORE v
 **How icing forms:** When the aircraft surface is at or below 0°C and encounters supercooled water droplets (liquid water existing below freezing), the droplets freeze on contact. This occurs most commonly in clouds, freezing rain, freezing drizzle, and freezing fog.
 
 **Components susceptible to icing:**
-- Propellers/rotors — Ice accumulation changes the airfoil shape, reduces efficiency, and creates imbalance. NRC research shows that small RPAS rotors can be affected by icing significantly faster than larger manned aircraft propellers.
-- Pitot tubes — Ice blocks the pressure inlet, causing erroneous airspeed readings
-- Barometric pressure ports — Ice blocks the static port, causing altitude errors
-- Camera/sensor lenses — Ice obscures the payload
-- Airframe — Ice adds weight, changes aerodynamic profile, can jam control surfaces
-- Antennas — Ice on antennas can degrade C2 link and GPS performance
+
+| Component | Icing Effect |
+|-----------|--------------|
+| Propellers/rotors | Changes airfoil shape, reduces efficiency, creates imbalance; small RPAS rotors affected faster than manned aircraft propellers |
+| Pitot tubes | Blocks pressure inlet, causing erroneous airspeed readings |
+| Barometric pressure ports | Blocks static port, causing altitude errors |
+| Camera/sensor lenses | Obscures payload |
+| Airframe | Adds weight, changes aerodynamic profile, can jam control surfaces |
+| Antennas | Degrades C2 link and GPS performance |
 
 **How fast can icing affect an RPA?** Very fast. NRC research on small UAV rotor icing shows that performance degradation can occur within minutes in moderate icing conditions. Unlike large aircraft that can accumulate ice for extended periods before performance is critically affected, small RPAS rotors have very low tolerance for ice accumulation.
 
@@ -249,9 +242,12 @@ Icing is one of the most dangerous weather hazards for RPAS, and RPAS are MORE v
 
 ### 5.1 Air Mass Characteristics
 
-**Stable air mass:** Air resists vertical motion. Characteristics include smooth air (little turbulence), poor visibility (smog, haze trapped in layers), steady precipitation if clouds form, and stratiform (layered) clouds. Stable conditions near the surface can trap pollutants and reduce visibility — important for VO operations under Standard 923.
+| Air Mass Type | Vertical Motion | Turbulence | Visibility | Precipitation | Cloud Type |
+|---------------|-----------------|------------|------------|---------------|------------|
+| Stable | Resists vertical motion | Smooth air, little turbulence | Poor (smog/haze trapped in layers) | Steady, if any | Stratiform (layered) |
+| Unstable | Moves vertically easily | Turbulent air | Good (vertical mixing disperses pollutants) | Showery | Cumuliform (puffy, vertical) |
 
-**Unstable air mass:** Air tends to move vertically with ease. Characteristics include turbulent air, good visibility (vertical mixing disperses pollutants), showery precipitation, and cumuliform (puffy, vertically-developed) clouds. Unstable conditions create the convective turbulence and updrafts/downdrafts that are particularly dangerous for small RPAS.
+Stable conditions near the surface can trap pollutants and reduce visibility — important for VO operations under Standard 923. Unstable conditions create convective turbulence and updrafts/downdrafts particularly dangerous for small RPAS.
 
 ---
 
@@ -259,17 +255,14 @@ Icing is one of the most dangerous weather hazards for RPAS, and RPAS are MORE v
 
 ### 6.1 Types of Turbulence
 
-**Convective turbulence:** Caused by uneven surface heating creating thermals (rising columns of warm air). Most common on sunny afternoons over dark surfaces (plowed fields, parking lots, rock faces). Creates localized updrafts and downdrafts that can displace a small RPA vertically.
-
-**Mechanical turbulence:** Caused by wind flowing over and around surface obstacles — buildings, trees, terrain features, ridgelines. Creates eddies and vortices on the downwind side of obstacles. The TC Urban Airflow video and NRC report describe five critical effects near buildings: Speed increase (venturi effect — wind can double between buildings), Direction changes, Shear (rapid speed gradients), Turbulence intensity (10% of free-atmosphere airflow in open areas vs. 40% in urban areas), and Vorticity (rooftop vortex shedding creating side-to-side oscillation).
-
-**Frontal turbulence:** Associated with the passage of weather fronts, especially cold fronts. The lifting of warm air over cold air (or cold air pushing under warm air) creates turbulent zones.
-
-**Orographic turbulence:** Wind flowing over mountain ridges and through valleys. Can create mountain waves, rotor turbulence, and severe downdrafts on the lee side of ridges.
-
-**Wind shear:** A sudden change in wind speed and/or direction over a short distance. Can be vertical (wind changes with altitude) or horizontal. Particularly dangerous near the ground where recovery altitude is limited.
-
-**Gusts and squalls:** Sudden, brief increases in wind speed. Gusts are typically seconds in duration; squalls can last minutes. Both can exceed the structural or flight-envelope limits of small RPAS.
+| Turbulence Type | Cause | Characteristics |
+|-----------------|-------|-----------------|
+| Convective | Uneven surface heating creating thermals | Most common on sunny afternoons over dark surfaces; creates updrafts/downdrafts displacing small RPA vertically |
+| Mechanical | Wind flowing over/around obstacles (buildings, trees, terrain) | Creates eddies and vortices on downwind side; urban areas see 40% turbulence intensity vs. 10% in open areas |
+| Frontal | Passage of weather fronts, especially cold fronts | Lifting of warm air over cold air creates turbulent zones |
+| Orographic | Wind flowing over mountain ridges and through valleys | Creates mountain waves, rotor turbulence, severe downdrafts on lee side |
+| Wind shear | Sudden change in wind speed/direction over short distance | Can be vertical or horizontal; particularly dangerous near ground |
+| Gusts and squalls | Sudden brief increases in wind speed | Gusts last seconds, squalls last minutes; can exceed RPAS structural limits |
 
 ### 6.2 The Critical RPAS-Specific Turbulence Issue
 
@@ -285,23 +278,22 @@ Icing is one of the most dangerous weather hazards for RPAS, and RPAS are MORE v
 
 Wind is caused by differences in air pressure from uneven heating of Earth's surface. The steeper the pressure gradient (closer isobars), the stronger the wind.
 
-**Pressure gradient force:** Drives air from high to low pressure. The primary wind driver.
-
-**Coriolis effect:** Deflects moving air to the right in the Northern Hemisphere. Combined with the pressure gradient force, this creates the counterclockwise flow around lows and clockwise flow around highs.
-
-**Friction:** Surface friction slows wind and changes its direction near the ground (within the friction layer, approximately the first 2,000 ft AGL). Above the friction layer, wind flows roughly parallel to isobars. Within the friction layer, wind crosses isobars at an angle toward lower pressure.
+| Force/Effect | Description | Result |
+|--------------|-------------|--------|
+| Pressure gradient force | Drives air from high to low pressure | Primary wind driver |
+| Coriolis effect | Deflects moving air to the right in Northern Hemisphere | Creates counterclockwise flow around lows, clockwise around highs |
+| Friction | Surface friction within first ~2,000 ft AGL | Slows wind and changes direction; wind crosses isobars toward lower pressure |
 
 ### 7.2 Wind Phenomena Relevant to BVLOS
 
-**Wind changes with surface heating:** As the sun heats the surface during the day, convective mixing brings faster upper-level winds down to the surface. Morning BVLOS operations often have calmer winds than afternoon operations.
-
-**Land/sea breezes:** Differential heating between land and water creates local wind patterns that cycle daily. During the day, land heats faster than water, creating an onshore sea breeze. At night, land cools faster, creating an offshore land breeze. Relevant for coastal BVLOS operations.
-
-**Anabatic winds:** Daytime upslope winds caused by solar heating of mountain slopes. Air near the heated slope is warmer and rises.
-
-**Katabatic winds:** Nighttime downslope winds caused by radiative cooling of mountain slopes. Cold, dense air flows downhill. Can be sudden and strong, especially in valleys and fjords — very relevant for BVLOS operations in British Columbia's terrain.
-
-**Wind gusts:** Caused by mechanical turbulence, convective activity, frontal passages, or terrain channelling. The gust factor (difference between sustained wind and peak gusts) is critical for RPAS — a sustained wind of 20 km/h with gusts to 40 km/h may exceed aircraft limits even though the sustained wind appears manageable.
+| Phenomenon | Cause | When/Where | BVLOS Impact |
+|------------|-------|------------|--------------|
+| Diurnal wind variation | Surface heating brings upper-level winds down | Stronger afternoon winds | Morning operations often calmer |
+| Sea breeze | Land heats faster than water during day | Coastal areas, daytime | Onshore wind develops |
+| Land breeze | Land cools faster than water at night | Coastal areas, nighttime | Offshore wind develops |
+| Anabatic wind | Solar heating of mountain slopes | Daytime, mountain slopes | Upslope wind; air rises |
+| Katabatic wind | Radiative cooling of mountain slopes | Nighttime, valleys/fjords | Downslope wind; can be sudden and strong |
+| Wind gusts | Mechanical turbulence, convection, fronts, terrain channelling | Variable | Gust factor critical — 20 km/h sustained with 40 km/h gusts may exceed limits |
 
 ### 7.3 Urban Airflow
 
@@ -317,11 +309,12 @@ Transport Canada's Urban Airflow guidance identifies five key wind effects near 
 
 A front is the boundary between two different air masses. The interaction between air masses of different temperature and moisture content creates the weather changes associated with frontal passages.
 
-**Cold front:** Cold air mass advances and pushes under warmer air. The warm air is forced upward rapidly, creating a narrow band of intense weather — heavy rain, thunderstorms, gusty winds, and rapid temperature drops. Cold fronts typically move faster than warm fronts.
+| Front Type | Movement | Weather Band | Typical Weather | Speed |
+|------------|----------|--------------|-----------------|-------|
+| Cold front | Cold air pushes under warm air | Narrow, intense | Heavy rain, thunderstorms, gusty winds, rapid temperature drop | Faster |
+| Warm front | Warm air slides over cold air | Wide, gradual | Low clouds, steady rain/drizzle, gradual improvement after passage | Slower |
 
-**Warm front:** Warm air mass advances and slides over retreating cold air. Weather develops gradually over a wide area — low clouds, steady rain or drizzle, gradually improving conditions after passage.
-
-**As a front approaches:** Changes in wind direction and speed, pressure changes (falling before a cold front, falling then rising with a warm front), temperature changes, increasing cloud cover, and potentially precipitation.
+**As a front approaches:** Changes in wind direction and speed, pressure changes (falling before cold front; falling then rising with warm front), temperature changes, increasing cloud cover, and potentially precipitation.
 
 **Freezing rain zones:** The area between a warm front aloft and cold air at the surface can produce freezing rain — one of the most dangerous conditions for RPAS icing. Supercooled rain falls from warm air above into cold air below, freezing on contact with any surface at or below 0°C.
 
@@ -333,17 +326,15 @@ A front is the boundary between two different air masses. The interaction betwee
 
 ### 9.1 Thunderstorm Hazards for RPAS
 
-Thunderstorms are one of the few absolute no-go conditions for RPAS operations. They produce multiple simultaneous hazards that can individually or collectively destroy an RPAS:
+Thunderstorms are one of the few absolute no-go conditions for RPAS operations. They produce multiple simultaneous hazards:
 
-**Lightning:** Can strike the aircraft directly, destroying electronics. Can also cause sudden electrical interference with C2 links and GPS.
-
-**Severe turbulence:** Updrafts and downdrafts within and near thunderstorms can exceed 6,000 ft/min — far beyond any RPAS's ability to compensate.
-
-**Heavy precipitation and hail:** Can damage the aircraft and obscure sensors.
-
-**Wind shear and microbursts:** Sudden, severe wind changes near thunderstorms, especially during collapse phases. A microburst can produce winds exceeding 100 km/h at the surface.
-
-**Icing:** Severe icing in the cumulonimbus cloud and in associated precipitation.
+| Hazard | Effect on RPAS |
+|--------|----------------|
+| Lightning | Direct strike destroys electronics; causes interference with C2 links and GPS |
+| Severe turbulence | Updrafts/downdrafts exceed 6,000 ft/min — far beyond RPAS compensation ability |
+| Heavy precipitation and hail | Damages aircraft and obscures sensors |
+| Wind shear and microbursts | Sudden severe wind changes, especially during collapse; microbursts can exceed 100 km/h |
+| Icing | Severe icing in cumulonimbus cloud and associated precipitation |
 
 ### 9.2 Surface Characteristics of an Approaching Thunderstorm
 
@@ -361,13 +352,12 @@ The only safe strategy is avoidance. Do not launch if thunderstorms are forecast
 
 ### 10.1 Official Sources for Weather Information
 
-**NAV CANADA Aviation Weather Web Site (AWWS) / Collaborative Flight Planning Services (CFPS):** The official source for aviation weather in Canada. Provides METARs, TAFs, GFAs, PIREPs, SIGMETs, AIRMETs, and radar/satellite imagery.
-
-**NAV CANADA Flight Information Services:** For telephone weather briefings, pilots can contact NAV CANADA at **1-866-WXBRIEF (1-866-992-7433)**. While most L1C pilots will use online resources, telephone briefings remain available for comprehensive weather discussions.
-
-**Environment and Climate Change Canada (ECCC):** Provides general weather forecasts, warnings, and radar. Useful for big-picture awareness but aviation-specific products (METAR, TAF, GFA) from NAV CANADA are the authoritative source for flight planning.
-
-**Windy.com and similar services:** Useful visualization tools for wind, precipitation, and cloud forecasts at various altitudes. However, these are NOT official aviation weather sources and should not be used as the sole basis for go/no-go decisions.
+| Source | Products | Use For |
+|--------|----------|---------|
+| NAV CANADA AWWS / CFPS | METARs, TAFs, GFAs, PIREPs, SIGMETs, AIRMETs, radar/satellite | Official aviation weather source for Canada |
+| NAV CANADA Flight Information Services | Telephone briefings: 1-866-WXBRIEF (1-866-992-7433) | Comprehensive weather discussions |
+| Environment and Climate Change Canada (ECCC) | General forecasts, warnings, radar | Big-picture awareness (NOT authoritative for flight planning) |
+| Windy.com and similar | Wind, precipitation, cloud visualization at various altitudes | Visualization only — NOT official; not sole basis for go/no-go |
 
 ### 10.2 Aviation Weather Reports
 
