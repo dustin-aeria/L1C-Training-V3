@@ -378,18 +378,118 @@ Transport Canada's Urban Airflow guidance identifies five key wind effects near 
 
 ## SECTION 8: Fronts and Frontal Weather
 
-### 8.1 Air Masses and Fronts
+### 8.1 Why Fronts Matter for BVLOS Operations
 
-A front is the boundary between two different air masses. The interaction between air masses of different temperature and moisture content creates the weather changes associated with frontal passages.
+Fronts are the #1 cause of rapid weather deterioration that catches pilots off-guard. A BVLOS mission that launches in good conditions can encounter dangerous weather mid-flight if a front arrives faster than forecast. Unlike manned pilots who can see and feel weather changes, RPAS pilots must anticipate fronts using forecasts and recognize subtle telemetry changes.
 
-| Front Type | Movement | Weather Band | Typical Weather | Speed |
-|------------|----------|--------------|-----------------|-------|
-| Cold front | Cold air pushes under warm air | Narrow, intense | Heavy rain, thunderstorms, gusty winds, rapid temperature drop | Faster |
-| Warm front | Warm air slides over cold air | Wide, gradual | Low clouds, steady rain/drizzle, gradual improvement after passage | Slower |
+**The core problem:** Fronts move. Your operating area doesn't. If a front arrives during your 2-hour BVLOS survey, you may face gusty winds, precipitation, and turbulence with an aircraft 8 km away from recovery.
 
-**As a front approaches:** Changes in wind direction and speed, pressure changes (falling before cold front; falling then rising with warm front), temperature changes, increasing cloud cover, and potentially precipitation.
+### 8.2 Cold Front vs Warm Front — Operational Comparison
 
-**Freezing rain zones:** The area between a warm front aloft and cold air at the surface can produce freezing rain — one of the most dangerous conditions for RPAS icing. Supercooled rain falls from warm air above into cold air below, freezing on contact with any surface at or below 0°C.
+| Characteristic | Cold Front | Warm Front |
+|----------------|------------|------------|
+| **How it moves** | Cold air bulldozes under warm air, forcing rapid lift | Warm air gradually slides up and over cold air |
+| **Weather band width** | Narrow (50-100 km) — passes quickly | Wide (200-400 km) — takes longer to pass |
+| **Warning time** | Less warning — can arrive 2-4 hrs earlier than forecast | More warning — gradual deterioration over 6-12 hrs |
+| **Precipitation** | Heavy showers, thunderstorms, hail possible | Steady rain/drizzle, lower intensity |
+| **Wind** | Sharp wind shift (often 90°+), gusty | Gradual wind shift, less gusty |
+| **After passage** | Rapid clearing, but gusty for 1-3 hrs | Slow improvement, may stay overcast |
+| **Typical speed (Western Canada)** | 30-50 km/h | 15-25 km/h |
+| **RPAS hazard level** | HIGH — rapid onset, severe turbulence | MODERATE — low ceilings, reduced visibility, icing risk |
+
+### 8.3 Operational Timeline — Planning Around a Cold Front
+
+Use this timeline when a cold front is forecast to pass through your operating area:
+
+| Time Before Front | What You'll See | Forecast Products | Action |
+|-------------------|-----------------|-------------------|--------|
+| **24 hrs** | Nothing yet at surface | GFA shows frontal position; TAF may show TEMPO or FM groups | Review timing — can you complete before arrival? |
+| **12 hrs** | Cirrus increasing from west | GFA confirms timing; check frontal speed trend | Final scheduling decision — build in buffer |
+| **6 hrs** | Altocumulus/altostratus, pressure starting to fall | Updated TAF; check if front accelerating | Committed or scrubbed — no launching if front arrives mid-mission |
+| **3 hrs** | Cumulus building, pressure falling faster, wind picking up | METAR showing changes | If airborne: begin recovery. If not launched: hold. |
+| **1 hr** | Towering cumulus, gusty wind, possible precip on horizon | METAR deteriorating rapidly | Aircraft must be recovered and secured |
+| **During passage** | Heavy precip, gusty winds (30-50 km/h+), lightning possible, temp drops 5-15°C | METAR shows wind shift, temp drop | DO NOT FLY — ground operations, secure equipment |
+| **1-3 hrs after** | Clearing rapidly, excellent visibility, but still gusty | METAR improving, but check wind/gusts | Wait for gusts to subside below aircraft limits |
+| **3+ hrs after** | Good conditions, stable | Conditions normalized | Safe to resume if wind limits met |
+
+### 8.4 Reading Fronts in Forecast Products
+
+**On the GFA (Graphical Area Forecast):**
+- Cold fronts shown as blue lines with triangles pointing direction of movement
+- Warm fronts shown as red lines with semicircles
+- Look at the "prog" panels (6hr, 12hr) to see where front will be at mission time
+- Note the spacing between current position and forecast position — that's the speed
+
+**In the TAF:**
+- Look for **FM** (from) groups — these often indicate frontal passage
+- Example: `FM231800 32020G35KT` = "From 1800Z, wind shifting to 320° at 20 gusting 35" — classic cold front signature
+- **TEMPO** groups near a front indicate showery/gusty conditions
+
+**In the METAR (real-time confirmation):**
+- Pressure trend: falling = front approaching; rising after drop = front passed
+- Wind direction shift of 45°+ in 1-2 hours = frontal passage occurring
+- Temperature drop with wind shift = cold front confirmed
+
+### 8.5 Telemetry Indicators — Recognizing Frontal Approach In-Flight
+
+If you're airborne during BVLOS and a front approaches faster than expected, your telemetry may show:
+
+| Telemetry Change | What It Means | Action |
+|------------------|---------------|--------|
+| Barometric altitude drifting (not matching GPS altitude) | Pressure changing rapidly — front approaching | Note the drift rate; begin RTH planning |
+| Increasing power consumption at same airspeed | Wind increasing, aircraft working harder | Check remaining battery vs distance to home |
+| Heading hold requiring increasing correction | Wind direction changing, gusty conditions | Expect conditions to deteriorate further |
+| Groundspeed varying significantly on same heading | Gusty, turbulent conditions | Front is very close — recover immediately |
+| Sudden groundspeed drop (into wind) or increase (downwind) | Wind has shifted significantly | Front may be passing — do not continue outbound |
+
+### 8.6 Freezing Rain — The Hidden RPAS Killer
+
+Freezing rain occurs in a specific atmospheric setup, usually associated with warm fronts:
+
+```
+WARM AIR ALOFT (above 0°C) — rain falls as liquid
+         ↓
+COLD AIR AT SURFACE (below 0°C) — rain freezes on contact
+         ↓
+YOUR RPAS — instant ice accumulation on all surfaces
+```
+
+**Why it's devastating for RPAS:**
+- Ice accumulates faster than any other icing condition
+- Rotors can become unbalanced within 30-60 seconds
+- No time to react — performance degrades almost instantly
+- Often occurs with low ceilings, limiting visual detection
+
+**When to suspect freezing rain risk:**
+- Temperature at surface: -5°C to 0°C
+- Warm front approaching with precipitation forecast
+- TAF/METAR shows "FZRA" or "FZDZ"
+- GFA icing panel shows freezing level near or at surface
+
+**Go/No-Go:** If ANY freezing rain is forecast or reported within 50 km of your operating area, the operation is scrubbed. No exceptions.
+
+### 8.7 Regional Context — Fronts in Western Canada
+
+**Alberta/BC patterns:**
+- Cold fronts typically approach from the west/northwest
+- Pacific fronts weaken crossing the Rockies, then can regenerate over the prairies
+- Chinook situations: warm front-like conditions on the east slopes can transition rapidly
+- Front timing in mountain valleys can differ from plains by 2-4 hours — valleys can "trap" weather
+
+**Practical example:**
+> *"A cold front is forecast to pass through Edmonton at 1800Z. Your survey site is 80 km west of Edmonton in the foothills. The front will reach your site approximately 2-3 hours BEFORE Edmonton — around 1500-1600Z. If you planned based on the Edmonton TAF timing, you'd be caught mid-mission."*
+
+### 8.8 Go/No-Go Decision Framework for Frontal Weather
+
+| Question | GO | NO-GO |
+|----------|-----|-------|
+| Can I complete the entire mission before the front arrives? | Yes, with 2+ hour buffer | No, or less than 2 hr buffer |
+| Is the front speed consistent in recent forecasts? | Yes, steady or slowing | No, accelerating |
+| Is freezing rain forecast anywhere near my route? | No | Yes |
+| Do I have a reliable abort point where I can recover quickly? | Yes | No |
+| After the front passes, will conditions allow flight within my window? | Yes, with adequate wait time | No, day is lost |
+
+> **Discussion Prompt:** *"The GFA shows a cold front 200 km west of your site at 1200Z, moving east at 40 km/h. Your mission requires 3 hours total (transit, survey, recovery). It's now 0800Z. Should you launch? What's your decision timeline? What if the front accelerates to 60 km/h?"*
 
 ---
 
