@@ -12,10 +12,10 @@ title: "L1C03 — Human Factors"
 
 ---
 
-<div class="instructor-note-box">
-<div class="instructor-note-header">
-<span class="instructor-emoji">📝</span> Instructor Notes — Module Purpose
-</div>
+<details class="instructor-note-box">
+<summary class="instructor-note-header">
+<span class="instructor-emoji">📝</span> Instructor Notes — Module Purpose (Click to expand)
+</summary>
 <div class="instructor-content">
 
 Human Factors is arguably the most important module for BVLOS operations. In VLOS, the pilot's direct sensory connection to the aircraft provides a natural safety buffer — you can see, hear, and intuitively sense problems. In BVLOS, this natural buffer disappears entirely. Every piece of situational awareness must be consciously constructed from instrument data, telemetry, checklists, and crew communication. Human Factors training is what prepares pilots to maintain performance in this fundamentally different cognitive environment.
@@ -28,7 +28,7 @@ Human Factors is arguably the most important module for BVLOS operations. In VLO
 - "My drone flies itself — automation handles everything." → Automation complacency is one of the most significant RPAS-specific human factors risks. When the system is doing the flying, the pilot's attention drifts, and they may not notice degrading conditions until they become critical.
 
 </div>
-</div>
+</details>
 
 ---
 

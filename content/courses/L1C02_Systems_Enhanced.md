@@ -12,10 +12,10 @@ title: "L1C02 — RPA Airframes, Power Plants, Propulsion, and Systems"
 
 ---
 
-<div class="instructor-note-box">
-<div class="instructor-note-header">
-<span class="instructor-emoji">📝</span> Instructor Notes — Module Purpose
-</div>
+<details class="instructor-note-box">
+<summary class="instructor-note-header">
+<span class="instructor-emoji">📝</span> Instructor Notes — Module Purpose (Click to expand)
+</summary>
 <div class="instructor-content">
 
 This is the most technically detailed module in the L1C ground school. It covers the aircraft itself, the ground control station, the command and control links that connect them, the sensors that provide situational awareness, and the systems (autopilot, GNSS, DAA) that make BVLOS operations possible. The goal is NOT to make students into engineers — it is to ensure they understand their systems deeply enough to make informed operational decisions, recognize failure modes, and know the limits of their equipment.
@@ -30,7 +30,7 @@ This is the most technically detailed module in the L1C ground school. It covers
 **Recommended session split:** Cover Sections 1–10 (Wake Turbulence through Batteries) in Session 1. Cover Sections 11–17 (Autopilots through Discussion Prompts) in Session 2.
 
 </div>
-</div>
+</details>
 
 ---
 
