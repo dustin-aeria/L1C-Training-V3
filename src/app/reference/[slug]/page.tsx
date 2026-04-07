@@ -15,6 +15,7 @@ import { DeclarationsContent } from "./content/Declarations";
 import { AirspaceRulesContent } from "./content/AirspaceRules";
 import { SiteSurveyContent } from "./content/SiteSurvey";
 import { GlossaryContent } from "./content/Glossary";
+import { DensityAltitudeContent } from "./content/DensityAltitude";
 
 const topics: Record<string, {
   title: string;
@@ -70,6 +71,11 @@ const topics: Record<string, {
     title: "Glossary & Quick Lookup",
     description: "Searchable definitions for all RPAS terms and acronyms",
     component: GlossaryContent,
+  },
+  "density-altitude": {
+    title: "Density Altitude Calculator",
+    description: "Calculate density altitude and understand its impact on RPAS performance",
+    component: DensityAltitudeContent,
   },
 };
 

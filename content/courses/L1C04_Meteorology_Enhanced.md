@@ -167,7 +167,7 @@ This distinction is important for understanding how manned aircraft and RPAS ref
 
 ### 3.2 Density Altitude
 
-Density altitude is the altitude in the Standard Atmosphere at which the current air density would be found.
+Density altitude is the altitude in the Standard Atmosphere at which the current air density would be found. It represents the "performance altitude" — what altitude your RPAS "thinks" it's flying at based on air density.
 
 | Factor | Effect on Density Altitude | Effect on Performance |
 |--------|---------------------------|----------------------|
@@ -175,6 +175,79 @@ Density altitude is the altitude in the Standard Atmosphere at which the current
 | Higher humidity | Increases density altitude | Reduces performance |
 | Higher elevation | Increases density altitude | Reduces performance |
 | Lower atmospheric pressure | Increases density altitude | Reduces performance |
+
+#### Density Altitude Calculation
+
+**Quick Formula (Koch Chart approximation):**
+```
+Density Altitude = Pressure Altitude + (120 × [OAT − ISA Temp])
+```
+
+Where:
+- **Pressure Altitude** = Elevation + [(29.92 − Current Altimeter Setting) × 1,000]
+- **ISA Temp at elevation** = 15°C − (2°C × [Elevation in 1000s of feet])
+- **OAT** = Outside Air Temperature (actual)
+
+#### Reference: ISA Standard Temperatures by Elevation
+
+| Elevation (ft) | Elevation (m) | ISA Temperature | Pressure (hPa) |
+|----------------|---------------|-----------------|----------------|
+| Sea Level | 0 | 15°C (59°F) | 1013.25 |
+| 1,000 | 305 | 13°C (55°F) | 977 |
+| 2,000 | 610 | 11°C (52°F) | 942 |
+| 3,000 | 914 | 9°C (48°F) | 908 |
+| 4,000 | 1,219 | 7°C (45°F) | 875 |
+| 5,000 | 1,524 | 5°C (41°F) | 843 |
+| 6,000 | 1,829 | 3°C (37°F) | 812 |
+| 8,000 | 2,438 | −1°C (30°F) | 753 |
+| 10,000 | 3,048 | −5°C (23°F) | 697 |
+
+#### Density Altitude Quick Reference — Common Scenarios
+
+| Scenario | Elevation | Temp | ISA Deviation | Approx. Density Alt | Performance Impact |
+|----------|-----------|------|---------------|---------------------|-------------------|
+| Cool morning, low elevation | 500 ft | 10°C | −4°C below ISA | ~20 ft | Excellent — better than rated |
+| Standard day, sea level | 0 ft | 15°C | ISA | 0 ft | As rated |
+| Hot summer afternoon | 1,000 ft | 35°C | +20°C above ISA | ~3,400 ft | Significantly reduced |
+| High altitude site | 4,000 ft | 25°C | +18°C above ISA | ~6,200 ft | Severely reduced |
+| Extreme (AB summer, mountains) | 5,000 ft | 32°C | +27°C above ISA | ~8,200 ft | Near aircraft limits |
+| Cold winter operation | 2,000 ft | −15°C | −26°C below ISA | ~−1,100 ft | Excellent lift, but battery issues |
+
+#### Worked Example for Students
+
+**Scenario:** Planning a survey at a site near Canmore, AB
+- **Site elevation:** 4,500 ft (1,372 m)
+- **Forecast temperature:** 28°C
+- **Current altimeter setting:** 29.85 inHg
+
+**Step 1 — Calculate Pressure Altitude:**
+```
+Pressure Alt = 4,500 + [(29.92 − 29.85) × 1,000]
+             = 4,500 + [0.07 × 1,000]
+             = 4,500 + 70
+             = 4,570 ft
+```
+
+**Step 2 — Determine ISA Temperature at this altitude:**
+```
+ISA Temp = 15°C − (2°C × 4.5)
+         = 15°C − 9°C
+         = 6°C
+```
+
+**Step 3 — Calculate ISA Deviation:**
+```
+Deviation = 28°C − 6°C = +22°C above ISA
+```
+
+**Step 4 — Calculate Density Altitude:**
+```
+Density Alt = 4,570 + (120 × 22)
+            = 4,570 + 2,640
+            = 7,210 ft
+```
+
+**Impact:** Your RPAS will perform as if flying at 7,210 ft in ISA conditions. If rated for sea level performance, expect ~20-25% reduction in thrust, climb rate, and endurance. Plan conservative battery reserves.
 
 **Assessing density altitude for RPAS operations:** Before launch, assess the current density altitude and compare it to your RPAS's performance data. Manufacturers typically rate performance at or near ISA conditions. On a hot day at a high-altitude site, your actual endurance, climb rate, and payload capacity may be significantly less than published specifications.
 

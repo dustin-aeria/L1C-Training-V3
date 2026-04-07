@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Scale, BookOpen, Shield, Compass, FileCheck, MapPin, Radio, Search, Plane, ScrollText } from "lucide-react";
+import { ArrowRight, Scale, BookOpen, Shield, Compass, FileCheck, MapPin, Radio, Search, Plane, ScrollText, Thermometer } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -75,6 +75,13 @@ const referenceTopics = [
     title: "Glossary & Quick Lookup",
     description: "Searchable definitions for all RPAS terms, acronyms, and regulatory references",
     icon: BookOpen,
+  },
+  {
+    slug: "density-altitude",
+    title: "Density Altitude Calculator",
+    description: "Calculate density altitude and understand its impact on RPAS performance",
+    icon: Thermometer,
+    tag: "Tool",
   },
 ];
 
