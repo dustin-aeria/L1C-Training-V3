@@ -15,70 +15,60 @@ const modules = [
     title: "Introduction",
     slug: "introduction",
     description: "Course overview, objectives, and introduction to L1C operations",
-    duration: "30 min",
   },
   {
     number: 1,
     title: "Air Law",
     slug: "air-law",
     description: "CARs Part IX, Division VI, Standards 921/922, and regulatory framework",
-    duration: "90 min",
   },
   {
     number: 2,
     title: "Systems",
     slug: "systems",
     description: "RPAS components, C2 links, payloads, and system architecture",
-    duration: "60 min",
   },
   {
     number: 3,
     title: "Human Factors",
     slug: "human-factors",
     description: "Crew resource management, fatigue, stress, and decision making",
-    duration: "45 min",
   },
   {
     number: 4,
     title: "Meteorology",
     slug: "meteorology",
     description: "Weather assessment, forecasts, and operational weather limits",
-    duration: "60 min",
   },
   {
     number: 5,
     title: "Navigation",
     slug: "navigation",
     description: "GNSS, map reading, coordinate systems, and flight planning",
-    duration: "60 min",
   },
   {
     number: 6,
     title: "Flight Operations",
     slug: "flight-operations",
     description: "SORA methodology, operational volumes, risk assessment, and procedures",
-    duration: "90 min",
   },
   {
     number: 7,
     title: "Theory of Flight",
     slug: "theory-of-flight",
     description: "Aerodynamics, performance, weight and balance for RPAS",
-    duration: "45 min",
   },
   {
     number: 8,
     title: "Radiotelephony",
     slug: "radiotelephony",
     description: "Radio procedures, phraseology, and ATC communications",
-    duration: "45 min",
   },
   {
     number: 9,
     title: "Flight Review Preparation",
     slug: "flight-review-prep",
     description: "Practical skills review and flight reviewer requirements",
-    duration: "30 min",
   },
 ];
 
@@ -114,7 +104,6 @@ export default function ModulesPage() {
                     <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-primary-foreground text-xl font-bold">
                       {module.number}
                     </div>
-                    <Badge variant="outline">{module.duration}</Badge>
                   </div>
                   <CardTitle className="mt-4 group-hover:text-primary transition-colors">
                     {module.title}
