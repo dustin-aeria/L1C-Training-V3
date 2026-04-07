@@ -167,89 +167,132 @@ This distinction is important for understanding how manned aircraft and RPAS ref
 
 ### 3.2 Density Altitude
 
-Density altitude is the altitude in the Standard Atmosphere at which the current air density would be found. It represents the "performance altitude" — what altitude your RPAS "thinks" it's flying at based on air density.
+#### Why This Will Bite You
 
-| Factor | Effect on Density Altitude | Effect on Performance |
-|--------|---------------------------|----------------------|
-| Higher temperature | Increases density altitude | Reduces performance |
-| Higher humidity | Increases density altitude | Reduces performance |
-| Higher elevation | Increases density altitude | Reduces performance |
-| Lower atmospheric pressure | Increases density altitude | Reduces performance |
+> **Real Example:** A pipeline survey crew flying a DJI M300 near Hinton, AB in July planned a 45-minute mission based on the manufacturer's 55-minute flight time spec. Site elevation: 4,200 ft. Temperature: 29°C. The aircraft returned with 8% battery after only 32 minutes — the crew had to abort mid-survey. Density altitude that day: approximately 7,400 ft. The aircraft was performing as if flying at 7,400 ft, not 4,200 ft. Nobody checked.
 
-#### Density Altitude Calculation
+**The core concept:** Density altitude is what altitude your RPAS "thinks" it's flying at based on air density. Hot, humid, high-elevation air is thin — your rotors produce less lift per revolution, motors work harder, and batteries drain faster. Your 55-minute aircraft becomes a 35-minute aircraft. Your 25 kg payload limit becomes 18 kg.
 
-**Quick Formula (Koch Chart approximation):**
+#### What Affects Density Altitude?
+
+| Factor | Why It Matters | Worst Case |
+|--------|----------------|------------|
+| **Temperature** | Hot air is thin air — molecules spread out | Summer afternoon in Alberta foothills |
+| **Elevation** | Higher = less air above you = lower pressure | Mountain survey sites (3,000-6,000 ft common) |
+| **Humidity** | Water vapor is lighter than N₂/O₂ — humid air is less dense | After rain on a hot day |
+| **Pressure** | Low pressure system = less dense air | Approaching weather front |
+
+**The danger combination:** High elevation + hot afternoon + low pressure system = density altitude can exceed 8,000-10,000 ft in Alberta/BC. Most commercial RPAS have significant performance degradation above 6,000 ft density altitude.
+
+#### Where to Get the Inputs You Need
+
+Before EVERY mission at elevation or in warm weather, you need three numbers:
+
+| Input | Where to Find It | Example |
+|-------|------------------|---------|
+| **Site Elevation** | Google Earth, topo map, GPS at site, or planning tool | 4,500 ft |
+| **Outside Air Temperature (OAT)** | METAR from nearest aerodrome, on-site thermometer, or weather app | 28°C |
+| **Altimeter Setting** | METAR "A" group (e.g., A3012 = 30.12 inHg), or NAV CANADA AWWS | 29.85 inHg |
+
+**Reading METAR for density altitude inputs:**
 ```
-Density Altitude = Pressure Altitude + (120 × [OAT − ISA Temp])
+METAR CYEG 151600Z 27015G25KT 15SM FEW040 22/08 A3012
+                                         ↑    ↑
+                                        OAT  Altimeter
+                                        22°C  30.12 inHg
 ```
 
-Where:
-- **Pressure Altitude** = Elevation + [(29.92 − Current Altimeter Setting) × 1,000]
-- **ISA Temp at elevation** = 15°C − (2°C × [Elevation in 1000s of feet])
-- **OAT** = Outside Air Temperature (actual)
+#### The Calculation (or Use the Calculator)
 
-#### Reference: ISA Standard Temperatures by Elevation
+**Quick Formula:**
+```
+Density Altitude = Pressure Altitude + (120 × ISA Deviation)
+```
 
-| Elevation (ft) | Elevation (m) | ISA Temperature | Pressure (hPa) |
-|----------------|---------------|-----------------|----------------|
-| Sea Level | 0 | 15°C (59°F) | 1013.25 |
-| 1,000 | 305 | 13°C (55°F) | 977 |
-| 2,000 | 610 | 11°C (52°F) | 942 |
-| 3,000 | 914 | 9°C (48°F) | 908 |
-| 4,000 | 1,219 | 7°C (45°F) | 875 |
-| 5,000 | 1,524 | 5°C (41°F) | 843 |
-| 6,000 | 1,829 | 3°C (37°F) | 812 |
-| 8,000 | 2,438 | −1°C (30°F) | 753 |
-| 10,000 | 3,048 | −5°C (23°F) | 697 |
+**Step-by-step:**
+1. **Pressure Altitude** = Site Elevation + [(29.92 − Altimeter Setting) × 1,000]
+2. **ISA Temperature** = 15°C − (2°C × Elevation in thousands of feet)
+3. **ISA Deviation** = Actual OAT − ISA Temperature
+4. **Density Altitude** = Pressure Altitude + (120 × ISA Deviation)
 
-#### Density Altitude Quick Reference — Common Scenarios
+**Or skip the math:** Use the **Density Altitude Calculator** in the Reference section of this platform. Enter your values, get instant results with performance impact assessment.
 
-| Scenario | Elevation | Temp | ISA Deviation | Approx. Density Alt | Performance Impact |
-|----------|-----------|------|---------------|---------------------|-------------------|
-| Cool morning, low elevation | 500 ft | 10°C | −4°C below ISA | ~20 ft | Excellent — better than rated |
-| Standard day, sea level | 0 ft | 15°C | ISA | 0 ft | As rated |
-| Hot summer afternoon | 1,000 ft | 35°C | +20°C above ISA | ~3,400 ft | Significantly reduced |
-| High altitude site | 4,000 ft | 25°C | +18°C above ISA | ~6,200 ft | Severely reduced |
-| Extreme (AB summer, mountains) | 5,000 ft | 32°C | +27°C above ISA | ~8,200 ft | Near aircraft limits |
-| Cold winter operation | 2,000 ft | −15°C | −26°C below ISA | ~−1,100 ft | Excellent lift, but battery issues |
+#### Reference: ISA Standard Temperatures
 
-#### Worked Example for Students
+| Elevation | ISA Temp | If Actual Temp is... | ISA Deviation |
+|-----------|----------|----------------------|---------------|
+| Sea Level | 15°C | 30°C | +15°C (bad) |
+| 2,000 ft | 11°C | 30°C | +19°C (worse) |
+| 4,000 ft | 7°C | 30°C | +23°C (severe) |
+| 5,000 ft | 5°C | 30°C | +25°C (critical) |
+| 6,000 ft | 3°C | 30°C | +27°C (near limits) |
 
-**Scenario:** Planning a survey at a site near Canmore, AB
+*Note: Every +1°C above ISA adds approximately 120 ft to density altitude.*
+
+#### Go/No-Go Decision Framework
+
+| Calculated Density Altitude | Decision | Required Actions |
+|-----------------------------|----------|------------------|
+| **< 3,000 ft** | GO | Normal operations |
+| **3,000 - 5,000 ft** | GO with caution | Reduce payload 10-15%, add 20% battery reserve, monitor power consumption |
+| **5,000 - 7,000 ft** | Marginal | Reduce payload 20-25%, plan shorter mission, have abort point defined, brief crew on power monitoring |
+| **7,000 - 9,000 ft** | HIGH RISK | Consider postponing to cooler time of day (early morning), minimum payload only, 30%+ battery reserve, continuous power monitoring |
+| **> 9,000 ft** | LIKELY NO-GO | Most commercial RPAS operating outside certified envelope. Requires manufacturer guidance and significant derating. Postpone to better conditions. |
+
+#### Reading Your Aircraft's Limits
+
+Check your RPAS manual for density altitude or operating ceiling specifications:
+
+| What to Look For | Where to Find It | What It Means |
+|------------------|------------------|---------------|
+| "Max Service Ceiling" | Specs page | Absolute maximum — but performance is already degraded |
+| "Max Takeoff Altitude" | Specs or operating limits | Highest launch elevation (but doesn't account for temperature) |
+| "Operating Temperature Range" | Environmental specs | High temps reduce performance even at low elevation |
+| Performance charts by altitude | Advanced manuals | Shows actual endurance/payload at various altitudes |
+
+**If your manual only lists "Max Altitude: 6,000 m (19,685 ft)"** — this is misleading. It means the aircraft CAN fly there, not that it performs well. Most RPAS show significant degradation above 3,000 m (10,000 ft) density altitude.
+
+#### Worked Example — Canmore Pipeline Survey
+
+**Scenario:** Planning an afternoon survey near Canmore, AB
 - **Site elevation:** 4,500 ft (1,372 m)
-- **Forecast temperature:** 28°C
-- **Current altimeter setting:** 29.85 inHg
+- **Forecast high temperature:** 28°C
+- **METAR altimeter:** 29.85 inHg
+- **Aircraft:** Rated 45 min endurance, 2.7 kg payload capacity at sea level
 
-**Step 1 — Calculate Pressure Altitude:**
-```
-Pressure Alt = 4,500 + [(29.92 − 29.85) × 1,000]
-             = 4,500 + [0.07 × 1,000]
-             = 4,500 + 70
-             = 4,570 ft
-```
+**Calculation:**
 
-**Step 2 — Determine ISA Temperature at this altitude:**
-```
-ISA Temp = 15°C − (2°C × 4.5)
-         = 15°C − 9°C
-         = 6°C
-```
+| Step | Calculation | Result |
+|------|-------------|--------|
+| 1. Pressure Altitude | 4,500 + [(29.92 − 29.85) × 1,000] | 4,570 ft |
+| 2. ISA Temp at 4,500 ft | 15°C − (2°C × 4.5) | 6°C |
+| 3. ISA Deviation | 28°C − 6°C | +22°C |
+| 4. Density Altitude | 4,570 + (120 × 22) | **7,210 ft** |
 
-**Step 3 — Calculate ISA Deviation:**
-```
-Deviation = 28°C − 6°C = +22°C above ISA
-```
+**Impact Assessment:**
+- Density altitude 7,210 ft = **HIGH RISK** category
+- Expected endurance: ~30-35 min (vs. 45 min rated) — **25-30% reduction**
+- Expected payload capacity: ~2.0 kg (vs. 2.7 kg rated) — **26% reduction**
+- Climb rate: Noticeably sluggish
+- Motor temps: Will run hotter
 
-**Step 4 — Calculate Density Altitude:**
-```
-Density Alt = 4,570 + (120 × 22)
-            = 4,570 + 2,640
-            = 7,210 ft
-```
+**Decision:** Postpone to 0600 local when temp will be ~12°C. Recalculate:
+- ISA Deviation at 12°C: 12 − 6 = +6°C
+- New Density Altitude: 4,570 + (120 × 6) = **5,290 ft**
+- This moves from HIGH RISK to MARGINAL — much safer with standard precautions.
 
-**Impact:** Your RPAS will perform as if flying at 7,210 ft in ISA conditions. If rated for sea level performance, expect ~20-25% reduction in thrust, climb rate, and endurance. Plan conservative battery reserves.
+#### Common Scenarios in Western Canada
 
-**Assessing density altitude for RPAS operations:** Before launch, assess the current density altitude and compare it to your RPAS's performance data. Manufacturers typically rate performance at or near ISA conditions. On a hot day at a high-altitude site, your actual endurance, climb rate, and payload capacity may be significantly less than published specifications.
+| Scenario | Typical Density Alt | What to Do |
+|----------|---------------------|------------|
+| Edmonton area, summer afternoon | 4,000-5,500 ft | Fly mornings, monitor power |
+| Foothills (Sundre, Rocky Mtn House), summer | 6,000-8,000 ft | Early morning only, reduced payload |
+| Mountain sites (Canmore, Jasper, Revelstoke) | 7,000-10,000 ft | Very early morning, significant derating, or postpone |
+| Prairie sites, summer afternoon | 3,000-5,000 ft | Normal precautions |
+| Any site, cool morning (< 15°C) | Near actual elevation | Best conditions — full performance |
+| Winter operations | Often BELOW actual elevation | Excellent lift, but watch battery cold-soak |
+
+> **Discussion Prompt:** *"Your client insists on a 2 PM survey at a site near Jasper (elevation 3,500 ft) on a forecast 32°C day. Calculate the density altitude. What do you tell the client? How do you explain the risk in terms they'll understand? What alternative do you propose?"*
 
 ### 3.3 Altimeter Errors
 
