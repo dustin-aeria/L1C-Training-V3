@@ -170,15 +170,18 @@ function parseExplanation(answerBlock: string): { explanation: string; reference
   const explanationLines: string[] = [];
   let reference = "";
 
-  let skipFirst = true;
+  let foundAnswer = false;
   for (const line of lines) {
-    const cleaned = line.replace(/^>\s*/, "").trim();
+    const cleaned = line.trim();
 
-    // Skip the answer line
-    if (skipFirst && cleaned.startsWith("**Answer:")) {
-      skipFirst = false;
-      // But include any text after the answer on the same line
-      const afterAnswer = cleaned.replace(/\*\*Answer:[^*]+\*\*\s*/, "").trim();
+    // Skip empty lines at the start
+    if (!cleaned) continue;
+
+    // Check for the answer line
+    if (cleaned.startsWith("**Answer:") || cleaned.startsWith("**Answer ")) {
+      foundAnswer = true;
+      // Include any text after the answer on the same line (after the closing **)
+      const afterAnswer = cleaned.replace(/\*\*Answer[^*]*\*\*\s*/, "").trim();
       if (afterAnswer) {
         explanationLines.push(afterAnswer);
       }
@@ -191,8 +194,17 @@ function parseExplanation(answerBlock: string): { explanation: string; reference
       continue;
     }
 
-    // Skip empty lines and other formatting
-    if (cleaned && !cleaned.startsWith(">")) {
+    // Check for "Why this matters" section
+    if (cleaned.startsWith("**Why this matters:**")) {
+      explanationLines.push(cleaned.replace("**Why this matters:**", "").trim());
+      continue;
+    }
+
+    // Skip if we haven't found the answer yet
+    if (!foundAnswer) continue;
+
+    // Add explanation text
+    if (cleaned) {
       explanationLines.push(cleaned);
     }
   }
@@ -227,9 +239,9 @@ function parseQuestion(questionBlock: string, questionNumber: number): Question 
   const options = parseOptions(questionBlock);
   const questionType = determineQuestionType(questionBlock, options);
 
-  // Extract answer block (everything in blockquotes after options)
-  const answerBlockMatch = questionBlock.match(/>\s*\*\*Answer:[\s\S]+?(?=\n---|\n## |$)/);
-  const answerBlock = answerBlockMatch ? answerBlockMatch[0] : "";
+  // Extract answer block from <details> tag
+  const detailsMatch = questionBlock.match(/<details>[\s\S]*?<summary>[^<]*<\/summary>([\s\S]*?)<\/details>/);
+  const answerBlock = detailsMatch ? detailsMatch[1] : "";
 
   const correctAnswers = parseCorrectAnswers(answerBlock);
   const { explanation, reference } = parseExplanation(answerBlock);
