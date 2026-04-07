@@ -64,6 +64,8 @@ Water vapour is the most variable component and is the primary driver of weather
 
 ### 1.2 Atmospheric Layers
 
+![Atmospheric layers from surface to space](/images/meteorology/atmosphere_layers_diagram.avif)
+
 The atmosphere is divided into distinct layers, each with different characteristics relevant to aviation:
 
 | Layer | Altitude | Characteristics | L1C Relevance |
@@ -84,6 +86,8 @@ The atmosphere behaves as a fluid with properties that directly affect flight:
 - The atmosphere has capacity to expand through lifting agents: thermal (solar heating), frontal (air mass interaction), mechanical (terrain forcing), and convergence (low-pressure systems)
 
 ### 1.3 The Standard Atmosphere (ISA)
+
+![Standard atmosphere reference values](/images/meteorology/standard atmospherioc refrence 1.jpg)
 
 The International Standard Atmosphere defines baseline conditions against which actual conditions are compared:
 
@@ -127,6 +131,8 @@ Air density directly affects RPAS performance because propellers and rotors gene
 
 ![Atmospheric pressure and how it varies with altitude](/images/meteorology/Atmospheric Pressure.png)
 
+![High pressure vs low pressure systems and associated weather](/images/meteorology/high vs low presure systems.jpg)
+
 Atmospheric pressure determines the weather that is likely to occur:
 
 | Pressure System | Weather | Air Flow (Northern Hemisphere) | Air Movement |
@@ -140,12 +146,16 @@ Atmospheric pressure determines the weather that is likely to occur:
 
 ![Effects of temperature on atmospheric pressure and altimeter readings](/images/meteorology/Effects of Temperature.png)
 
+![Temperature effects on pressure altitude](/images/meteorology/temperature effect.jpg)
+
 Temperature affects the rate of change in pressure with height:
 
 - In warm air, pressure decreases more slowly with altitude (the pressure column is "stretched")
 - In cold air, pressure decreases more rapidly with altitude (the pressure column is "compressed")
 
 This has a direct implication: **"High to low, watch out below."** When flying from a high-pressure area to a low-pressure area, your altimeter will indicate a higher altitude than your actual altitude. Similarly, when flying from warm air to cold air, your true altitude will be lower than indicated. For RPAS operating below 400 ft AGL near terrain, this altimeter error matters.
+
+![High to low watch out below - altimeter errors illustrated](/images/meteorology/High-to-Low.jpg)
 
 **Effects of temperature on RPAS altitude display:** The original course materials illustrate this with a critical diagram showing three pressure columns at 30°C, 15°C, and 0°C. At the same indicated pressure level (e.g., 5,000 ft), the true altitude is higher in warm air and lower in cold air. Warm air "stretches" the atmosphere, cold air "compresses" it.
 
@@ -154,6 +164,8 @@ This has a direct implication: **"High to low, watch out below."** When flying f
 ## SECTION 3: Meteorological Aspects of Altimetry
 
 ### 3.1 Altimeter Setting Region vs. Standard Pressure Region
+
+![RPAS altitude reference compared to manned aircraft](/images/meteorology/RPAS altituyde reference.jpg)
 
 This distinction is important for understanding how manned aircraft and RPAS reference altitude differently:
 
@@ -317,6 +329,8 @@ Check your RPAS manual for density altitude or operating ceiling specifications:
 
 ### 4.1 Moisture, Clouds, and Fog
 
+![Cloud formation process - rising air cooling to dew point](/images/meteorology/Cloud Formation Process.gif)
+
 **Lapse rate and cloud formation:** As air rises, it cools. The rate of cooling depends on whether the air is saturated (wet adiabatic lapse rate: approximately 1.5°C/1,000 ft) or unsaturated (dry adiabatic lapse rate: approximately 3°C/1,000 ft). When rising air cools to the dew point temperature, water vapour condenses and clouds form. The height of the cloud base can be estimated from the temperature-dew point spread at the surface.
 
 **Effects of moisture on RPAS:** Moisture can affect electronics (corrosion, short circuits), optical sensors (lens fogging, degraded camera performance), propeller performance (water accumulation changes balance and aerodynamics), and airframe integrity (moisture ingress into composite structures).
@@ -326,6 +340,8 @@ Check your RPAS manual for density altitude or operating ceiling specifications:
 **Cloud significance for RPAS:** Cloud base height indicates where manned VFR traffic will be concentrated. Low ceilings compress VFR traffic into the same low-altitude airspace where RPAS operate, increasing the risk of conflicts. Observed vertical cloud development (towering cumulus, cumulonimbus) indicates convective activity and potential thunderstorms.
 
 ### 4.2 Aircraft Icing (CARs 901.35)
+
+![Aircraft icing types and formation](/images/meteorology/icing.png)
 
 Icing is one of the most dangerous weather hazards for RPAS, and RPAS are MORE vulnerable to icing than manned aircraft because of their smaller size, lower mass, and higher surface-area-to-weight ratio.
 
@@ -358,6 +374,8 @@ Icing is one of the most dangerous weather hazards for RPAS, and RPAS are MORE v
 
 ### 5.1 Air Mass Characteristics
 
+![Stable vs unstable air masses and their characteristics](/images/meteorology/stable vs unstable air.jpg)
+
 | Air Mass Type | Vertical Motion | Turbulence | Visibility | Precipitation | Cloud Type |
 |---------------|-----------------|------------|------------|---------------|------------|
 | Stable | Resists vertical motion | Smooth air, little turbulence | Poor (smog/haze trapped in layers) | Steady, if any | Stratiform (layered) |
@@ -370,6 +388,8 @@ Stable conditions near the surface can trap pollutants and reduce visibility —
 ## SECTION 6: Turbulence
 
 ### 6.1 Types of Turbulence
+
+![Types of turbulence affecting RPAS operations](/images/meteorology/types of turbluence.png)
 
 | Turbulence Type | Cause | Characteristics |
 |-----------------|-------|-----------------|
@@ -389,6 +409,8 @@ Stable conditions near the surface can trap pollutants and reduce visibility —
 ---
 
 ## SECTION 7: Wind
+
+![Wind speed vs ground speed relationship](/images/meteorology/wind speed ground speed.gif)
 
 ### 7.1 Wind Fundamentals
 
@@ -428,6 +450,10 @@ Fronts are the #1 cause of rapid weather deterioration that catches pilots off-g
 **The core problem:** Fronts move. Your operating area doesn't. If a front arrives during your 2-hour BVLOS survey, you may face gusty winds, precipitation, and turbulence with an aircraft 8 km away from recovery.
 
 ### 8.2 Cold Front vs Warm Front — Operational Comparison
+
+![Cold front movement and weather](/images/meteorology/cold front.gif)
+
+![Warm front movement and weather](/images/meteorology/warm front.gif)
 
 | Characteristic | Cold Front | Warm Front |
 |----------------|------------|------------|
@@ -576,6 +602,8 @@ The only safe strategy is avoidance. Do not launch if thunderstorms are forecast
 | Windy.com and similar | Wind, precipitation, cloud visualization at various altitudes | Visualization only — NOT official; not sole basis for go/no-go |
 
 ### 10.2 Aviation Weather Reports
+
+![METAR vs TAF - observation vs forecast](/images/meteorology/metar-vs-taf - one is observation other is forecastr.webp)
 
 **METAR (Aviation Routine Weather Report):** Current observed conditions at an aerodrome. Includes wind, visibility, weather phenomena, clouds, temperature, dew point, and pressure. L1C pilots must be able to decipher METAR reports.
 
