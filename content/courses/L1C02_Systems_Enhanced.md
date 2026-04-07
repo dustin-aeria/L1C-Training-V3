@@ -59,6 +59,8 @@ After completing this module, you will be able to:
 
 ### 1.1 Wake Turbulence Categories
 
+![Wake Turbulence](/images/systems/wake%20turbulence.avif)
+
 Understanding manned aircraft categories is important for RPAS pilots because wake turbulence separation requirements affect how Air Traffic Control manages traffic near your operating area. NAV CANADA classifies aircraft into three primary wake turbulence categories:
 
 | Category | Maximum Certified Take-Off Weight | Examples |
@@ -115,6 +117,8 @@ RPAS are classified within the broader ICAO aircraft classification framework. F
 
 **By Configuration:**
 
+![Fixed-Wing vs Multirotor vs Hybrid VTOL](/images/systems/Fixed%20wing%20vs%20multirotor%20vs%20hybrid%20vtol.png)
+
 | Configuration | Description |
 |---------------|-------------|
 | **Fixed-wing** | Generate lift through forward motion over aerodynamic surfaces (wings). Efficient for long-range, high-speed operations. Cannot hover. Require launch and recovery systems (runway, catapult, hand launch, VTOL hybrid). |
@@ -147,6 +151,9 @@ Understanding your airframe is the first line of defence against in-flight failu
 **Manufacturer-defined repair boundaries:** Manufacturers identify which repairs and work can be undertaken by the operator versus what must be addressed by an authorized repair facility. You must know where to find your applicable OEM guidelines and follow them. Performing repairs beyond your authorization can void the safety assurance declaration.
 
 **Critical pre-flight inspection items:**
+
+![Propeller Damage Example](/images/systems/propellar%20damage.jpg)
+
 - **Propeller/rotor damage** — Even small nicks or chips alter the balance and aerodynamic efficiency of a propeller. Unbalanced propellers create vibrations that accelerate bearing wear, stress motor mounts, and can cause the IMU to produce erroneous data.
 - **Surface contamination** — Frost, ice, dirt, oil, or debris on aerodynamic surfaces degrades lift performance. On sensors (compass, barometer ports, pitot tubes), contamination can cause erroneous readings.
 - **Wiring damage** — Frayed, pinched, or corroded wiring can cause intermittent electrical failures — the most dangerous kind, because they may not appear during pre-flight checks but manifest during flight.
@@ -172,6 +179,8 @@ A **servo** is an electromechanical actuator that converts electrical signals in
 
 **Actions of a servo:** The flight controller sends a PWM (Pulse Width Modulation) signal to the servo, which moves to and holds a specific position. The servo contains a motor, gear train, potentiometer (for position feedback), and control circuit.
 
+![How a Servo Motor Works](/images/systems/working-of-servo-motor-inside.gif)
+
 **Indications of a failed servo:**
 - Flight surface not responding to control inputs
 - Oscillation or jittering of the controlled surface
@@ -185,7 +194,9 @@ A **servo** is an electromechanical actuator that converts electrical signals in
 
 **Keeping components dry:** Water and moisture cause corrosion, electrical shorts, and sensor contamination. Even moisture from fog, dew, or humid air can affect sensitive electronics over time.
 
-**Waterproof ratings (IP ratings):** An IP (Ingress Protection) rating like IP43 or IP67 indicates the degree of protection against solid objects and water. However, IP ratings have limitations — they are tested under specific laboratory conditions, not in operational environments with vibration, temperature cycling, and physical stress. An IP43-rated RPAS may survive light rain in a lab test but fail in sustained rain at altitude with wind-driven water penetration. Always treat the IP rating as a *minimum* protection level, not a guarantee.
+**Waterproof ratings (IP ratings):** An IP (Ingress Protection) rating like IP43 or IP67 indicates the degree of protection against solid objects and water.
+
+![IP Rating Chart](/images/systems/IP%20Rating%20Chart.webp) However, IP ratings have limitations — they are tested under specific laboratory conditions, not in operational environments with vibration, temperature cycling, and physical stress. An IP43-rated RPAS may survive light rain in a lab test but fail in sustained rain at altitude with wind-driven water penetration. Always treat the IP rating as a *minimum* protection level, not a guarantee.
 
 ### 5.4 Battery Consumption
 
@@ -196,6 +207,8 @@ Understanding battery consumption is essential for BVLOS flight planning. Key fa
 ## SECTION 6: Redundancies and Critical Items
 
 ### 6.1 The Value of Redundancy in BVLOS
+
+![Redundancy Architecture](/images/systems/redunandancy%20architecture.webp)
 
 Redundancy means having backup systems that can take over if a primary system fails. In VLOS operations, the pilot's direct observation provides a human redundancy layer — you can see problems and react. In BVLOS, technological redundancy replaces this human layer.
 
@@ -210,6 +223,8 @@ Redundancy means having backup systems that can take over if a primary system fa
 | **Navigation redundancy** | Multi-constellation GNSS (GPS + GLONASS + Galileo + BeiDou) provides more satellites and better geometry |
 
 ### 6.2 Single Points of Failure
+
+![Single Point of Failure](/images/systems/single%20point%20of%20failure.png)
 
 A **single point of failure** is any component whose failure alone would result in loss of control or an unsafe condition. Manufacturers are required to perform a system safety analysis on their RPAS designs to identify all single points of failure.
 
