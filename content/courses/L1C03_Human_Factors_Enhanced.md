@@ -105,36 +105,12 @@ A Transportation Safety Board (TSB) of Canada study shows it typically takes a p
 
 **Detection probability rates:** Research on visual detection of aircraft shows that detection probability varies significantly with scan technique:
 
-<div class="detection-rate-chart">
-<div class="chart-title">Visual Detection Rate by Scanning Method</div>
-<div class="chart-bars">
-<div class="chart-row">
-<div class="chart-label">No systematic scan</div>
-<div class="chart-bar-container">
-<div class="chart-bar bar-poor" style="width: 15%"><span>~15%</span></div>
-</div>
-</div>
-<div class="chart-row">
-<div class="chart-label">Sector-by-sector scan</div>
-<div class="chart-bar-container">
-<div class="chart-bar bar-moderate" style="width: 50%"><span>~50%</span></div>
-</div>
-</div>
-<div class="chart-row">
-<div class="chart-label">Audio-cued visual search</div>
-<div class="chart-bar-container">
-<div class="chart-bar bar-good" style="width: 70%"><span>~70%</span></div>
-</div>
-</div>
-<div class="chart-row">
-<div class="chart-label">Combination (systematic + audio)</div>
-<div class="chart-bar-container">
-<div class="chart-bar bar-excellent" style="width: 85%"><span>~85%</span></div>
-</div>
-</div>
-</div>
-<div class="chart-note">Assumes unobstructed visibility and alert observers</div>
-</div>
+| Scanning Method | Detection Rate | Notes |
+|-----------------|----------------|-------|
+| No systematic scan | ~10-15% | Random glances, easily distracted |
+| Sector-by-sector scan | ~40-50% | Systematic coverage of entire hemisphere |
+| Audio-cued visual search | ~60-70% | Sound directs visual attention |
+| Combination (systematic + audio) | ~75-85% | Multiple cues improve detection |
 
 These rates assume unobstructed visibility and alert observers. Factors like fatigue, distraction, sun glare, and background clutter significantly reduce detection rates. This is why multiple VOs with overlapping sectors are recommended for L1C operations.
 
