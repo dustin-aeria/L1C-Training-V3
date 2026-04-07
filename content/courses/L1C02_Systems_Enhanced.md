@@ -154,10 +154,12 @@ Understanding your airframe is the first line of defence against in-flight failu
 
 ![Propeller Damage Example](/images/systems/propellar%20damage.jpg)
 
-- **Propeller/rotor damage** — Even small nicks or chips alter the balance and aerodynamic efficiency of a propeller. Unbalanced propellers create vibrations that accelerate bearing wear, stress motor mounts, and can cause the IMU to produce erroneous data.
-- **Surface contamination** — Frost, ice, dirt, oil, or debris on aerodynamic surfaces degrades lift performance. On sensors (compass, barometer ports, pitot tubes), contamination can cause erroneous readings.
-- **Wiring damage** — Frayed, pinched, or corroded wiring can cause intermittent electrical failures — the most dangerous kind, because they may not appear during pre-flight checks but manifest during flight.
-- **Structural damage** — Cracks, deformations, or loose fasteners in the airframe can lead to in-flight structural failure, especially under vibration or manoeuvring loads.
+| Inspection Item | What to Look For |
+|-----------------|------------------|
+| **Propeller/rotor damage** | Even small nicks or chips alter the balance and aerodynamic efficiency of a propeller. Unbalanced propellers create vibrations that accelerate bearing wear, stress motor mounts, and can cause the IMU to produce erroneous data. |
+| **Surface contamination** | Frost, ice, dirt, oil, or debris on aerodynamic surfaces degrades lift performance. On sensors (compass, barometer ports, pitot tubes), contamination can cause erroneous readings. |
+| **Wiring damage** | Frayed, pinched, or corroded wiring can cause intermittent electrical failures — the most dangerous kind, because they may not appear during pre-flight checks but manifest during flight. |
+| **Structural damage** | Cracks, deformations, or loose fasteners in the airframe can lead to in-flight structural failure, especially under vibration or manoeuvring loads. |
 
 **Airworthiness decision-making:** When something out of order is found during a pre-flight inspection, you must determine whether the aircraft is airworthy. The decision process is: (1) Consult the manufacturer's maintenance manual for the specific finding. (2) If the finding is addressed, follow the manufacturer's guidance. (3) If the finding is NOT addressed, or if you are unsure, the aircraft is NOT airworthy until the condition is resolved by qualified personnel. When in doubt, do NOT fly.
 
