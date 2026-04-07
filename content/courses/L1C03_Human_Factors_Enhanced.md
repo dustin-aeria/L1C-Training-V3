@@ -59,13 +59,15 @@ After completing this module, you will be able to:
 
 Human Factors is the scientific study of how human capabilities and limitations interact with the systems, environment, and tasks involved in aviation operations. Researchers study the impact of these conditions on the rate of accidents and fatalities:
 
-- **Fatigue** — Degraded alertness, reaction time, and decision-making
-- **Complacency** — Reduced vigilance due to familiarity and routine
-- **Decision making** — Errors in judgment under time pressure, uncertainty, or stress
-- **Physiological effects from the environment** — Temperature, noise, vibration, lighting
-- **Errors/mistakes** — Unintentional actions that deviate from the intended outcome
-- **Communication** — Breakdowns between crew members, with ATC, or with clients
-- **Situational awareness** — The perception, comprehension, and projection of the operational environment
+| Factor | Impact on Operations |
+|--------|---------------------|
+| **Fatigue** | Degraded alertness, reaction time, and decision-making |
+| **Complacency** | Reduced vigilance due to familiarity and routine |
+| **Decision making** | Errors in judgment under time pressure, uncertainty, or stress |
+| **Physiological effects** | Temperature, noise, vibration, lighting affecting performance |
+| **Errors/mistakes** | Unintentional actions that deviate from the intended outcome |
+| **Communication** | Breakdowns between crew members, with ATC, or with clients |
+| **Situational awareness** | The perception, comprehension, and projection of the operational environment |
 
 Civil aviation authorities and airlines train crew members in human factors because decades of accident investigation have shown that the human operator is both the most capable and the most vulnerable component in any aviation system. The aircraft rarely breaks itself without human contribution to the causal chain.
 
@@ -79,6 +81,8 @@ Civil aviation authorities and airlines train crew members in human factors beca
 
 ![Visual Observer Detect and Avoid](/images/human-factors/VO DAA.png)
 
+![12.5 Second Detection Timeline](/images/human-factors/12.5%20second%20detection%20timeline.png)
+
 A Transportation Safety Board (TSB) of Canada study shows it typically takes a pilot **12.5 seconds** to identify and react to conflicting aircraft, progressing through four stages:
 
 1. **Seeing** — The aircraft enters the observer's field of vision
@@ -89,6 +93,9 @@ A Transportation Safety Board (TSB) of Canada study shows it typically takes a p
 12.5 seconds is a significant amount of time. At typical GA approach speeds of 100 knots, a manned aircraft covers approximately 500 metres in 12.5 seconds. For visual observers using Standard 923 DAA, this means traffic must be detected at sufficient distance to allow the full see-recognize-understand-adjust sequence to complete before the conflict point.
 
 **Good scanning techniques for visual observers:**
+
+![Visual Scanning Technique](/images/human-factors/visual%20scanning%20tehnique%201.gif)
+
 - Use a systematic pattern — don't randomly scan. Divide the sky into sectors and scan each sector sequentially.
 - Move your eyes in small, overlapping steps rather than sweeping continuously. The human eye detects movement and contrast at the periphery but can only identify objects when focused directly on them.
 - Take breaks from looking at screens (GCS displays) before scanning the sky — your eyes need time to readjust to distance focusing.
@@ -96,16 +103,42 @@ A Transportation Safety Board (TSB) of Canada study shows it typically takes a p
 
 **Detection probability rates:** Research on visual detection of aircraft shows that detection probability varies significantly with scan technique:
 
-| Scanning Method | Detection Rate | Notes |
-|---|---|---|
-| No systematic scan | ~10-15% | Random glances, easily distracted |
-| Sector-by-sector scan | ~40-50% | Systematic coverage of entire hemisphere |
-| Audio-cued visual search | ~60-70% | Sound directs visual attention |
-| Combination (systematic + audio) | ~75-85% | Multiple cues improve detection |
+<div class="detection-rate-chart">
+<div class="chart-title">Visual Detection Rate by Scanning Method</div>
+<div class="chart-bars">
+<div class="chart-row">
+<div class="chart-label">No systematic scan</div>
+<div class="chart-bar-container">
+<div class="chart-bar bar-poor" style="width: 15%"><span>~15%</span></div>
+</div>
+</div>
+<div class="chart-row">
+<div class="chart-label">Sector-by-sector scan</div>
+<div class="chart-bar-container">
+<div class="chart-bar bar-moderate" style="width: 50%"><span>~50%</span></div>
+</div>
+</div>
+<div class="chart-row">
+<div class="chart-label">Audio-cued visual search</div>
+<div class="chart-bar-container">
+<div class="chart-bar bar-good" style="width: 70%"><span>~70%</span></div>
+</div>
+</div>
+<div class="chart-row">
+<div class="chart-label">Combination (systematic + audio)</div>
+<div class="chart-bar-container">
+<div class="chart-bar bar-excellent" style="width: 85%"><span>~85%</span></div>
+</div>
+</div>
+</div>
+<div class="chart-note">Assumes unobstructed visibility and alert observers</div>
+</div>
 
 These rates assume unobstructed visibility and alert observers. Factors like fatigue, distraction, sun glare, and background clutter significantly reduce detection rates. This is why multiple VOs with overlapping sectors are recommended for L1C operations.
 
 ### 2.2 Perspective Illusion
+
+![CBDR Perspective Illusion](/images/human-factors/CBDR%20PErpective.jpeg)
 
 When observing distant aircraft, perspective illusion can cause incorrect judgments about the aircraft's distance, speed, and whether it is on a collision course. A constant-bearing, decreasing-range (CBDR) target — one on a direct collision course — appears stationary in your field of view. It does not appear to move laterally; it simply gets larger. This makes collision-course traffic the hardest to detect visually, because the human visual system is optimized to detect movement, not static objects that are slowly growing.
 
@@ -115,6 +148,8 @@ Alertness is affected by sleep quality and quantity, circadian rhythm (time of d
 
 ### 2.4 Fatigue
 
+![Fatigue Effects](/images/human-factors/fatigue%20effects.jpg)
+
 Fatigue is as dangerous as drugs or alcohol when it comes to impairment and is often harder to detect. Fatigue influences judgment, motor response, and mental capability. Its effects can be present without the person realizing it, making it particularly dangerous.
 
 Factors contributing to fatigue extend beyond just sleep: lack of sleep, work-related stress, family issues, emotional state, and general health all contribute. Transport Canada's Fatigue Risk Management System (FRMS) Toolbox provides a comprehensive guide to understanding, managing, and mitigating fatigue risks.
@@ -122,12 +157,15 @@ Factors contributing to fatigue extend beyond just sleep: lack of sleep, work-re
 ### 2.5 Environmental Effects on Operator Performance
 
 RPAS pilots in the field face environmental stressors that office-based workers do not:
-- **Cold** — Reduces manual dexterity (affecting controller operation), impairs cognitive function, and shortens battery life
-- **Heat** — Causes dehydration, heat exhaustion, and reduces concentration
-- **Sun glare** — Makes GCS screens difficult to read, reducing telemetry awareness
-- **Wind** — Creates noise that interferes with communication and audio scanning
-- **Rain/precipitation** — Distracts the pilot, may damage equipment, reduces VO visibility
-- **Altitude** — At operational altitudes for the pilot (not the RPA), altitude effects are minimal, but in mountainous terrain, even moderate elevations can affect some individuals
+
+| Stressor | Effect on Operator |
+|----------|-------------------|
+| **Cold** | Reduces manual dexterity (affecting controller operation), impairs cognitive function, and shortens battery life |
+| **Heat** | Causes dehydration, heat exhaustion, and reduces concentration |
+| **Sun glare** | Makes GCS screens difficult to read, reducing telemetry awareness |
+| **Wind** | Creates noise that interferes with communication and audio scanning |
+| **Rain/precipitation** | Distracts the pilot, may damage equipment, reduces VO visibility |
+| **Altitude** | At operational altitudes for the pilot, altitude effects are minimal, but in mountainous terrain, even moderate elevations can affect some individuals |
 
 ---
 
@@ -137,20 +175,49 @@ RPAS pilots in the field face environmental stressors that office-based workers 
 
 Transport Canada identifies five hazardous attitudes that interfere with safe decision-making. Every pilot is susceptible to these — recognizing them in yourself is the first step to managing them:
 
-**Macho — "I already know how to do it."**
-The belief that you can handle anything, that rules and procedures are for less experienced pilots. Leads to taking unnecessary risks to demonstrate capability. *Antidote: "Taking chances is foolish."*
+<div class="hazardous-attitudes-grid">
 
-**Impulsivity — "Do it quickly."**
-The urge to act immediately without thinking through consequences. In BVLOS, where decisions have delayed consequences (the aircraft is far away, effects take time to develop), impulsive actions can create situations that are difficult or impossible to recover from. *Antidote: "Not so fast. Think first."*
+<div class="attitude-card attitude-macho">
+<div class="attitude-icon">💪</div>
+<div class="attitude-title">MACHO</div>
+<div class="attitude-phrase">"I already know how to do it."</div>
+<div class="attitude-description">The belief that you can handle anything, that rules and procedures are for less experienced pilots. Leads to taking unnecessary risks to demonstrate capability.</div>
+<div class="attitude-antidote">✓ Antidote: "Taking chances is foolish."</div>
+</div>
 
-**Resignation — "What's the use?"**
-The feeling that you have no control over the outcome, that whatever happens will happen. Leads to passive acceptance of deteriorating conditions rather than active intervention. *Antidote: "I'm not helpless. I can make a difference."*
+<div class="attitude-card attitude-impulsivity">
+<div class="attitude-icon">⚡</div>
+<div class="attitude-title">IMPULSIVITY</div>
+<div class="attitude-phrase">"Do it quickly."</div>
+<div class="attitude-description">The urge to act immediately without thinking through consequences. In BVLOS, impulsive actions can create situations that are difficult or impossible to recover from.</div>
+<div class="attitude-antidote">✓ Antidote: "Not so fast. Think first."</div>
+</div>
 
-**Invulnerability — "It won't happen to me."**
-The belief that accidents happen to other people — less experienced, less skilled, less careful people. This attitude prevents pilots from taking precautions because they don't believe they are at risk. *Antidote: "It could happen to me."*
+<div class="attitude-card attitude-resignation">
+<div class="attitude-icon">🤷</div>
+<div class="attitude-title">RESIGNATION</div>
+<div class="attitude-phrase">"What's the use?"</div>
+<div class="attitude-description">The feeling that you have no control over the outcome, that whatever happens will happen. Leads to passive acceptance of deteriorating conditions rather than active intervention.</div>
+<div class="attitude-antidote">✓ Antidote: "I'm not helpless. I can make a difference."</div>
+</div>
 
-**Anti-Authoritarian — "Don't tell me what to do."**
-Resentment of rules, procedures, and oversight. Leads to skipping checklists, ignoring SOPs, and disregarding regulatory requirements. *Antidote: "Follow the rules. They are usually right."*
+<div class="attitude-card attitude-invulnerability">
+<div class="attitude-icon">🛡️</div>
+<div class="attitude-title">INVULNERABILITY</div>
+<div class="attitude-phrase">"It won't happen to me."</div>
+<div class="attitude-description">The belief that accidents happen to other people — less experienced, less skilled, less careful people. This prevents pilots from taking precautions.</div>
+<div class="attitude-antidote">✓ Antidote: "It could happen to me."</div>
+</div>
+
+<div class="attitude-card attitude-anti-authority">
+<div class="attitude-icon">🚫</div>
+<div class="attitude-title">ANTI-AUTHORITARIAN</div>
+<div class="attitude-phrase">"Don't tell me what to do."</div>
+<div class="attitude-description">Resentment of rules, procedures, and oversight. Leads to skipping checklists, ignoring SOPs, and disregarding regulatory requirements.</div>
+<div class="attitude-antidote">✓ Antidote: "Follow the rules. They are usually right."</div>
+</div>
+
+</div>
 
 > **Discussion Prompt #1:** *"Which of the five hazardous attitudes do you think you are most susceptible to? Think of a specific situation in your RPAS experience where one of these attitudes influenced your decision-making — even if nothing went wrong."*
 
@@ -164,18 +231,59 @@ Each "slice of cheese" represents a layer of defence: regulations, training, SOP
 
 **Reason's second level — Unsafe Acts — classifies human failures as:**
 
-**Errors (unintended actions):**
-- **Slips** — The correct action was intended but executed incorrectly. Example: Meaning to select "Return to Home" but pressing "Flight Terminate" on the GCS because the buttons are adjacent.
-- **Lapses** — The correct action was intended but was forgotten or omitted. Example: Forgetting to check NOTAMs before a BVLOS mission because you were distracted by client communication.
-- **Mistakes** — An incorrect action was deliberately chosen due to flawed reasoning or inadequate knowledge. Example: Deciding to continue a BVLOS mission into deteriorating weather because you incorrectly assessed the wind limits of your RPAS.
+<div class="reason-model-container">
 
-**Violations (deliberate deviations):**
-- **Routine violations** — Habitual non-compliance that has become normalized within the operation. Example: Routinely skipping the compass calibration because "it always works fine."
-- **Exceptional violations** — One-time deviations from rules driven by unusual circumstances. Example: Flying beyond the declared operational boundary because the client's asset of interest is 200 m outside the planned area.
+<div class="reason-category">
+<div class="reason-category-header errors-header">
+<span class="reason-icon">⚠️</span> ERRORS (Unintended Actions)
+</div>
+
+<div class="reason-card error-card">
+<div class="reason-type">SLIP</div>
+<div class="reason-definition">Correct action intended → Executed incorrectly</div>
+<div class="reason-example">Example: Meaning to select "Return to Home" but pressing "Flight Terminate" because the buttons are adjacent.</div>
+</div>
+
+<div class="reason-card error-card">
+<div class="reason-type">LAPSE</div>
+<div class="reason-definition">Correct action intended → Forgotten or omitted</div>
+<div class="reason-example">Example: Forgetting to check NOTAMs before a BVLOS mission because you were distracted by client communication.</div>
+</div>
+
+<div class="reason-card error-card">
+<div class="reason-type">MISTAKE</div>
+<div class="reason-definition">Incorrect action deliberately chosen → Flawed reasoning</div>
+<div class="reason-example">Example: Continuing into deteriorating weather because you incorrectly assessed the wind limits of your RPAS.</div>
+</div>
+
+</div>
+
+<div class="reason-category">
+<div class="reason-category-header violations-header">
+<span class="reason-icon">🚨</span> VIOLATIONS (Deliberate Deviations)
+</div>
+
+<div class="reason-card violation-card">
+<div class="reason-type">ROUTINE VIOLATION</div>
+<div class="reason-definition">Habitual non-compliance → Normalized behaviour</div>
+<div class="reason-example">Example: Routinely skipping compass calibration because "it always works fine."</div>
+</div>
+
+<div class="reason-card violation-card">
+<div class="reason-type">EXCEPTIONAL VIOLATION</div>
+<div class="reason-definition">One-time deviation → Unusual circumstances</div>
+<div class="reason-example">Example: Flying beyond the declared boundary because the client's asset is 200 m outside the planned area.</div>
+</div>
+
+</div>
+
+</div>
 
 ![10 Year Unsafe Acts Study](/images/human-factors/10 year unsafe acts study.png)
 
 ### 3.3 The HFACS Framework
+
+![HFACS Four-Level Framework](/images/human-factors/HFACS%20four%20level%20framework.gif)
 
 The Human Factors Analysis and Classification System (HFACS) provides a comprehensive framework for analyzing the causes of human error at four levels. It extends Reason's model from individual acts up through organizational influences:
 
@@ -204,6 +312,8 @@ The highest-level factors that shape the operational environment:
 > **Scenario for HFACS Analysis:** *A pilot conducting a BVLOS pipeline survey crashes the RPA into a power line. Investigation reveals: (L1) The pilot was focused on GCS telemetry and missed the power line on the terrain display (channelized attention — perceptual error). (L2) The pilot had been working 12 hours and was fatigued (adverse mental state / physical limitation). (L3) The supervisor scheduled the mission as the last task of a 14-hour work day (planned inappropriate operations). (L4) The company routinely schedules back-to-back missions to maximize billable hours (organizational process / resource management). At which level should corrective action focus?*
 
 ### 3.4 The Dirty Dozen
+
+![The Dirty Dozen](/images/human-factors/dirty%20dozen.jpg)
 
 Transport Canada identifies twelve common human factors preconditions for errors and violations. These are available as TC aviation safety posters and should be memorized:
 
@@ -234,6 +344,8 @@ In RPAS operations, the pilot is on the ground. A crash destroys the aircraft �
 
 ### 4.2 Automation Complacency
 
+![Automation Complacency](/images/human-factors/automation%20complacency.webp)
+
 When an autopilot flies the aircraft along a pre-programmed route, the pilot's role shifts from "flying" to "monitoring." Monitoring is psychologically demanding — maintaining vigilance over a system that is performing normally is one of the hardest cognitive tasks humans face. Research consistently shows that monitoring performance degrades significantly after 15–20 minutes of uneventful operation.
 
 In BVLOS, automation complacency is compounded by the absence of visual cues. In VLOS, you can see the aircraft behaving normally even when you're not actively controlling it. In BVLOS, "normal" means numbers on a screen that aren't changing — which is exactly what you would see whether everything is fine OR if your telemetry link has frozen and is displaying stale data.
@@ -257,6 +369,8 @@ The perception that the aircraft is "disposable" (compared to a manned aircraft)
 ## SECTION 5: Threat and Error Management (TEM)
 
 ### 5.1 The TEM Model
+
+![TEM Model](/images/human-factors/TEM%20diagram.webp)
 
 TEM provides a practical framework for managing threats and errors in real-time operations:
 
@@ -288,6 +402,8 @@ In BVLOS, Level 1 SA is entirely dependent on instruments and technology. If you
 
 ### 6.1 CRM in RPAS Operations
 
+![Crew Communication Loop](/images/human-factors/crew%20communciaotn%20loop.jpg)
+
 CRM is a training and management system focusing on non-technical skills that are essential for safe operations. In RPAS, CRM applies to interactions between the pilot, visual observers, payload operators, and any other crew members.
 
 The four pillars of RPAS CRM:
@@ -312,6 +428,8 @@ TP 15530 requires that L1C pilots be able to:
 ## SECTION 7: Crew Fitness and the IM SAFE Checklist
 
 ### 7.1 Self-Assessment Before Every Operation
+
+![IM SAFE Checklist](/images/human-factors/IMSAFE.png)
 
 It is the responsibility of individual crew members to conduct a self-assessment to ensure they are fit before accepting duties. The **IM SAFE** checklist provides a structured approach:
 
@@ -416,10 +534,12 @@ When a checklist is interrupted (phone call, radio communication, crew question,
 
 Automation changes the pilot's role from operator to monitor. This creates several human factors challenges:
 
-- **Skill degradation** — Manual flying skills atrophy when the autopilot does all the flying. If automation fails during a BVLOS mission, the pilot may need to manually fly the aircraft home — and may not be proficient.
-- **Mode confusion** — Complex autopilot systems have multiple modes. Pilots may not always know which mode is active, leading to unexpected aircraft behaviour.
-- **Automation surprise** — When the autopilot does something unexpected, the pilot must first understand what happened, then decide how to respond, then execute the response. This takes time — time that may not be available in an emergency.
-- **Complacency** — As discussed in Section 4.2, monitoring a well-functioning automated system is cognitively demanding and inherently unsustainable over long periods.
+| Challenge | Description |
+|-----------|-------------|
+| **Skill degradation** | Manual flying skills atrophy when the autopilot does all the flying. If automation fails during a BVLOS mission, the pilot may need to manually fly the aircraft home — and may not be proficient. |
+| **Mode confusion** | Complex autopilot systems have multiple modes. Pilots may not always know which mode is active, leading to unexpected aircraft behaviour. |
+| **Automation surprise** | When the autopilot does something unexpected, the pilot must first understand what happened, then decide how to respond, then execute the response. This takes time — time that may not be available in an emergency. |
+| **Complacency** | As discussed in Section 4.2, monitoring a well-functioning automated system is cognitively demanding and inherently unsustainable over long periods. |
 
 ---
 
