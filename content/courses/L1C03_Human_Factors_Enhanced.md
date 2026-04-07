@@ -81,8 +81,6 @@ Civil aviation authorities and airlines train crew members in human factors beca
 
 ### 2.1 Visual Scanning for Visual Observers
 
-![12.5 Second Detection Timeline](/images/human-factors/12.5%20second%20detection%20timeline.png)
-
 A Transportation Safety Board (TSB) of Canada study shows it typically takes a pilot **12.5 seconds** to identify and react to conflicting aircraft, progressing through four stages:
 
 | Stage | Action | Description |
@@ -95,8 +93,6 @@ A Transportation Safety Board (TSB) of Canada study shows it typically takes a p
 12.5 seconds is a significant amount of time. At typical GA approach speeds of 100 knots, a manned aircraft covers approximately 500 metres in 12.5 seconds. For visual observers using Standard 923 DAA, this means traffic must be detected at sufficient distance to allow the full see-recognize-understand-adjust sequence to complete before the conflict point.
 
 **Good scanning techniques for visual observers:**
-
-![Visual Scanning Technique](/images/human-factors/visual%20scanning%20tehnique%201.gif)
 
 | Technique | Description |
 |-----------|-------------|
@@ -118,8 +114,6 @@ These rates assume unobstructed visibility and alert observers. Factors like fat
 
 ### 2.2 Perspective Illusion
 
-![CBDR Perspective Illusion](/images/human-factors/CBDR%20PErpective.jpeg)
-
 When observing distant aircraft, perspective illusion can cause incorrect judgments about the aircraft's distance, speed, and whether it is on a collision course. A constant-bearing, decreasing-range (CBDR) target — one on a direct collision course — appears stationary in your field of view. It does not appear to move laterally; it simply gets larger. This makes collision-course traffic the hardest to detect visually, because the human visual system is optimized to detect movement, not static objects that are slowly growing.
 
 ### 2.3 Factors Affecting Alertness
@@ -127,8 +121,6 @@ When observing distant aircraft, perspective illusion can cause incorrect judgme
 Alertness is affected by sleep quality and quantity, circadian rhythm (time of day), workload (both overload and underload), environmental conditions (temperature, noise, comfort), hydration and nutrition, stress, and medications. In BVLOS operations, where missions can be long and repetitive (e.g., multi-hour survey flights), alertness degradation is a significant concern — especially for visual observers who must maintain continuous airspace scanning.
 
 ### 2.4 Fatigue
-
-![Fatigue Effects](/images/human-factors/fatigue%20effects.jpg)
 
 Fatigue is as dangerous as drugs or alcohol when it comes to impairment and is often harder to detect. Fatigue influences judgment, motor response, and mental capability. Its effects can be present without the person realizing it, making it particularly dangerous.
 
@@ -167,8 +159,6 @@ Transport Canada identifies five hazardous attitudes that interfere with safe de
 
 ### 3.2 James Reason's Unsafe Acts Model — The Swiss Cheese Model
 
-![Swiss Cheese Model](/images/human-factors/Swiss Cheese.png)
-
 James Reason's model describes how accidents occur when multiple layers of defence are breached simultaneously — like the holes in slices of Swiss cheese aligning to allow a hazard to pass through every barrier.
 
 Each "slice of cheese" represents a layer of defence: regulations, training, SOPs, checklists, equipment redundancy, crew cross-checks. Each "hole" represents a weakness in that layer. Accidents rarely result from a single failure — they result from a chain of failures where multiple holes align.
@@ -190,11 +180,7 @@ Each "slice of cheese" represents a layer of defence: regulations, training, SOP
 | **Routine Violation** | Habitual non-compliance → Normalized behaviour | Routinely skipping compass calibration because "it always works fine" |
 | **Exceptional Violation** | One-time deviation → Unusual circumstances | Flying beyond the declared boundary because the client's asset is 200 m outside the planned area |
 
-![10 Year Unsafe Acts Study](/images/human-factors/10 year unsafe acts study.png)
-
 ### 3.3 The HFACS Framework
-
-![HFACS Four-Level Framework](/images/human-factors/HFACS%20four%20level%20framework.gif)
 
 The Human Factors Analysis and Classification System (HFACS) provides a comprehensive framework for analyzing the causes of human error at four levels. It extends Reason's model from individual acts up through organizational influences:
 
@@ -234,8 +220,6 @@ The Human Factors Analysis and Classification System (HFACS) provides a comprehe
 
 ### 3.4 The Dirty Dozen
 
-![The Dirty Dozen](/images/human-factors/dirty%20dozen.jpg)
-
 Transport Canada identifies twelve common human factors preconditions for errors and violations. These are available as TC aviation safety posters and should be memorized:
 
 | # | Factor | Description |
@@ -267,8 +251,6 @@ In RPAS operations, the pilot is on the ground. A crash destroys the aircraft �
 
 ### 4.2 Automation Complacency
 
-![Automation Complacency](/images/human-factors/automation%20complacency.webp)
-
 When an autopilot flies the aircraft along a pre-programmed route, the pilot's role shifts from "flying" to "monitoring." Monitoring is psychologically demanding — maintaining vigilance over a system that is performing normally is one of the hardest cognitive tasks humans face. Research consistently shows that monitoring performance degrades significantly after 15–20 minutes of uneventful operation.
 
 In BVLOS, automation complacency is compounded by the absence of visual cues. In VLOS, you can see the aircraft behaving normally even when you're not actively controlling it. In BVLOS, "normal" means numbers on a screen that aren't changing — which is exactly what you would see whether everything is fine OR if your telemetry link has frozen and is displaying stale data.
@@ -292,8 +274,6 @@ The perception that the aircraft is "disposable" (compared to a manned aircraft)
 ## SECTION 5: Threat and Error Management (TEM)
 
 ### 5.1 The TEM Model
-
-![TEM Model](/images/human-factors/TEM%20diagram.webp)
 
 TEM provides a practical framework for managing threats and errors in real-time operations:
 
@@ -332,8 +312,6 @@ In BVLOS, Level 1 SA is entirely dependent on instruments and technology. If you
 
 ### 6.1 CRM in RPAS Operations
 
-![Crew Communication Loop](/images/human-factors/crew%20communciaotn%20loop.jpg)
-
 CRM is a training and management system focusing on non-technical skills that are essential for safe operations. In RPAS, CRM applies to interactions between the pilot, visual observers, payload operators, and any other crew members.
 
 **The Four Pillars of RPAS CRM:**
@@ -360,8 +338,6 @@ TP 15530 requires that L1C pilots be able to:
 ## SECTION 7: Crew Fitness and the IM SAFE Checklist
 
 ### 7.1 Self-Assessment Before Every Operation
-
-![IM SAFE Checklist](/images/human-factors/IMSAFE.png)
 
 It is the responsibility of individual crew members to conduct a self-assessment to ensure they are fit before accepting duties. The **IM SAFE** checklist provides a structured approach:
 
