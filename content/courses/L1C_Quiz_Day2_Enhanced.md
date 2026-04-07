@@ -56,23 +56,19 @@ A fixed-wing Remotely Piloted Aircraft (RPA) that has been loaded with an aft ce
 ---
 
 ## Question 3
-**Category:** L1C05 Navigation | **Bloom's Level:** Recall (Matching)
+**Category:** L1C05 Navigation | **Bloom's Level:** Recall
 
-Match the scales to the type of aeronautical chart.
+Select all the CORRECT chart-to-scale matches.
 
-| Chart Type | Scale |
-|---|---|
-| Visual Flight Rules (VFR) Navigation Charts (VNC) | 1:1,000,000 |
-| World Aeronautical Charts (WACs) | 1:500,000 |
-| VFR Terminal Area (VTA) Charts | 1:250,000 |
+- ☐ a) VNC (VFR Navigation Chart) → 1:500,000
+- ☐ b) WAC (World Aeronautical Chart) → 1:500,000
+- ☐ c) VTA (VFR Terminal Area) → 1:250,000
+- ☐ d) WAC (World Aeronautical Chart) → 1:1,000,000
 
 <details>
 <summary>Click to reveal answer</summary>
 
-**Answer:**
-- VNC → **1:500,000** (1 inch = 8 NM)
-- WAC → **1:1,000,000** (half the detail of VNC)
-- VTA → **1:250,000** (twice the detail of VNC)
+**Answer: a), c), and d)** The correct matches are: VNC → 1:500,000, VTA → 1:250,000, WAC → 1:1,000,000. Option b) is incorrect — WAC is 1:1,000,000, not 1:500,000.
 
 **Memory aid:** VTA is the most detailed (smallest scale number = largest detail). VNC is the standard for L1C planning. WAC is the broadest overview. Think: VTA zooms IN, WAC zooms OUT, VNC is in the middle.
 
@@ -175,14 +171,19 @@ Your proposed operational volume extends from between 20 Nautical Miles (NM) to 
 ---
 
 ## Question 8
-**Category:** L1C05 Navigation | **Bloom's Level:** Recall (Fill in the Blank)
+**Category:** L1C05 Navigation | **Bloom's Level:** Recall
 
-In Part IX of the *Canadian Aviation Regulations (CARs)*, a populated area is any area with more than ______ people per square kilometre. Fill in the blank.
+In Part IX of the *Canadian Aviation Regulations (CARs)*, a populated area is any area with more than how many people per square kilometre?
+
+- ☐ a) 5 people per km²
+- ☐ b) 10 people per km²
+- ☐ c) 25 people per km²
+- ☐ d) 50 people per km²
 
 <details>
 <summary>Click to reveal answer</summary>
 
-**Answer: 25** (more than 25 people per km² = populated area). Below 5 pp/km² = unpopulated. Between 5 and 25 pp/km² = sparsely populated. Above 25 pp/km² = populated.
+**Answer: c)** More than 25 people per km² = populated area. Below 5 pp/km² = unpopulated. Between 5 and 25 pp/km² = sparsely populated. Above 25 pp/km² = populated.
 
 **Reference:** CARs SOR/96-433; L1C01 Air Law — Population Density Definitions
 
@@ -191,14 +192,19 @@ In Part IX of the *Canadian Aviation Regulations (CARs)*, a populated area is an
 ---
 
 ## Question 9
-**Category:** L1C05 Navigation | **Bloom's Level:** Recall (Fill in the Blank)
+**Category:** L1C05 Navigation | **Bloom's Level:** Recall
 
-Part IX of *Canadian Aviation Regulations (CARs)* defines a sparsely populated area as an area of between 5 and ________ people per square kilometre. Fill in the blank.
+Part IX of *Canadian Aviation Regulations (CARs)* defines a sparsely populated area as an area of between 5 and how many people per square kilometre?
+
+- ☐ a) 10 people per km²
+- ☐ b) 15 people per km²
+- ☐ c) 25 people per km²
+- ☐ d) 50 people per km²
 
 <details>
 <summary>Click to reveal answer</summary>
 
-**Answer: 25** (5 to 25 pp/km² = sparsely populated). Operations over sparsely populated areas or within 1 km of populated areas require 901.87(b), which requires a Pre-Validated Declaration (PVD) under Standard 922.07 and is limited to small RPAS only.
+**Answer: c)** 5 to 25 pp/km² = sparsely populated. Operations over sparsely populated areas or within 1 km of populated areas require 901.87(b), which requires a Pre-Validated Declaration (PVD) under Standard 922.07 and is limited to small RPAS only.
 
 **Reference:** CARs SOR/96-433; L1C01 Air Law — 901.87(b) Requirements
 
@@ -207,14 +213,19 @@ Part IX of *Canadian Aviation Regulations (CARs)* defines a sparsely populated a
 ---
 
 ## Question 10
-**Category:** L1C08 Radiotelephony | **Bloom's Level:** Application (Fill in the Blank)
+**Category:** L1C08 Radiotelephony | **Bloom's Level:** Application
 
-You are operating a drone adjacent to Sylvan Lake, which is in the Alberta – Red Deer Common Frequency Area. Traditional traffic at 8,000ft Mean Sea Level (MSL) and below will be monitoring and transmitting on ________ MHz. Fill in the blank.
+You are operating a drone adjacent to Sylvan Lake, which is in the Alberta – Red Deer Common Frequency Area. Traditional traffic at 8,000ft MSL and below will be monitoring and transmitting on which frequency?
+
+- ☐ a) 123.2 MHz
+- ☐ b) 126.7 MHz
+- ☐ c) 122.875 MHz
+- ☐ d) 121.5 MHz
 
 <details>
 <summary>Click to reveal answer</summary>
 
-**Answer: 122.875 MHz.** This is a discrete air-to-air frequency specific to the Alberta–Red Deer Common Frequency Area. Students must be able to find area-specific frequencies in the Canada Flight Supplement (CFS), specifically the "C31 Areas with Discrete Air-to-Air Frequencies" section.
+**Answer: c)** 122.875 MHz. This is a discrete air-to-air frequency specific to the Alberta–Red Deer Common Frequency Area. Students must be able to find area-specific frequencies in the Canada Flight Supplement (CFS), specifically the "C31 Areas with Discrete Air-to-Air Frequencies" section.
 
 **Why this matters:** Different areas of Canada have different common frequencies for VFR traffic. If you are monitoring the wrong frequency, you miss traffic calls from aircraft that could conflict with your BVLOS operation. Always look up the specific frequency for your operating area in the CFS before every mission.
 
@@ -225,14 +236,19 @@ You are operating a drone adjacent to Sylvan Lake, which is in the Alberta – R
 ---
 
 ## Question 11
-**Category:** L1C08 Radiotelephony | **Bloom's Level:** Recall (Fill in the Blank)
+**Category:** L1C08 Radiotelephony | **Bloom's Level:** Recall
 
-"Pilots operating VFR [Visual Flight Rules] en route in uncontrolled airspace when not communicating on an MF [Mandatory Frequency], or an ATF [Air Traffic Frequency], or VFR on an airway should continuously monitor _______ MHz and whenever practicable, broadcast their identification, position, altitude and intentions on this frequency to alert other VFR or IFR [Instrument Flight Rules] aircraft that may be in the vicinity." Fill in the blank.
+Pilots operating VFR en route in uncontrolled airspace when not communicating on an MF or ATF should continuously monitor which frequency?
+
+- ☐ a) 121.5 MHz
+- ☐ b) 123.2 MHz
+- ☐ c) 126.7 MHz
+- ☐ d) 122.2 MHz
 
 <details>
 <summary>Click to reveal answer</summary>
 
-**Answer: 126.7 MHz.** This is the standard VFR en route frequency for uncontrolled airspace across Canada. For L1C BVLOS operations in Class G airspace, monitoring 126.7 MHz provides awareness of VFR traffic transiting through or near your operating area. Broadcasting your own RPAS operations on this frequency alerts manned traffic to your presence.
+**Answer: c)** 126.7 MHz. This is the standard VFR en route frequency for uncontrolled airspace across Canada. For L1C BVLOS operations in Class G airspace, monitoring 126.7 MHz provides awareness of VFR traffic transiting through or near your operating area. Broadcasting your own RPAS operations on this frequency alerts manned traffic to your presence.
 
 **Reference:** TC AIM — TP 14371; L1C08 Radiotelephony — Key Frequencies for L1C Operations
 

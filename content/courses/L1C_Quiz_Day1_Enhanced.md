@@ -343,14 +343,19 @@ When a helicopter is arriving at an uncontrolled aerodrome that lies within a Ma
 ---
 
 ## Question 17
-**Category:** L1C01 Air Regs | **Bloom's Level:** Recall (Fill in the Blank)
+**Category:** L1C01 Air Regs | **Bloom's Level:** Recall
 
-With respect to wildfires, *CARs 601.15* states that no person shall operate an aircraft: "(a) over a forest fire area (b) over any area that is located within _____ nautical miles of a forest fire area (c) at an altitude of less than 3,000ft Above Ground Level (d) in any airspace that is described in a Notice to Airmen (NOTAM) issued pursuant to section 601.16." Fill in the blank.
+With respect to wildfires, *CARs 601.15* states that no person shall operate an aircraft over any area that is located within how many nautical miles of a forest fire area?
+
+- ☐ a) 3 nautical miles
+- ☐ b) 5 nautical miles
+- ☐ c) 10 nautical miles
+- ☐ d) 2 nautical miles
 
 <details>
 <summary>Click to reveal answer</summary>
 
-**Answer: 5** nautical miles. The 5 NM restriction around forest fires applies to ALL aircraft including RPAS. This is one of the absolute no-go conditions for any RPAS operation — no exceptions without specific authorization.
+**Answer: b)** 5 nautical miles. The 5 NM restriction around forest fires applies to ALL aircraft including RPAS. This is one of the absolute no-go conditions for any RPAS operation — no exceptions without specific authorization.
 
 **Reference:** CARs SOR/96-433, Section 601.15; L1C01 Air Law — Forest Fire Restrictions
 
