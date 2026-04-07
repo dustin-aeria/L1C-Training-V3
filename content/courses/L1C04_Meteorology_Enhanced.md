@@ -4,11 +4,13 @@ title: "L1C04 — Meteorology"
 
 # L1C04 — Meteorology
 
-> **Module Type:** Exam Content — TP 15530 Section 4
-> **ICAO Competency Codes:** APK (Application of Procedures), KNO (Knowledge)
-> **Estimated Duration:** 2.5–3 hours
-> **TP 15530 Mapping:** Section 4 — Meteorology
-> **Regulatory References:** CARs 901.35 (icing); TC AIM RPA Chapter 3.2.22; NAV CANADA Aviation Weather Services Guide; NRC Urban Wind Flow Report
+| | |
+|---|---|
+| **Module Type** | Exam Content — TP 15530 Section 4 |
+| **ICAO Competency Codes** | APK (Application of Procedures), KNO (Knowledge) |
+| **Estimated Duration** | 2.5–3 hours |
+| **TP 15530 Mapping** | Section 4 — Meteorology |
+| **Regulatory References** | CARs 901.35 (icing); TC AIM RPA Chapter 3.2.22; NAV CANADA Aviation Weather Services Guide; NRC Urban Wind Flow Report |
 
 ---
 

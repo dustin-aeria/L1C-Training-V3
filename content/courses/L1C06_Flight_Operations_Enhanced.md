@@ -4,11 +4,13 @@ title: "L1C06 — Flight Operations"
 
 # L1C06 — Flight Operations
 
-> **Module Type:** Exam Content — TP 15530 Section 6
-> **ICAO Competency Codes:** WLM (Workload Management), SAW (Situational Awareness), KNO (Knowledge), LTW (Leadership and Teamwork)
-> **Estimated Duration:** 4–5 hours
-> **TP 15530 Mapping:** Section 6 — Flight Operations
-> **Regulatory References:** CARs 901.23, 901.24, 901.27, 901.87, 901.217–901.223; AC 903-001; TC AIM RPA 3.2.37
+| | |
+|---|---|
+| **Module Type** | Exam Content — TP 15530 Section 6 |
+| **ICAO Competency Codes** | WLM (Workload Management), SAW (Situational Awareness), KNO (Knowledge), LTW (Leadership and Teamwork) |
+| **Estimated Duration** | 4–5 hours |
+| **TP 15530 Mapping** | Section 6 — Flight Operations |
+| **Regulatory References** | CARs 901.23, 901.24, 901.27, 901.87, 901.217–901.223; AC 903-001; TC AIM RPA 3.2.37 |
 
 ---
 

@@ -4,11 +4,13 @@ title: "L1C07 — Theory of Flight"
 
 # L1C07 — Theory of Flight
 
-> **Module Type:** Exam Content — TP 15530 Section 7
-> **ICAO Competency Codes:** KNO (Knowledge), FPM (Flight Path Management)
-> **Estimated Duration:** 2–2.5 hours
-> **TP 15530 Mapping:** Section 7 — Theory of Flight
-> **Regulatory References:** From the Ground Up (MacDonald & Peppler, 30th ed.); NASA Beginners' Guide to Aeronautics
+| | |
+|---|---|
+| **Module Type** | Exam Content — TP 15530 Section 7 |
+| **ICAO Competency Codes** | KNO (Knowledge), FPM (Flight Path Management) |
+| **Estimated Duration** | 2–2.5 hours |
+| **TP 15530 Mapping** | Section 7 — Theory of Flight |
+| **Regulatory References** | From the Ground Up (MacDonald & Peppler, 30th ed.); NASA Beginners' Guide to Aeronautics |
 
 ---
 

@@ -4,11 +4,13 @@ title: "L1C09 — Flight Review Preparation"
 
 # L1C09 — Flight Review Preparation
 
-> **Module Type:** Practical Preparation — TP 15530 Appendix A
-> **ICAO Competency Codes:** All codes assessed during flight review
-> **Estimated Duration:** 3–4 hours
-> **TP 15530 Mapping:** Appendix A — Flight Reviewer's Guide, RPAS Level 1 Complex Operations Exercises
-> **Regulatory References:** Standard 921.07; CARs 901.87–901.95; Standard 923; TP 15395 (Flight Reviewer's Guide)
+| | |
+|---|---|
+| **Module Type** | Practical Preparation — TP 15530 Appendix A |
+| **ICAO Competency Codes** | All codes assessed during flight review |
+| **Estimated Duration** | 3–4 hours |
+| **TP 15530 Mapping** | Appendix A — Flight Reviewer's Guide, RPAS Level 1 Complex Operations Exercises |
+| **Regulatory References** | Standard 921.07; CARs 901.87–901.95; Standard 923; TP 15395 (Flight Reviewer's Guide) |
 
 ---
 

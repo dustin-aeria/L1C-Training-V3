@@ -4,11 +4,13 @@ title: "L1C08 — Radiotelephony"
 
 # L1C08 — Radiotelephony
 
-> **Module Type:** Exam Content — TP 15530 Section 8
-> **ICAO Competency Codes:** APK (Application of Procedures), KNO (Knowledge), PSD (Problem Solving and Decision Making), COM (Communication)
-> **Estimated Duration:** 1.5–2 hours
-> **TP 15530 Mapping:** Section 8 — Radiotelephony
-> **Regulatory References:** TC AIM RAC Chapter; RIC-21 (ROC-A Study Guide); RBR-1; Radiocommunication Regulations Section 33; Canadian Table of Frequency Allocations (SF10759)
+| | |
+|---|---|
+| **Module Type** | Exam Content — TP 15530 Section 8 |
+| **ICAO Competency Codes** | APK (Application of Procedures), KNO (Knowledge), PSD (Problem Solving and Decision Making), COM (Communication) |
+| **Estimated Duration** | 1.5–2 hours |
+| **TP 15530 Mapping** | Section 8 — Radiotelephony |
+| **Regulatory References** | TC AIM RAC Chapter; RIC-21 (ROC-A Study Guide); RBR-1; Radiocommunication Regulations Section 33; Canadian Table of Frequency Allocations (SF10759) |
 
 ---
 

@@ -4,11 +4,13 @@ title: "L1C01 — Air Law, Air Traffic Rules and Procedures"
 
 # L1C01 — Air Law, Air Traffic Rules and Procedures
 
-> **Module Type:** Exam Content — TP 15530 Section 1
-> **ICAO Competency Code:** APK (Application of Procedures)
-> **Estimated Duration:** 4–5 hours (recommend splitting across two sessions)
-> **TP 15530 Mapping:** Section 1 — Air Law, Air Traffic Rules and Procedures
-> **Regulatory References:** Aeronautics Act; CARs Parts I, VI, IX; Standards 921, 922, 923; AC 903-001; AC 901-002; AC 922-001
+| | |
+|---|---|
+| **Module Type** | Exam Content — TP 15530 Section 1 |
+| **ICAO Competency Code** | APK (Application of Procedures) |
+| **Estimated Duration** | 4–5 hours (recommend splitting across two sessions) |
+| **TP 15530 Mapping** | Section 1 — Air Law, Air Traffic Rules and Procedures |
+| **Regulatory References** | Aeronautics Act; CARs Parts I, VI, IX; Standards 921, 922, 923; AC 903-001; AC 901-002; AC 922-001 |
 
 ---
 

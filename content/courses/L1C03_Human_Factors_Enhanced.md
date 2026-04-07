@@ -4,11 +4,13 @@ title: "L1C03 — Human Factors"
 
 # L1C03 — Human Factors
 
-> **Module Type:** Exam Content — TP 15530 Section 3
-> **ICAO Competency Codes:** SAW (Situational Awareness), KNO (Knowledge), LTW (Leadership and Teamwork), WLM (Workload Management), PSB (Professional Standards and Behaviours)
-> **Estimated Duration:** 2.5–3 hours
-> **TP 15530 Mapping:** Section 3 — Human Factors
-> **Regulatory References:** CARs 901.218, 901.219; TP 12863/TP 12864; TC AIM RPA Chapter (crew fitness); JARUS Methodology for Evaluation of Automation
+| | |
+|---|---|
+| **Module Type** | Exam Content — TP 15530 Section 3 |
+| **ICAO Competency Codes** | SAW (Situational Awareness), KNO (Knowledge), LTW (Leadership and Teamwork), WLM (Workload Management), PSB (Professional Standards and Behaviours) |
+| **Estimated Duration** | 2.5–3 hours |
+| **TP 15530 Mapping** | Section 3 — Human Factors |
+| **Regulatory References** | CARs 901.218, 901.219; TP 12863/TP 12864; TC AIM RPA Chapter (crew fitness); JARUS Methodology for Evaluation of Automation |
 
 ---
 

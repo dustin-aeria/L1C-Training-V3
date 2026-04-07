@@ -4,11 +4,13 @@ title: "L1C05 — Navigation"
 
 # L1C05 — Navigation
 
-> **Module Type:** Exam Content — TP 15530 Section 5
-> **ICAO Competency Codes:** APK (Application of Procedures), KNO (Knowledge), SAW (Situational Awareness), PSD (Problem Solving and Decision Making)
-> **Estimated Duration:** 3–4 hours
-> **TP 15530 Mapping:** Section 5 — Navigation
-> **Regulatory References:** CARs 901.27, 901.87; AC 903-001 Section 5.0; TC AIM RPA Chapter 3.2.15
+| | |
+|---|---|
+| **Module Type** | Exam Content — TP 15530 Section 5 |
+| **ICAO Competency Codes** | APK (Application of Procedures), KNO (Knowledge), SAW (Situational Awareness), PSD (Problem Solving and Decision Making) |
+| **Estimated Duration** | 3–4 hours |
+| **TP 15530 Mapping** | Section 5 — Navigation |
+| **Regulatory References** | CARs 901.27, 901.87; AC 903-001 Section 5.0; TC AIM RPA Chapter 3.2.15 |
 
 ---
 

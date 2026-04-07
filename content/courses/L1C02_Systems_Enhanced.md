@@ -4,11 +4,13 @@ title: "L1C02 — RPA Airframes, Power Plants, Propulsion, and Systems"
 
 # L1C02 — RPA Airframes, Power Plants, Propulsion, and Systems
 
-> **Module Type:** Exam Content — TP 15530 Section 2
-> **ICAO Competency Code:** KNO (Knowledge)
-> **Estimated Duration:** 4–5 hours (recommend splitting across two sessions)
-> **TP 15530 Mapping:** Section 2 — RPAS Airframes, Power Plants, Propulsion, and Systems
-> **Regulatory References:** Standard 922 (all sections); Standard 923; AC 922-001 Issue 02; CARs 901.23, 901.211, 901.219, 901.221, 901.223
+| | |
+|---|---|
+| **Module Type** | Exam Content — TP 15530 Section 2 |
+| **ICAO Competency Code** | KNO (Knowledge) |
+| **Estimated Duration** | 4–5 hours (recommend splitting across two sessions) |
+| **TP 15530 Mapping** | Section 2 — RPAS Airframes, Power Plants, Propulsion, and Systems |
+| **Regulatory References** | Standard 922 (all sections); Standard 923; AC 922-001 Issue 02; CARs 901.23, 901.211, 901.219, 901.221, 901.223 |
 
 ---
 

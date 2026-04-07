@@ -4,10 +4,12 @@ title: L1C00 — Course Introduction & Orientation
 
 # L1C00 — Course Introduction & Orientation
 
-> **Module Type:** Non-Exam Content — Orientation & Context Setting
-> **Estimated Duration:** 45–60 minutes
-> **TP 15530 Mapping:** General orientation; sets context for all eight knowledge domains
-> **Prerequisites:** Students should have already passed the Advanced Operations exam (or be enrolled to do so)
+| | |
+|---|---|
+| **Module Type** | Non-Exam Content — Orientation & Context Setting |
+| **Estimated Duration** | 45–60 minutes |
+| **TP 15530 Mapping** | General orientation; sets context for all eight knowledge domains |
+| **Prerequisites** | Students should have already passed the Advanced Operations exam (or be enrolled to do so) |
 
 ***
 
