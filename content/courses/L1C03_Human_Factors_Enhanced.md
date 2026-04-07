@@ -87,10 +87,12 @@ Civil aviation authorities and airlines train crew members in human factors beca
 
 A Transportation Safety Board (TSB) of Canada study shows it typically takes a pilot **12.5 seconds** to identify and react to conflicting aircraft, progressing through four stages:
 
-1. **Seeing** — The aircraft enters the observer's field of vision
-2. **Recognizing** — The observer identifies the object as an aircraft (not a bird, debris, etc.)
-3. **Understanding** — The observer determines that the aircraft is on a collision course
-4. **Adjusting** — The observer communicates with the pilot, who manoeuvres the RPA to avoid collision
+| Stage | Action | Description |
+|-------|--------|-------------|
+| 1 | **Seeing** | The aircraft enters the observer's field of vision |
+| 2 | **Recognizing** | The observer identifies the object as an aircraft (not a bird, debris, etc.) |
+| 3 | **Understanding** | The observer determines that the aircraft is on a collision course |
+| 4 | **Adjusting** | The observer communicates with the pilot, who manoeuvres the RPA to avoid collision |
 
 12.5 seconds is a significant amount of time. At typical GA approach speeds of 100 knots, a manned aircraft covers approximately 500 metres in 12.5 seconds. For visual observers using Standard 923 DAA, this means traffic must be detected at sufficient distance to allow the full see-recognize-understand-adjust sequence to complete before the conflict point.
 
@@ -98,10 +100,12 @@ A Transportation Safety Board (TSB) of Canada study shows it typically takes a p
 
 ![Visual Scanning Technique](/images/human-factors/visual%20scanning%20tehnique%201.gif)
 
-- Use a systematic pattern — don't randomly scan. Divide the sky into sectors and scan each sector sequentially.
-- Move your eyes in small, overlapping steps rather than sweeping continuously. The human eye detects movement and contrast at the periphery but can only identify objects when focused directly on them.
-- Take breaks from looking at screens (GCS displays) before scanning the sky — your eyes need time to readjust to distance focusing.
-- Audio scanning is also valuable — listen for approaching aircraft engines, especially in quiet rural environments where L1C operations typically occur.
+| Technique | Description |
+|-----------|-------------|
+| **Systematic pattern** | Don't randomly scan. Divide the sky into sectors and scan each sector sequentially. |
+| **Small eye movements** | Move your eyes in small, overlapping steps rather than sweeping continuously. The human eye detects movement at the periphery but can only identify objects when focused directly. |
+| **Screen breaks** | Take breaks from looking at GCS displays before scanning the sky — your eyes need time to readjust to distance focusing. |
+| **Audio scanning** | Listen for approaching aircraft engines, especially in quiet rural environments where L1C operations typically occur. |
 
 **Detection probability rates:** Research on visual detection of aircraft shows that detection probability varies significantly with scan technique:
 
