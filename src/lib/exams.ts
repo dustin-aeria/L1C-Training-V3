@@ -115,14 +115,31 @@ function parseOptions(content: string): QuestionOption[] {
 }
 
 // Determine question type
-function determineQuestionType(content: string, options: QuestionOption[]): Question["questionType"] {
+function determineQuestionType(content: string, options: QuestionOption[], answerBlock: string): Question["questionType"] {
   // Check for fill in the blank
   if (content.includes("Fill in the blank") || content.includes("fill in the blank")) {
     return "fill-blank";
   }
 
-  // Check for select all
-  if (content.includes("Select all") || content.includes("select all")) {
+  // Check for select all/multiple - various phrasings
+  const multiSelectPatterns = [
+    /select all/i,
+    /select the conditions/i,
+    /select which/i,
+    /choose all/i,
+    /check all/i,
+    /mark all/i,
+  ];
+
+  for (const pattern of multiSelectPatterns) {
+    if (pattern.test(content)) {
+      return "select-all";
+    }
+  }
+
+  // Also check if the answer has multiple correct options (e.g., "a) and b)")
+  const correctAnswers = parseCorrectAnswers(answerBlock);
+  if (correctAnswers.length > 1) {
     return "select-all";
   }
 
@@ -246,11 +263,13 @@ function parseQuestion(questionBlock: string, questionNumber: number): Question 
   const { category, bloomsLevel } = parseMetadata(questionBlock);
   const questionText = parseQuestionText(questionBlock);
   const options = parseOptions(questionBlock);
-  const questionType = determineQuestionType(questionBlock, options);
 
-  // Extract answer block from <details> tag
+  // Extract answer block from <details> tag FIRST (needed for question type detection)
   const detailsMatch = questionBlock.match(/<details>[\s\S]*?<summary>[^<]*<\/summary>([\s\S]*?)<\/details>/);
   const answerBlock = detailsMatch ? detailsMatch[1] : "";
+
+  // Determine question type (needs answerBlock to check for multiple correct answers)
+  const questionType = determineQuestionType(questionBlock, options, answerBlock);
 
   const correctAnswers = parseCorrectAnswers(answerBlock);
   const { explanation, reference } = parseExplanation(answerBlock);
