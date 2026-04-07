@@ -27,7 +27,7 @@ This is the most technically detailed module in the L1C ground school. It covers
 - "GPS is always accurate." → GPS accuracy varies dramatically with satellite geometry (DOP), atmospheric conditions, terrain masking, multipath reflections, and intentional or unintentional interference. A BVLOS mission in a narrow valley may have completely different GPS performance than one over flat terrain.
 - "Lost link means the drone is lost." → A well-designed RPAS with a proper 922.09 declaration will behave predictably after C2 link loss. Understanding lost-link behaviour is one of the most critical aspects of BVLOS operations.
 
-**Recommended session split:** Cover Sections 1–7 (Airframes through Batteries) in Session 1. Cover Sections 8–15 (Autopilots through Knowledge Check) in Session 2.
+**Recommended session split:** Cover Sections 1–10 (Wake Turbulence through Batteries) in Session 1. Cover Sections 11–17 (Autopilots through Discussion Prompts) in Session 2.
 
 </div>
 </div>
@@ -132,15 +132,15 @@ RPAS are classified within the broader ICAO aircraft classification framework. F
 | **Hydrogen fuel cell** | Emerging technology for extended endurance |
 | **Hybrid electric/combustion** | Combines benefits of both power sources |
 
-### 1.2 Applicable Operational Principles
+### 3.2 Applicable Operational Principles
 
 L1C pilots must understand the complete flight envelope of their aircraft type, including components, aerodynamics, weight and balance, launch procedures, take-off/initial climb/level off/hover/forward flight, flight scenarios and manoeuvres, and landing/recovery. These topics are covered in detail in Module L1C07 (Theory of Flight) but introduced here in the context of the systems that enable them.
 
 ---
 
-## SECTION 2: Airframes
+## SECTION 4: Airframes
 
-### 2.1 Airframe Inspection and Airworthiness
+### 4.1 Airframe Inspection and Airworthiness
 
 Understanding your airframe is the first line of defence against in-flight failures — especially critical in BVLOS where you cannot visually monitor the aircraft for developing problems.
 
@@ -158,13 +158,13 @@ Understanding your airframe is the first line of defence against in-flight failu
 
 ---
 
-## SECTION 3: Electrical Systems
+## SECTION 5: Electrical Systems
 
-### 3.1 Typical Electrical System Components
+### 5.1 Typical Electrical System Components
 
 RPAS electrical systems include power sources (batteries, generators), distribution systems (wiring, bus bars, voltage regulators), actuators (servos, electronic speed controllers/ESCs), sensors, control electronics (flight controller, GPS receiver, telemetry radio), and payload systems.
 
-### 3.2 Servos
+### 5.2 Servos
 
 ![Flight Control System Architecture](/images/systems/flight control architecture.png)
 
@@ -181,32 +181,35 @@ A **servo** is an electromechanical actuator that converts electrical signals in
 
 ![Flight Control Surface Movement](/images/systems/Flight Control.gif)
 
-### 3.3 Environmental Protection
+### 5.3 Environmental Protection
 
 **Keeping components dry:** Water and moisture cause corrosion, electrical shorts, and sensor contamination. Even moisture from fog, dew, or humid air can affect sensitive electronics over time.
 
 **Waterproof ratings (IP ratings):** An IP (Ingress Protection) rating like IP43 or IP67 indicates the degree of protection against solid objects and water. However, IP ratings have limitations — they are tested under specific laboratory conditions, not in operational environments with vibration, temperature cycling, and physical stress. An IP43-rated RPAS may survive light rain in a lab test but fail in sustained rain at altitude with wind-driven water penetration. Always treat the IP rating as a *minimum* protection level, not a guarantee.
 
-### 3.4 Battery Consumption
+### 5.4 Battery Consumption
 
 Understanding battery consumption is essential for BVLOS flight planning. Key factors affecting consumption include aircraft weight (including payload), flight speed, wind conditions, ambient temperature, altitude, and manoeuvring intensity. Most flight controllers provide real-time battery telemetry including voltage, current draw, and estimated remaining capacity, but these estimates become less accurate as batteries age.
 
 ---
 
-## SECTION 4: Redundancies and Critical Items
+## SECTION 6: Redundancies and Critical Items
 
-### 4.1 The Value of Redundancy in BVLOS
+### 6.1 The Value of Redundancy in BVLOS
 
 Redundancy means having backup systems that can take over if a primary system fails. In VLOS operations, the pilot's direct observation provides a human redundancy layer — you can see problems and react. In BVLOS, technological redundancy replaces this human layer.
 
 **Types of redundancy in RPAS:**
-- **Sensor redundancy** — Dual IMUs, dual barometers, dual GPS receivers allow the flight controller to cross-check data and detect sensor failures
-- **Power redundancy** — Dual batteries, dual power buses prevent a single battery failure from causing total power loss
-- **C2 link redundancy** — Dual remote controllers, backup communication links (e.g., cellular backup for primary radio link)
-- **Motor redundancy** — Hexacopters and octocopters can continue controlled flight after losing one or more motors
-- **Navigation redundancy** — Multi-constellation GNSS (GPS + GLONASS + Galileo + BeiDou) provides more satellites and better geometry
 
-### 4.2 Single Points of Failure
+| Redundancy Type | Description |
+|-----------------|-------------|
+| **Sensor redundancy** | Dual IMUs, dual barometers, dual GPS receivers allow the flight controller to cross-check data and detect sensor failures |
+| **Power redundancy** | Dual batteries, dual power buses prevent a single battery failure from causing total power loss |
+| **C2 link redundancy** | Dual remote controllers, backup communication links (e.g., cellular backup for primary radio link) |
+| **Motor redundancy** | Hexacopters and octocopters can continue controlled flight after losing one or more motors |
+| **Navigation redundancy** | Multi-constellation GNSS (GPS + GLONASS + Galileo + BeiDou) provides more satellites and better geometry |
+
+### 6.2 Single Points of Failure
 
 A **single point of failure** is any component whose failure alone would result in loss of control or an unsafe condition. Manufacturers are required to perform a system safety analysis on their RPAS designs to identify all single points of failure.
 
@@ -225,7 +228,7 @@ This aircraft demonstrates the multi-layer redundancy expected for declared BVLO
 
 > **Discussion Prompt #1:** *"Look at your own RPAS. How many single points of failure can you identify? For each one, what would happen if that component failed during a BVLOS mission 5 km from your position? What mitigations exist?"*
 
-### 4.3 Latent Failures
+### 6.3 Latent Failures
 
 A **latent failure** is a failure that has already occurred but has not yet been detected because the failed component is not currently in active use, or because its failure is masked by a redundant system. Latent failures are dangerous because they degrade your redundancy without your knowledge — when the primary system then fails, there is no backup.
 
@@ -235,9 +238,9 @@ A **latent failure** is a failure that has already occurred but has not yet been
 
 ---
 
-## SECTION 5: Ground Control Station (GCS)
+## SECTION 7: Ground Control Station (GCS)
 
-### 5.1 GCS Considerations for BVLOS
+### 7.1 GCS Considerations for BVLOS
 
 The GCS is where you control and monitor your aircraft during BVLOS operations. In VLOS, the GCS supplements your direct visual observation. In BVLOS, the GCS IS your entire interface with the aircraft.
 
@@ -249,9 +252,9 @@ The GCS is where you control and monitor your aircraft during BVLOS operations. 
 
 ---
 
-## SECTION 6: Command and Control (C2) Links
+## SECTION 8: Command and Control (C2) Links
 
-### 6.1 C2 Link Fundamentals
+### 8.1 C2 Link Fundamentals
 
 The C2 link is the data connection between the GCS and the RPA. It carries command inputs from the pilot to the aircraft and telemetry data from the aircraft back to the pilot. In BVLOS, the C2 link is your lifeline to the aircraft — if it fails, you lose the ability to control the aircraft and may lose awareness of its status.
 
@@ -259,7 +262,7 @@ The C2 link is the data connection between the GCS and the RPA. It carries comma
 
 **Radio line-of-sight:** Unlike visual line of sight, radio line of sight follows the curvature of the RF signal path and includes the Fresnel zone. Physical obstructions that don't appear to block the direct path between antennas can still degrade the signal if they encroach on the Fresnel zone.
 
-### 6.2 C2 Link Types — Radio vs. Cellular vs. Satellite
+### 8.2 C2 Link Types — Radio vs. Cellular vs. Satellite
 
 | Characteristic | Direct Radio (LOS) | Cellular | Satellite |
 |---|---|---|---|
@@ -273,7 +276,7 @@ The C2 link is the data connection between the GCS and the RPA. It carries comma
 
 > **Key Concept — Latency Matters for BVLOS:** In direct manual control, latency determines how quickly the aircraft responds to your inputs. At 50 ms latency (typical direct radio), the delay is imperceptible. At 500 ms (satellite), there is a noticeable lag that makes precise manual control difficult. This is why most satellite-linked BVLOS operations use autonomous flight modes with human monitoring rather than direct stick control.
 
-### 6.3 Data Transmission Properties
+### 8.3 Data Transmission Properties
 
 Understanding these properties helps you evaluate whether a C2 link is appropriate for your operation:
 
@@ -291,19 +294,16 @@ Understanding these properties helps you evaluate whether a C2 link is appropria
 
 Video transmission requires **100–1000 times** more bandwidth than C2 commands. This is why many BVLOS platforms use separate frequencies for C2 (reliable, low-bandwidth) and video (high-bandwidth, non-critical). A momentary video dropout is acceptable; a momentary C2 dropout could be catastrophic.
 
-**Latency:** The delay between sending and receiving data. Critical for control responsiveness.
+| Property | Description |
+|----------|-------------|
+| **Latency** | The delay between sending and receiving data. Critical for control responsiveness. |
+| **Throughput** | The real-world usable data rate after accounting for overhead, error correction, and interference. |
+| **Signal-to-Noise Ratio (SNR)** | The ratio of signal power to noise power. Higher SNR means better signal quality and fewer errors. |
+| **Power Output** | Transmit power. Higher power generally means greater range, but is regulated by ISED. |
+| **Interference Susceptibility** | How vulnerable the link is to RF noise from other sources. |
+| **Security (Encryption)** | Protection against unauthorized access. AES, WPA, and proprietary encryption methods are used. |
 
-**Throughput:** The real-world usable data rate after accounting for overhead, error correction, and interference.
-
-**Signal-to-Noise Ratio (SNR):** The ratio of signal power to noise power. Higher SNR means better signal quality and fewer errors.
-
-**Power Output:** Transmit power. Higher power generally means greater range, but is regulated by ISED.
-
-**Interference Susceptibility:** How vulnerable the link is to RF noise from other sources.
-
-**Security (Encryption):** Protection against unauthorized access. AES, WPA, and proprietary encryption methods are used.
-
-### 6.4 Unlicensed Frequency Characteristics
+### 8.4 Unlicensed Frequency Characteristics
 
 | Characteristic | 900 MHz | 2.4 GHz | 5.8 GHz |
 |---|---|---|---|
@@ -318,7 +318,7 @@ Video transmission requires **100–1000 times** more bandwidth than C2 commands
 
 > **Operational Implication:** For long-range BVLOS operations, 900 MHz offers the best penetration and range but limited bandwidth. For operations requiring high-bandwidth video telemetry, 5.8 GHz offers the bandwidth but with severely limited range. Many BVLOS platforms use 900 MHz for C2 commands and a separate 2.4 or 5.8 GHz link for video — separating critical control data from payload data.
 
-### 6.5 Standard 922.09 — C2 Link Reliability and Lost Link Behaviour
+### 8.5 Standard 922.09 — C2 Link Reliability and Lost Link Behaviour
 
 Standard 922.09 requires that:
 - The occurrence of any combination of failures resulting in loss of control is **remote or less**
@@ -330,15 +330,15 @@ Lost-link behaviour must be consistent and programmable. The operator must know 
 
 ---
 
-## SECTION 7: Radio Wave Propagation
+## SECTION 9: Radio Wave Propagation
 
-### 7.1 The Inverse-Square Law
+### 9.1 The Inverse-Square Law
 
 The intensity of radiated energy (including radio signals) is inversely proportional to the square of the distance from the source. This means that if you double the distance, the signal strength drops to one-quarter. If you triple the distance, it drops to one-ninth.
 
 **Practical implication:** Signal strength decreases rapidly with distance. A C2 link that works perfectly at 1 km may be marginal at 3 km and unusable at 5 km, even with perfect line of sight. Your maximum theoretical range is NOT your reliable operational range — always plan with significant margin.
 
-### 7.2 Antennas
+### 9.2 Antennas
 
 Different antenna types have different characteristics that affect C2 link performance:
 
@@ -356,7 +356,7 @@ Different antenna types have different characteristics that affect C2 link perfo
 - **Radiation pattern** — The three-dimensional shape of the antenna's signal output. Determines where the signal is strongest and where there are "null" zones.
 - **Polarization** — Vertical, horizontal, circular left, or circular right. The transmitting and receiving antennas must use matching polarization for optimal signal reception. Mismatched polarization can cause signal loss of 20 dB or more.
 
-### 7.3 Signal Propagation Effects
+### 9.3 Signal Propagation Effects
 
 | Propagation Effect | Description |
 |--------------------|-------------|
@@ -366,7 +366,7 @@ Different antenna types have different characteristics that affect C2 link perfo
 | **Fresnel zone** | The ellipsoidal region surrounding the direct line between transmitter and receiver through which most of the signal energy travels. Any obstacle that encroaches on the Fresnel zone — even if it does not block the direct line of sight — will reduce signal strength. The Fresnel zone is wider at mid-path and narrower near the antennas. At 2.4 GHz over a 5 km path, the Fresnel zone radius at mid-path is approximately 12.5 m — a stand of trees or a low hill can easily encroach on it. |
 | **Doppler spread** | The frequency shift caused by relative motion between the transmitter and receiver. In high-speed fixed-wing BVLOS operations, Doppler effects can affect some C2 link protocols. Generally not significant at typical multirotor speeds. |
 
-### 7.4 Electromagnetic Interference (EMI)
+### 9.4 Electromagnetic Interference (EMI)
 
 EMI is defined by the ITU as the effect of unwanted energy upon reception in a radiocommunication system, manifested by performance degradation, misinterpretation, or loss of information.
 
@@ -391,26 +391,28 @@ EMI is defined by the ITU as the effect of unwanted energy upon reception in a r
 
 ---
 
-## SECTION 8: Batteries
+## SECTION 10: Batteries
 
-### 8.1 Battery Types and Characteristics
+### 10.1 Battery Types and Characteristics
 
 The majority of consumer and commercial RPAS use **Lithium Polymer (LiPo)** or **Lithium-ion (Li-ion)** batteries. Both are high-energy-density power sources that offer good power-to-weight ratios but require careful handling.
 
 **A single battery is a single point of failure.** If your RPAS uses a single battery pack with no backup power system, a battery failure will result in loss of power and a crash. Dual-battery systems or redundant power architectures address this vulnerability.
 
-### 8.2 Variables Affecting Battery Performance
+### 10.2 Variables Affecting Battery Performance
 
-- **Age:** Battery capacity degrades with each charge/discharge cycle. A battery rated at 10,000 mAh when new may only deliver 7,000 mAh after 200 cycles.
-- **Charge history:** Batteries that have been over-discharged, over-charged, or stored at full charge for extended periods degrade faster.
-- **Charge status:** A battery at 80% charge does not have 80% of its performance remaining — discharge curves are non-linear, especially at low temperatures.
-- **Temperature:** Cold temperatures significantly reduce battery capacity and voltage. A battery that provides 25 minutes of flight at 20°C may only provide 15 minutes at -10°C. Many RPAS have battery warming systems for cold-weather operations.
+| Variable | Effect on Performance |
+|----------|----------------------|
+| **Age** | Battery capacity degrades with each charge/discharge cycle. A battery rated at 10,000 mAh when new may only deliver 7,000 mAh after 200 cycles. |
+| **Charge history** | Batteries that have been over-discharged, over-charged, or stored at full charge for extended periods degrade faster. |
+| **Charge status** | A battery at 80% charge does not have 80% of its performance remaining — discharge curves are non-linear, especially at low temperatures. |
+| **Temperature** | Cold temperatures significantly reduce battery capacity and voltage. A battery that provides 25 minutes of flight at 20°C may only provide 15 minutes at -10°C. Many RPAS have battery warming systems for cold-weather operations. |
 
-### 8.3 Assessing Battery Voltages
+### 10.3 Assessing Battery Voltages
 
 Monitoring individual cell voltages (not just total pack voltage) is critical for detecting developing battery problems. A cell that is significantly lower than others indicates degradation or a developing failure. Most telemetry systems display per-cell voltage during pre-flight checks.
 
-### 8.4 Battery Hazards
+### 10.4 Battery Hazards
 
 **Transport risks:** Lithium-ion batteries are classified as dangerous goods for transport. They can experience thermal runaway (a self-accelerating exothermic reaction) if damaged, short-circuited, or exposed to excessive heat. Transport regulations (IATA DGR, TDG Regulations) specify packaging, labelling, and quantity limits.
 
@@ -420,33 +422,32 @@ Monitoring individual cell voltages (not just total pack voltage) is critical fo
 
 ---
 
-## SECTION 9: Autopilots and Flight Management Systems
+## SECTION 11: Autopilots and Flight Management Systems
 
-### 9.1 Levels of Pilot Intervention
+### 11.1 Levels of Pilot Intervention
 
 RPAS autopilots operate on a spectrum from full manual control to full autonomy:
 
-**Human-in-the-Loop (HITL):** The pilot has direct positive control of the system and is directing the flight through controller inputs or waypoint identification. The pilot must actively fly the aircraft. Most common for VLOS operations.
+| Intervention Level | Description |
+|--------------------|-------------|
+| **Human-in-the-Loop (HITL)** | The pilot has direct positive control of the system and is directing the flight through controller inputs or waypoint identification. The pilot must actively fly the aircraft. Most common for VLOS operations. |
+| **Human-on-the-Loop (HOTL)** | The RPAS is the primary decision-making platform and the pilot actively monitors the operation, ready to take control if intervention is needed. The pilot plans the operation using flight planning software and uploads the flight plan to the RPAS, which follows the plan autonomously. Most common for BVLOS survey operations. |
+| **Human-off-the-Loop** | The system operates fully autonomously without pilot monitoring. NOT currently permitted under L1C regulations — the pilot must maintain awareness and the ability to intervene. |
 
-**Human-on-the-Loop (HOTL):** The RPAS is the primary decision-making platform and the pilot actively monitors the operation, ready to take control if intervention is needed. The pilot plans the operation using flight planning software and uploads the flight plan to the RPAS, which follows the plan autonomously. Most common for BVLOS survey operations.
-
-**Human-off-the-Loop:** The system operates fully autonomously without pilot monitoring. NOT currently permitted under L1C regulations — the pilot must maintain awareness and the ability to intervene.
-
-### 9.2 Autopilot Components and Control Loops
+### 11.2 Autopilot Components and Control Loops
 
 A typical autopilot consists of:
 
-**Sensors:** IMU (accelerometers, gyroscopes, magnetometer), barometric pressure sensor, GPS receiver, airspeed sensor (fixed-wing), proximity sensors, and optionally a compass and secondary GPS.
-
-**Flight controller:** The processor that receives sensor data, computes the aircraft's current state, compares it to the desired state, and sends correction commands to the motors/servos.
-
-**Inner control loop:** Manages the aircraft's attitude (pitch, roll, yaw) at high speed (typically 400–1000 Hz). Uses primarily IMU data. This is the loop that keeps the aircraft stable moment-to-moment.
-
-**Outer control loop:** Manages the aircraft's position and velocity (altitude hold, position hold, waypoint navigation) at lower speed (typically 10–50 Hz). Uses GPS, barometer, and compass data. This is the loop that guides the aircraft along the planned flight path.
+| Component | Description |
+|-----------|-------------|
+| **Sensors** | IMU (accelerometers, gyroscopes, magnetometer), barometric pressure sensor, GPS receiver, airspeed sensor (fixed-wing), proximity sensors, and optionally a compass and secondary GPS. |
+| **Flight controller** | The processor that receives sensor data, computes the aircraft's current state, compares it to the desired state, and sends correction commands to the motors/servos. |
+| **Inner control loop** | Manages the aircraft's attitude (pitch, roll, yaw) at high speed (typically 400–1000 Hz). Uses primarily IMU data. This is the loop that keeps the aircraft stable moment-to-moment. |
+| **Outer control loop** | Manages the aircraft's position and velocity (altitude hold, position hold, waypoint navigation) at lower speed (typically 10–50 Hz). Uses GPS, barometer, and compass data. This is the loop that guides the aircraft along the planned flight path. |
 
 **Understanding the loop hierarchy matters because:** A sensor failure that affects the inner loop (e.g., IMU failure) will likely cause immediate loss of control. A sensor failure that affects the outer loop (e.g., GPS loss) will cause navigation errors but the aircraft may remain stable — it just won't know where it is.
 
-### 9.3 Flight Termination and Return-to-Home (RTH)
+### 11.3 Flight Termination and Return-to-Home (RTH)
 
 **Flight termination:** An emergency procedure where the autopilot deliberately ends the flight, typically by cutting motor power (allowing the aircraft to descend/crash in a controlled manner) or deploying a parachute. Flight termination is used when continued flight poses a greater risk than an uncontrolled descent.
 
@@ -454,7 +455,7 @@ A typical autopilot consists of:
 
 **Pre-flight preparations for flight termination systems:** Verify the termination system is armed and functional, confirm the RTH altitude is set above all known obstacles along the return path, verify the home point coordinates are correct, and confirm the lost-link behaviour is programmed as intended.
 
-### 9.4 Software and Firmware
+### 11.4 Software and Firmware
 
 **Software version control:** Using incorrect, outdated, or mismatched firmware versions can cause unexpected behaviour including loss of control. Only install verified firmware from approved sources (the manufacturer's official channels).
 
@@ -464,9 +465,9 @@ A typical autopilot consists of:
 
 ---
 
-## SECTION 10: Instruments and Sensors
+## SECTION 12: Instruments and Sensors
 
-### 10.1 Magnetometer (Compass)
+### 12.1 Magnetometer (Compass)
 
 The magnetometer measures the Earth's magnetic field and provides a heading reference to the flight controller.
 
@@ -482,7 +483,7 @@ The magnetometer measures the Earth's magnetic field and provides a heading refe
 
 > **Key Concept:** Quadcopter motors generate their own magnetic fields that can interfere with compass readings. This is why many RPAS designs mount the compass sensor on a mast or as far from the motors as possible. If your compass is showing erratic readings, motor interference or environmental magnetic anomalies should be your first suspicion.
 
-### 10.2 Altimeter/Barometer
+### 12.2 Altimeter/Barometer
 
 **Altimeter:** Measures altitude above a fixed reference (typically sea level). Aviation is fundamentally grounded in altimetry — all aircraft separation is based on altitude references.
 
@@ -492,13 +493,13 @@ The magnetometer measures the Earth's magnetic field and provides a heading refe
 
 **Effect of a blocked static system:** If the barometric pressure port is blocked (by moisture, debris, or icing), the barometer will read a fixed pressure regardless of actual altitude changes. The autopilot's altitude hold will drift because it cannot sense pressure changes. This can cause the aircraft to climb or descend without the pilot being aware.
 
-### 10.3 Airspeed Indicator (Fixed-Wing RPAS)
+### 12.3 Airspeed Indicator (Fixed-Wing RPAS)
 
 **Indicated Airspeed (IAS) vs. True Airspeed (TAS):** IAS is what the pitot-static system measures. TAS is the actual speed through the air, corrected for altitude and temperature. At higher altitudes and temperatures, TAS is higher than IAS.
 
 **Blocked pitot system:** If the pitot tube is blocked (insects, ice, debris), the airspeed indicator will show a frozen or incorrect reading. On a fixed-wing RPAS with autopilot speed control, a blocked pitot can cause the autopilot to attempt speed corrections based on false data — potentially slowing the aircraft to a stall or accelerating beyond structural limits.
 
-### 10.4 Inertial Measurement Unit (IMU)
+### 12.4 Inertial Measurement Unit (IMU)
 
 The IMU is the core sensor package that provides the flight controller with attitude and acceleration data. A typical IMU contains:
 
@@ -512,22 +513,24 @@ The IMU is the core sensor package that provides the flight controller with atti
 
 ---
 
-## SECTION 11: GNSS / GPS
+## SECTION 13: GNSS / GPS
 
-### 11.1 Global Navigation Satellite Systems
+### 13.1 Global Navigation Satellite Systems
 
 GNSS uses satellites for autonomous geo-positioning. Modern RPAS receivers can use multiple constellations simultaneously:
 
-- **GPS** — United States (31 satellites)
-- **GLONASS** — Russia (24 satellites)
-- **BeiDou** — China (35+ satellites)
-- **Galileo** — European Union (30 satellites)
+| Constellation | Operator | Satellites |
+|---------------|----------|------------|
+| **GPS** | United States | 31 satellites |
+| **GLONASS** | Russia | 24 satellites |
+| **BeiDou** | China | 35+ satellites |
+| **Galileo** | European Union | 30 satellites |
 
 Using multiple constellations provides more visible satellites, better geometric diversity, and improved accuracy and availability — especially important in challenging environments like valleys, urban areas, or high-latitude operations in northern Canada.
 
 ![GNSS Satellite Navigation System](/images/systems/GNSS motiongrpahic.gif)
 
-### 11.2 GPS Error Sources
+### 13.2 GPS Error Sources
 
 **Satellite errors:** Gravitational effects of the Sun and Moon can pull satellites from their planned orbital paths. Solar radiation creates EMI that affects signals before they reach the atmosphere. These errors are generally small and correctable using differential GPS (DGPS) or RTK systems.
 
@@ -539,7 +542,7 @@ Using multiple constellations provides more visible satellites, better geometric
 
 **GPS jamming and spoofing:** Jamming introduces an erroneous signal that overwhelms the valid GPS transmissions. Spoofing provides false GPS data that appears legitimate. Both can cause the RPAS to navigate to incorrect positions. GPS interference can be monitored using tools like GPSjam.org. The K-Index from NOAA also indicates space weather conditions that can affect GPS performance.
 
-### 11.3 Navigation and Altitude Accuracy
+### 13.3 Navigation and Altitude Accuracy
 
 Flight controllers combine IMU data with GPS data through sensor fusion algorithms to achieve positioning accuracy greater than GPS alone. Standard 922.04 requires position accuracy of ±10 m and altitude accuracy of ±16 m for controlled airspace operations.
 
@@ -549,22 +552,25 @@ Actual GPS module accuracy varies significantly between receivers. The original 
 
 ---
 
-## SECTION 12: Detect and Avoid Systems (DAA)
+## SECTION 14: Detect and Avoid Systems (DAA)
 
-### 12.1 The DAA Requirement for BVLOS
+### 14.1 The DAA Requirement for BVLOS
 
 In BVLOS operations, pilots cannot rely on human vision to detect and avoid other aircraft. Standard 922.10 requires a technological solution for detecting and avoiding manned aircraft in the operational area.
 
 However, Standard 922.10 is **optional** — manufacturers may choose not to declare against it. If the RPAS does not have onboard DAA capability, the operator can instead use **Standard 923 Vision-Based DAA**, where trained visual observers monitor for incoming traditional aircraft while not being able to see the RPA itself. The visual observers effectively become the detect-and-avoid system.
 
 **Technological DAA options include:**
-- **Radar** — Active detection, works in all visibility conditions, range varies by system
-- **ADS-B receivers** — Passive detection of transponder-equipped aircraft, good range, but not all aircraft are equipped
-- **Electro-Optical/Infrared (EO/IR) sensors** — Camera-based detection, limited by visibility conditions
-- **Acoustic sensors** — Sound-based detection, limited range, affected by wind noise
-- **Combination systems** — Multiple sensor types fused for comprehensive detection
 
-### 12.2 Transponder Types
+| DAA Technology | Description |
+|----------------|-------------|
+| **Radar** | Active detection, works in all visibility conditions, range varies by system |
+| **ADS-B receivers** | Passive detection of transponder-equipped aircraft, good range, but not all aircraft are equipped |
+| **Electro-Optical/Infrared (EO/IR) sensors** | Camera-based detection, limited by visibility conditions |
+| **Acoustic sensors** | Sound-based detection, limited range, affected by wind noise |
+| **Combination systems** | Multiple sensor types fused for comprehensive detection |
+
+### 14.2 Transponder Types
 
 Understanding transponder types helps you evaluate what traffic your DAA system can and cannot detect:
 
@@ -587,15 +593,15 @@ NAV CANADA has announced a phased rollout of ADS-B requirements:
 
 > **Key Concept — The DAA Gap:** The aircraft most likely to conflict with L1C BVLOS operations — low-flying VFR traffic in uncontrolled airspace (bush planes, helicopters, crop dusters, recreational aircraft) — are the ones LEAST likely to be equipped with ADS-B or any transponder. An ADS-B-only DAA system will not detect these aircraft. This is why vision-based DAA (Standard 923) using trained visual observers remains an important option.
 
-### 12.3 Standard 923 — Vision-Based Detect and Avoid
+### 14.4 Standard 923 — Vision-Based Detect and Avoid
 
 Standard 923 allows the use of trained visual observers as the DAA system for BVLOS operations. The VOs maintain visual contact with the airspace in which the RPA is operating, detect approaching traffic, and communicate with the pilot to initiate avoidance manoeuvres. This is the "declaration is optional to the manufacturer" note from the original course materials — operators can conduct BVLOS using human vision-based DAA under Standard 923 instead of requiring the manufacturer to declare against Standard 922.10.
 
 ---
 
-## SECTION 13: Maintenance and Record Keeping
+## SECTION 15: Maintenance and Record Keeping
 
-### 13.1 Maintenance Control Manual (CARs 901.211)
+### 15.1 Maintenance Control Manual (CARs 901.211)
 
 Every RPAS operator must establish and maintain a Maintenance Control Manual that includes:
 - The name of every person authorized by the operator to perform maintenance actions
@@ -604,11 +610,11 @@ Every RPAS operator must establish and maintain a Maintenance Control Manual tha
 
 The MCM must be made available to the Minister on request.
 
-### 13.2 Training Program — Maintenance (CARs 901.219)
+### 15.2 Training Program — Maintenance (CARs 901.219)
 
 The RPOC training program must include training on RPA servicing and ground handling (901.219(2)(b)(ii)). Maintenance personnel must be trained and competent before performing maintenance actions.
 
-### 13.3 Record Keeping (CARs 901.223)
+### 15.3 Record Keeping (CARs 901.223)
 
 Maintenance records must include:
 - The names of persons who performed maintenance actions
@@ -618,13 +624,13 @@ Maintenance records must include:
 
 Records must be available on request by the Minister and retained for the required period (12–24 months depending on record type).
 
-### 13.4 Manufacturer Instructions and Modifications
+### 15.4 Manufacturer Instructions and Modifications
 
 Always follow the manufacturer's instructions for maintenance, including identifying when independent verification is required. Modifications to RPAS must demonstrate that Standard 922 requirements continue to be met, and must be performed in accordance with manufacturer instructions. A modifier who makes a declaration for a modified RPAS takes on the same regulatory responsibilities as the original manufacturer.
 
 ---
 
-## SECTION 14: Knowledge Check — Systems Module
+## SECTION 16: Knowledge Check — Systems Module
 
 ### Recall-Level Questions
 
@@ -715,7 +721,7 @@ Always follow the manufacturer's instructions for maintenance, including identif
 
 ---
 
-## SECTION 15: Discussion Prompts for Instructor-Led Session
+## SECTION 17: Discussion Prompts for Instructor-Led Session
 
 ### Systems Thinking (10 minutes)
 *"In a manned aircraft, if the compass fails, the pilot looks out the window and navigates by visual reference. If the altimeter fails, the pilot looks at the ground and estimates height. In BVLOS, what replaces each of these human capabilities? What happens when the replacement also fails?"*
@@ -728,8 +734,6 @@ Always follow the manufacturer's instructions for maintenance, including identif
 
 ### Battery Management Philosophy (5 minutes)
 *"What is your personal minimum battery threshold for initiating RTH during a BVLOS mission? How do you account for headwinds on the return leg, cold temperature effects on remaining capacity, and the possibility that you may need to divert to an alternate landing site?"*
-
----
 
 ---
 
