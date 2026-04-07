@@ -342,17 +342,14 @@ The intensity of radiated energy (including radio signals) is inversely proporti
 
 Different antenna types have different characteristics that affect C2 link performance:
 
-**Dipole antenna:** Simple, omnidirectional in one plane. Good general-purpose antenna but not optimized for long range.
-
-**Yagi array:** Directional antenna that concentrates signal in one direction. Higher gain but must be pointed at the aircraft. Useful for fixed-direction BVLOS operations.
-
-**Cloverleaf antenna:** Circularly polarized, designed for FPV video transmission. Good rejection of multipath interference.
-
-**Fractal antenna:** Compact design that operates across multiple frequencies. Used in some GCS designs.
-
-**MIMO (Multiple In Multiple Out):** Uses multiple antennas to improve data throughput and reliability. Common in 4G/5G cellular links.
-
-**Phased array:** Electronically steerable — can track a moving aircraft without physical movement. Increasingly used in advanced GCS systems.
+| Antenna Type | Description |
+|--------------|-------------|
+| **Dipole antenna** | Simple, omnidirectional in one plane. Good general-purpose antenna but not optimized for long range. |
+| **Yagi array** | Directional antenna that concentrates signal in one direction. Higher gain but must be pointed at the aircraft. Useful for fixed-direction BVLOS operations. |
+| **Cloverleaf antenna** | Circularly polarized, designed for FPV video transmission. Good rejection of multipath interference. |
+| **Fractal antenna** | Compact design that operates across multiple frequencies. Used in some GCS designs. |
+| **MIMO (Multiple In Multiple Out)** | Uses multiple antennas to improve data throughput and reliability. Common in 4G/5G cellular links. |
+| **Phased array** | Electronically steerable — can track a moving aircraft without physical movement. Increasingly used in advanced GCS systems. |
 
 **Key antenna concepts:**
 - **EIRP (Effective Isotropic Radiated Power)** — The effective power output considering antenna gain. Regulated by ISED.
@@ -361,15 +358,13 @@ Different antenna types have different characteristics that affect C2 link perfo
 
 ### 7.3 Signal Propagation Effects
 
-**Attenuation:** The gradual weakening of a signal as it travels through the atmosphere. Affected by distance (inverse-square law), atmospheric conditions (rain, fog), and obstacles.
-
-**Multipath propagation:** When a radio signal reaches the receiver via multiple paths due to reflections from terrain, buildings, water, or the aircraft's own airframe. The multiple signals can arrive at different times and phases, causing constructive or destructive interference. In BVLOS operations over water or flat terrain, multipath can cause predictable signal fading at specific distances.
-
-**Spatial diversity:** Using multiple antennas separated by a distance to mitigate multipath fading. If one antenna is in a fade null, the other is likely receiving a usable signal. Many BVLOS GCS systems use dual antennas with spatial diversity.
-
-**Fresnel zone:** The ellipsoidal region surrounding the direct line between transmitter and receiver through which most of the signal energy travels. Any obstacle that encroaches on the Fresnel zone — even if it does not block the direct line of sight — will reduce signal strength. The Fresnel zone is wider at mid-path and narrower near the antennas. At 2.4 GHz over a 5 km path, the Fresnel zone radius at mid-path is approximately 12.5 m — a stand of trees or a low hill can easily encroach on it.
-
-**Doppler spread:** The frequency shift caused by relative motion between the transmitter and receiver. In high-speed fixed-wing BVLOS operations, Doppler effects can affect some C2 link protocols. Generally not significant at typical multirotor speeds.
+| Propagation Effect | Description |
+|--------------------|-------------|
+| **Attenuation** | The gradual weakening of a signal as it travels through the atmosphere. Affected by distance (inverse-square law), atmospheric conditions (rain, fog), and obstacles. |
+| **Multipath propagation** | When a radio signal reaches the receiver via multiple paths due to reflections from terrain, buildings, water, or the aircraft's own airframe. The multiple signals can arrive at different times and phases, causing constructive or destructive interference. In BVLOS operations over water or flat terrain, multipath can cause predictable signal fading at specific distances. |
+| **Spatial diversity** | Using multiple antennas separated by a distance to mitigate multipath fading. If one antenna is in a fade null, the other is likely receiving a usable signal. Many BVLOS GCS systems use dual antennas with spatial diversity. |
+| **Fresnel zone** | The ellipsoidal region surrounding the direct line between transmitter and receiver through which most of the signal energy travels. Any obstacle that encroaches on the Fresnel zone — even if it does not block the direct line of sight — will reduce signal strength. The Fresnel zone is wider at mid-path and narrower near the antennas. At 2.4 GHz over a 5 km path, the Fresnel zone radius at mid-path is approximately 12.5 m — a stand of trees or a low hill can easily encroach on it. |
+| **Doppler spread** | The frequency shift caused by relative motion between the transmitter and receiver. In high-speed fixed-wing BVLOS operations, Doppler effects can affect some C2 link protocols. Generally not significant at typical multirotor speeds. |
 
 ### 7.4 Electromagnetic Interference (EMI)
 
@@ -573,13 +568,12 @@ However, Standard 922.10 is **optional** — manufacturers may choose not to dec
 
 Understanding transponder types helps you evaluate what traffic your DAA system can and cannot detect:
 
-**Mode A:** Temporary four-digit code (0000–7777, 4096 discrete codes) issued by air traffic control. Only transmits when interrogated by a ground radar. Provides identification only, no altitude.
-
-**Mode C:** Adds encoded pressure altitude information to Mode A. Requires interrogation. Minimum requirement for "transponder-required airspace" per NAV CANADA.
-
-**Mode S:** 24-bit address issued by ICAO. Includes Mode A and Mode C data. Periodic broadcast (does not require interrogation). Minimum requirement for TCAS-equipped aircraft.
-
-**ADS-B (Automatic Dependent Surveillance-Broadcast):** 24-bit ICAO address, repeated broadcast, includes Mode A, Mode C, GPS location, and altitude. Provides the richest data for DAA systems but NOT universally equipped — many GA aircraft, ultralight aircraft, and helicopters operating below 400 ft in uncontrolled airspace may not carry transponders at all.
+| Transponder Type | Description |
+|------------------|-------------|
+| **Mode A** | Temporary four-digit code (0000–7777, 4096 discrete codes) issued by air traffic control. Only transmits when interrogated by a ground radar. Provides identification only, no altitude. |
+| **Mode C** | Adds encoded pressure altitude information to Mode A. Requires interrogation. Minimum requirement for "transponder-required airspace" per NAV CANADA. |
+| **Mode S** | 24-bit address issued by ICAO. Includes Mode A and Mode C data. Periodic broadcast (does not require interrogation). Minimum requirement for TCAS-equipped aircraft. |
+| **ADS-B** | Automatic Dependent Surveillance-Broadcast. 24-bit ICAO address, repeated broadcast, includes Mode A, Mode C, GPS location, and altitude. Provides the richest data for DAA systems but NOT universally equipped — many GA aircraft, ultralight aircraft, and helicopters operating below 400 ft in uncontrolled airspace may not carry transponders at all. |
 
 ### 14.3 NAV CANADA ADS-B Rollout Timeline
 
