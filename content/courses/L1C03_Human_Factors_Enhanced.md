@@ -155,49 +155,13 @@ RPAS pilots in the field face environmental stressors that office-based workers 
 
 Transport Canada identifies five hazardous attitudes that interfere with safe decision-making. Every pilot is susceptible to these — recognizing them in yourself is the first step to managing them:
 
-<div class="hazardous-attitudes-grid">
-
-<div class="attitude-card attitude-macho">
-<div class="attitude-icon">💪</div>
-<div class="attitude-title">MACHO</div>
-<div class="attitude-phrase">"I already know how to do it."</div>
-<div class="attitude-description">The belief that you can handle anything, that rules and procedures are for less experienced pilots. Leads to taking unnecessary risks to demonstrate capability.</div>
-<div class="attitude-antidote">✓ Antidote: "Taking chances is foolish."</div>
-</div>
-
-<div class="attitude-card attitude-impulsivity">
-<div class="attitude-icon">⚡</div>
-<div class="attitude-title">IMPULSIVITY</div>
-<div class="attitude-phrase">"Do it quickly."</div>
-<div class="attitude-description">The urge to act immediately without thinking through consequences. In BVLOS, impulsive actions can create situations that are difficult or impossible to recover from.</div>
-<div class="attitude-antidote">✓ Antidote: "Not so fast. Think first."</div>
-</div>
-
-<div class="attitude-card attitude-resignation">
-<div class="attitude-icon">🤷</div>
-<div class="attitude-title">RESIGNATION</div>
-<div class="attitude-phrase">"What's the use?"</div>
-<div class="attitude-description">The feeling that you have no control over the outcome, that whatever happens will happen. Leads to passive acceptance of deteriorating conditions rather than active intervention.</div>
-<div class="attitude-antidote">✓ Antidote: "I'm not helpless. I can make a difference."</div>
-</div>
-
-<div class="attitude-card attitude-invulnerability">
-<div class="attitude-icon">🛡️</div>
-<div class="attitude-title">INVULNERABILITY</div>
-<div class="attitude-phrase">"It won't happen to me."</div>
-<div class="attitude-description">The belief that accidents happen to other people — less experienced, less skilled, less careful people. This prevents pilots from taking precautions.</div>
-<div class="attitude-antidote">✓ Antidote: "It could happen to me."</div>
-</div>
-
-<div class="attitude-card attitude-anti-authority">
-<div class="attitude-icon">🚫</div>
-<div class="attitude-title">ANTI-AUTHORITARIAN</div>
-<div class="attitude-phrase">"Don't tell me what to do."</div>
-<div class="attitude-description">Resentment of rules, procedures, and oversight. Leads to skipping checklists, ignoring SOPs, and disregarding regulatory requirements.</div>
-<div class="attitude-antidote">✓ Antidote: "Follow the rules. They are usually right."</div>
-</div>
-
-</div>
+| Attitude | Phrase | Description | Antidote |
+|----------|--------|-------------|----------|
+| **Macho** | "I already know how to do it." | The belief that you can handle anything, that rules and procedures are for less experienced pilots. Leads to taking unnecessary risks. | "Taking chances is foolish." |
+| **Impulsivity** | "Do it quickly." | The urge to act immediately without thinking through consequences. In BVLOS, impulsive actions can create situations that are impossible to recover from. | "Not so fast. Think first." |
+| **Resignation** | "What's the use?" | The feeling that you have no control over the outcome. Leads to passive acceptance of deteriorating conditions rather than active intervention. | "I'm not helpless. I can make a difference." |
+| **Invulnerability** | "It won't happen to me." | The belief that accidents happen to other people — less experienced, less skilled, less careful people. Prevents pilots from taking precautions. | "It could happen to me." |
+| **Anti-Authoritarian** | "Don't tell me what to do." | Resentment of rules, procedures, and oversight. Leads to skipping checklists, ignoring SOPs, and disregarding regulatory requirements. | "Follow the rules. They are usually right." |
 
 > **Discussion Prompt #1:** *"Which of the five hazardous attitudes do you think you are most susceptible to? Think of a specific situation in your RPAS experience where one of these attitudes influenced your decision-making — even if nothing went wrong."*
 
