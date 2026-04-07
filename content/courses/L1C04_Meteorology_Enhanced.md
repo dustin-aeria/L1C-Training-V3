@@ -602,15 +602,123 @@ METAR CYEG 151600Z 27015G25KT 15SM FEW040 SCT120 BKN250 22/08 A3012 RMK CU2AC3CI
 
 **For L1C operations:** The key elements are wind (direction, speed, gusts), visibility, cloud bases (especially low ceilings), and temperature/dew point spread (indicates fog potential).
 
+---
+
+### 10.3 Vancouver METAR Example — Coastal Weather
+
+Coastal locations like Vancouver often show different weather patterns than interior sites. Here's a typical Vancouver METAR with rain and reduced visibility:
+
+```
+METAR CYVR 071845Z 09012G18KT 6SM -RA BR SCT008 BKN015 OVC025 12/10 A2987 RMK SC4SC3SC1 SLP115
+```
+
+**Full Decoder:**
+
+| Element | Code | Meaning | L1C Impact |
+|---------|------|---------|------------|
+| Report Type | METAR | Routine weather observation | Standard report |
+| Station | CYVR | Vancouver International Airport | Closest station for Lower Mainland ops |
+| Date/Time | 071845Z | 7th day of month, 1845 UTC (1045 local PDT) | Check report age — valid ~1 hour |
+| Wind | 09012G18KT | From 090° (east) at 12 kt, gusting 18 kt | 12 kt = 22 km/h, gusts to 33 km/h — check aircraft limits |
+| Visibility | 6SM | 6 statute miles | Reduced — rain and mist present |
+| Weather | -RA | Light rain | Moisture on sensors, lens fogging risk |
+| Weather | BR | Mist (visibility 5/8 to 6 SM) | VLOS may be marginal at distance |
+| Clouds | SCT008 | Scattered at 800 ft AGL | LOW ceiling — 3-4 oktas coverage |
+| Clouds | BKN015 | Broken at 1,500 ft AGL | 5-7 oktas — significant cloud layer |
+| Clouds | OVC025 | Overcast at 2,500 ft AGL | Full coverage above |
+| Temp/Dewpoint | 12/10 | Temp 12°C, dewpoint 10°C | **SPREAD ONLY 2°C — fog likely if temp drops** |
+| Altimeter | A2987 | 29.87 inHg | Below standard (29.92) — low pressure system |
+| Remarks | RMK | Remarks section follows | Additional observer notes |
+| Cloud Types | SC4SC3SC1 | Stratocumulus layers (4+3+1 = 8 oktas total) | Layered stratus — stable air, steady precip |
+| Sea Level Pressure | SLP115 | 1011.5 hPa | Confirms low pressure |
+
+**L1C Decision Assessment:**
+
+| Factor | Status | Notes |
+|--------|--------|-------|
+| Wind | CAUTION | 12G18 kt = 22-33 km/h — within most limits but gusty |
+| Visibility | MARGINAL | 6 SM okay for launch, but rain reducing it |
+| Ceiling | CONCERN | 800 ft scattered — VFR traffic compressed low |
+| Precipitation | CAUTION | Light rain — sensor/lens issues, slippery surfaces |
+| Fog Risk | HIGH | 2°C spread — fog will form if temp drops 2° |
+| Overall | MARGINAL GO | Monitor closely, have abort plan, expect deterioration |
+
+---
+
+### 10.4 Vancouver TAF Example — Reading a Forecast
+
+TAFs show expected conditions over time. Here's a 24-hour Vancouver TAF showing typical coastal weather evolution:
+
+```
+TAF CYVR 071740Z 0718/0818 10015G25KT P6SM SCT020 BKN040
+    TEMPO 0718/0724 4SM -RA BR BKN015
+    FM080200 12008KT P6SM SCT030 BKN060
+    BECMG 0806/0808 VRB03KT SKC
+```
+
+**Full Decoder:**
+
+| Line | Code | Meaning | Time (UTC) | Time (Local PDT) |
+|------|------|---------|------------|------------------|
+| **Header** | TAF CYVR | Terminal Aerodrome Forecast for Vancouver | — | — |
+| | 071740Z | Issued on 7th at 1740 UTC | 1740Z | 1040 local |
+| | 0718/0818 | Valid from 7th 1800Z to 8th 1800Z | 24-hour forecast | — |
+| **Initial** | 10015G25KT | Wind 100° at 15 kt gusting 25 kt | From 1800Z | From 1100 local |
+| | P6SM | Visibility greater than 6 SM | — | — |
+| | SCT020 BKN040 | Scattered 2,000 ft, broken 4,000 ft | — | — |
+| **TEMPO** | 0718/0724 | Temporary conditions between 1800Z-2400Z | 1800-2400Z | 1100-1700 local |
+| | 4SM -RA BR | Visibility 4 SM in light rain and mist | — | — |
+| | BKN015 | Ceiling drops to broken 1,500 ft | — | — |
+| **FM** | FM080200 | From 8th at 0200 UTC | 0200Z | 1900 local (7th) |
+| | 12008KT | Wind shifts to 120° at 8 kt (calming) | — | — |
+| | P6SM | Visibility improves to >6 SM | — | — |
+| | SCT030 BKN060 | Clouds lifting — 3,000 ft / 6,000 ft | — | — |
+| **BECMG** | 0806/0808 | Becoming (gradual change) between 0600-0800Z | 0600-0800Z | 2300-0100 local |
+| | VRB03KT | Wind variable at 3 kt (calm) | — | — |
+| | SKC | Sky clear | — | — |
+
+**TAF Change Indicators Explained:**
+
+| Indicator | Meaning | How to Use It |
+|-----------|---------|---------------|
+| **FM** (From) | Permanent change at specific time | Conditions WILL change — plan around this |
+| **TEMPO** | Temporary fluctuations (<1 hr each, <50% of period) | May or may not happen — be prepared |
+| **BECMG** | Gradual change over the time range | Transition period — conditions evolving |
+| **PROB30/40** | 30-40% probability of conditions | Unlikely but possible — have contingency |
+
+**Mission Planning Using This TAF:**
+
+| Planned Mission Time | Expected Conditions | Go/No-Go |
+|---------------------|---------------------|----------|
+| 1100-1300 local (1800-2000Z) | Gusty (15G25 kt), possible rain reducing vis to 4 SM, ceiling may drop to 1,500 ft | **MARGINAL** — expect TEMPO conditions |
+| 1400-1600 local (2100-2300Z) | Still in TEMPO period, gusty winds continue | **MARGINAL** — same concerns |
+| 1700-1900 local (0000-0200Z) | Transitioning — winds calming, TEMPO period ending | **IMPROVING** — monitor actual METAR |
+| 1900-2100 local (0200-0400Z) | FM conditions — 8 kt wind, >6 SM, higher ceilings | **GO** — good conditions expected |
+| Next morning 0600+ local | BECMG to calm/clear complete | **GO** — excellent conditions |
+
+**Key Insight:** This TAF shows a classic coastal pattern — onshore flow with rain during the day, calming overnight as the system moves through. Best flying window: evening and next morning.
+
+---
+
+### 10.5 Other Weather Observation Systems
+
 **AWOS (Automated Weather Observation Station):** Automated surface observations available at some locations without staffed weather offices.
 
-**LWIS (Basic Weather Information System):** Limited weather observation systems.
+**LWIS (Limited Weather Information System):** Basic automated observations — wind, temp, pressure only. No visibility or cloud observations.
 
-### 10.3 Aviation Forecasts
+---
 
-**TAF (Aerodrome Forecast):** Forecast conditions for a specific aerodrome over a defined period (typically 24 hours). L1C pilots must be able to decipher TAF reports and understand validity periods.
+### 10.6 Graphical Area Forecast (GFA)
 
 **GFA (Graphical Area Forecast):** Graphical depiction of forecast weather conditions including clouds, turbulence, icing, precipitation, and winds. L1C pilots must be able to extract key weather information from GFAs.
+
+**GFA Panels to Check:**
+
+| Panel | What It Shows | L1C Use |
+|-------|---------------|---------|
+| Clouds & Weather | Cloud layers, precipitation areas, visibility | Primary flight planning tool |
+| Icing & Turbulence | Icing levels, turbulence areas/intensity | Check freezing level, turbulence at your altitude |
+| Winds | Forecast winds at various altitudes | 3,000 ft winds most relevant for 400 ft ops |
 
 **Important note:** Aviation weather sources may report cloud base and wind differently from non-aviation sources. Aviation reports use knots for wind speed and feet AGL for cloud base. Consumer weather services may use km/h or m/s for wind and metres ASL for cloud height. Ensure you are using the correct units and references.
 
