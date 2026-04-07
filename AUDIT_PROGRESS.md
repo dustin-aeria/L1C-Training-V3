@@ -26,7 +26,7 @@ For each module, we complete a **3-phase audit**:
 | Module | Structure | Formatting | Images | Status |
 |--------|-----------|------------|--------|--------|
 | L1C01 - Air Law | Not started | Not started | Not started | **PENDING** |
-| L1C02 - Systems | **COMPLETE** | **COMPLETE** | **IN PROGRESS** | Section 2 images needed |
+| L1C02 - Systems | **COMPLETE** | **COMPLETE** | **29/48 (60%)** | Ready for review |
 | L1C03 - Human Factors | Not started | Not started | Not started | PENDING |
 | L1C04 - Meteorology | Not started | Not started | Not started | PENDING |
 | L1C05 - Navigation | Not started | Not started | Not started | PENDING |
@@ -60,44 +60,79 @@ For each module, we complete a **3-phase audit**:
 - [x] Section 13.1: GNSS constellations table
 - [x] Section 14.1: DAA technology options table
 - [x] Section 14.2: Transponder types table
+- [x] Section 12.4: IMU components table
 
-### Images Added (IN PROGRESS)
+### Images Added (29 total)
 Current images in `public/images/systems/`:
 
-| Image | Section | Status |
-|-------|---------|--------|
-| wake turbulence.avif | 1.1 | Added |
-| Airframe classes.png | 3.1 | Added |
-| Fixed wing vs multirotor vs hybrid vtol.png | 3.1 | Added |
-| Quadcopter components.png | 3.1 | Added |
-| propellar damage.jpg | 4.1 | Added |
-| flight control architecture.png | 5.2 | Added |
-| Flight Control.gif | 5.2 | Added |
-| working-of-servo-motor-inside.gif | 5.2 | Added |
-| IP Rating Chart.webp | 5.3 | Added |
-| redunandancy architecture.webp | 6.1 | Added |
-| single point of failure.png | 6.2 | Added |
-| magnatometer.jpg | 12.1 | Added |
-| GNSS motiongrpahic.gif | 13.1 | Added |
+| Image | Section | Description |
+|-------|---------|-------------|
+| wake turbulence.avif | 1.1 | Wake vortex visualization |
+| Airframe classes.png | 3.1 | ICAO aircraft classification |
+| Fixed wing vs multirotor vs hybrid vtol.png | 3.1 | Configuration comparison |
+| Quadcopter components.png | 3.1 | Quadcopter component layout |
+| propellar damage.jpg | 4.1 | Propeller damage examples |
+| flight control architecture.png | 5.2 | Flight control system architecture |
+| Flight Control.gif | 5.2 | Control surface movement animation |
+| working-of-servo-motor-inside.gif | 5.2 | Servo motor operation |
+| IP Rating Chart.webp | 5.3 | Ingress protection ratings |
+| redunandancy architecture.webp | 6.1 | Redundancy architecture |
+| single point of failure.png | 6.2 | Single point failure identification |
+| frequency characteristics visual.webp | 8.3 | 900MHz vs 2.4GHz vs 5.8GHz |
+| latency.gif | 8.2 | Latency impact visualization |
+| inverse square.webp | 9.1 | Inverse square law diagram |
+| types of antennas.jpg | 9.2 | Antenna types comparison |
+| fresnel zone 1.png | 9.3 | Fresnel zone diagram |
+| EMI Sources.png | 9.4 | EMI sources in environment |
+| battery discharge curve.webp | 10.2 | Non-linear discharge curve |
+| cold weather batery performance.png | 10.2 | Cold weather performance |
+| Cell Voltage Monitoring.png | 10.3 | Cell voltage monitoring |
+| lipo-battery-fire.jpg | 10.4 | LiPo fire safety warning |
+| control loop architecture.png | 11.2 | Inner/outer control loops |
+| declination_explanation.webp | 12.1 | Magnetic declination explanation |
+| magnatometer.jpg | 12.1 | Magnetometer sensor |
+| multiple constellation gns.png | 13.1 | Multi-constellation GNSS |
+| GNSS motiongrpahic.gif | 13.1 | GNSS satellite motion |
+| DOP visualization.jpg | 13.2 | Dilution of Precision visual |
+| terain masking.webp | 13.2 | Terrain masking example |
+| GPS mulitpath illustration.png | 13.2 | GPS multipath illustration |
 
-### Images Still Needed for L1C02
-Refer to `IMAGE_REQUIREMENTS.md` for full list. Key gaps:
-- Section 2: Standard 922 (framework diagram)
-- Section 7: GCS setup photo
-- Section 8: C2 link diagram, frequency comparison
-- Section 9: Antenna types, Fresnel zone diagram
-- Section 10: Battery types, thermal runaway warning
-- Section 11: Autopilot architecture, RTH diagram
-- Section 12: Sensor diagrams (barometer, pitot tube, IMU)
-- Section 14: DAA system comparison
+### Video Resources Added
+| Section | Video |
+|---------|-------|
+| 14.2 | [Transponder Types Evolution](https://youtu.be/eHVjbUmnQSg) - Mode A, C, S, ADS-B overview |
+
+### Images Still Needed for L1C02 (19 remaining)
+
+| # | Description | Section | Priority |
+|---|-------------|---------|----------|
+| 1 | Standard 922 Framework Overview | 2.1 | Medium |
+| 2 | Probability Classifications Scale | 2.2 | Low |
+| 3 | Pre-Flight Inspection Checklist Visual | 4.1 | Medium |
+| 4 | GCS Setup Best Practices | 7.1 | High |
+| 5 | C2 Link Types Comparison (Radio/Cellular/Satellite) | 8.2 | High |
+| 6 | Lost Link Behavior Flowchart | 8.5 | High |
+| 7 | RF Multipath Propagation | 9.3 | Medium |
+| 8 | Autonomy Levels Diagram (HITL/HOTL) | 11.1 | Medium |
+| 9 | RTH Altitude Planning | 11.3 | High |
+| 10 | Flight Termination Sequence | 11.3 | High |
+| 11 | IMU Components Diagram | 12.4 | Medium |
+| 12 | Barometer vs GPS Altitude Comparison | 12.2 | Medium |
+| 13 | Blocked Pitot/Static Effects | 12.3 | Low |
+| 14 | DAA Technology Options Comparison | 14.1 | High |
+| 15 | ADS-B Coverage Gap in Class G | 14.2 | Medium |
+| 16 | Vision-Based DAA (Standard 923) | 14.3 | Medium |
+| 17 | Maintenance Documentation Flow | 15.1 | Low |
+| 18 | Pre/Post-Flight Inspection Log Template | 15.3 | Low |
+| 19 | Airspeed Sensor/Pitot Tube Diagram | 12.3 | Low |
 
 ---
 
 ## Next Steps
 
-1. **User providing**: Section 2 images for Systems module
-2. **After Section 2 images**: Review entire L1C02 section by section for perfection
-3. **Then**: Move to L1C01 Air Law audit
+1. **L1C02 Section-by-Section Review**: Go through entire Systems module for content accuracy and flow
+2. **High-priority images**: GCS setup, C2 links, Lost link flowchart, RTH planning, DAA comparison
+3. **After L1C02 is perfect**: Move to L1C01 Air Law audit (structure → formatting → images)
 
 ---
 
@@ -117,6 +152,7 @@ Refer to `IMAGE_REQUIREMENTS.md` for full list. Key gaps:
 3. `bd9caba` - Complete audit of L1C02 Systems module (numbering + tables)
 4. `f7a778f` - Add Systems module images (13 total)
 5. `4a0e2b7` - Convert pre-flight inspection items to table (Section 4.1)
+6. `af5c271` - Add 16 additional images + transponder video link to Systems module
 
 ---
 

@@ -544,9 +544,11 @@ The magnetometer measures the Earth's magnetic field and provides a heading refe
 
 The IMU is the core sensor package that provides the flight controller with attitude and acceleration data. A typical IMU contains:
 
-- **Accelerometers** (3-axis) — Measure acceleration forces including gravity. Used to determine aircraft attitude (pitch and roll) and detect manoeuvring loads.
-- **Gyroscopes** (3-axis) — Measure rotational rates. Used for rate stabilization and attitude tracking.
-- **Magnetometer** — Sometimes integrated into the IMU, sometimes separate. Provides heading reference.
+| Component | Description |
+|-----------|-------------|
+| **Accelerometers** (3-axis) | Measure acceleration forces including gravity. Used to determine aircraft attitude (pitch and roll) and detect manoeuvring loads. |
+| **Gyroscopes** (3-axis) | Measure rotational rates. Used for rate stabilization and attitude tracking. |
+| **Magnetometer** | Sometimes integrated into the IMU, sometimes separate. Provides heading reference. |
 
 **Causes of erroneous IMU performance:** Vibration (the most common cause in RPAS), temperature extremes, electromagnetic interference, physical damage, and uncalibrated initial state.
 
