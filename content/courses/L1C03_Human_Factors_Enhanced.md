@@ -231,53 +231,20 @@ Each "slice of cheese" represents a layer of defence: regulations, training, SOP
 
 **Reason's second level — Unsafe Acts — classifies human failures as:**
 
-<div class="reason-model-container">
+**ERRORS (Unintended Actions):**
 
-<div class="reason-category">
-<div class="reason-category-header errors-header">
-<span class="reason-icon">⚠️</span> ERRORS (Unintended Actions)
-</div>
+| Type | Definition | Example |
+|------|------------|---------|
+| **Slip** | Correct action intended → Executed incorrectly | Meaning to select "Return to Home" but pressing "Flight Terminate" because the buttons are adjacent |
+| **Lapse** | Correct action intended → Forgotten or omitted | Forgetting to check NOTAMs before a BVLOS mission because you were distracted by client communication |
+| **Mistake** | Incorrect action deliberately chosen → Flawed reasoning | Continuing into deteriorating weather because you incorrectly assessed the wind limits of your RPAS |
 
-<div class="reason-card error-card">
-<div class="reason-type">SLIP</div>
-<div class="reason-definition">Correct action intended → Executed incorrectly</div>
-<div class="reason-example">Example: Meaning to select "Return to Home" but pressing "Flight Terminate" because the buttons are adjacent.</div>
-</div>
+**VIOLATIONS (Deliberate Deviations):**
 
-<div class="reason-card error-card">
-<div class="reason-type">LAPSE</div>
-<div class="reason-definition">Correct action intended → Forgotten or omitted</div>
-<div class="reason-example">Example: Forgetting to check NOTAMs before a BVLOS mission because you were distracted by client communication.</div>
-</div>
-
-<div class="reason-card error-card">
-<div class="reason-type">MISTAKE</div>
-<div class="reason-definition">Incorrect action deliberately chosen → Flawed reasoning</div>
-<div class="reason-example">Example: Continuing into deteriorating weather because you incorrectly assessed the wind limits of your RPAS.</div>
-</div>
-
-</div>
-
-<div class="reason-category">
-<div class="reason-category-header violations-header">
-<span class="reason-icon">🚨</span> VIOLATIONS (Deliberate Deviations)
-</div>
-
-<div class="reason-card violation-card">
-<div class="reason-type">ROUTINE VIOLATION</div>
-<div class="reason-definition">Habitual non-compliance → Normalized behaviour</div>
-<div class="reason-example">Example: Routinely skipping compass calibration because "it always works fine."</div>
-</div>
-
-<div class="reason-card violation-card">
-<div class="reason-type">EXCEPTIONAL VIOLATION</div>
-<div class="reason-definition">One-time deviation → Unusual circumstances</div>
-<div class="reason-example">Example: Flying beyond the declared boundary because the client's asset is 200 m outside the planned area.</div>
-</div>
-
-</div>
-
-</div>
+| Type | Definition | Example |
+|------|------------|---------|
+| **Routine Violation** | Habitual non-compliance → Normalized behaviour | Routinely skipping compass calibration because "it always works fine" |
+| **Exceptional Violation** | One-time deviation → Unusual circumstances | Flying beyond the declared boundary because the client's asset is 200 m outside the planned area |
 
 ![10 Year Unsafe Acts Study](/images/human-factors/10 year unsafe acts study.png)
 
@@ -287,27 +254,37 @@ Each "slice of cheese" represents a layer of defence: regulations, training, SOP
 
 The Human Factors Analysis and Classification System (HFACS) provides a comprehensive framework for analyzing the causes of human error at four levels. It extends Reason's model from individual acts up through organizational influences:
 
-**Level 1 — Unsafe Acts**
-The actions (or inactions) of the operator that directly led to the incident. Includes errors (skill-based, decision, perceptual) and violations (routine, exceptional).
+| Level | Category | Description |
+|-------|----------|-------------|
+| **Level 1** | **Unsafe Acts** | The actions (or inactions) of the operator that directly led to the incident. Includes errors (skill-based, decision, perceptual) and violations (routine, exceptional). |
+| **Level 2** | **Preconditions for Unsafe Acts** | The conditions that set the stage for unsafe acts. See breakdown below. |
+| **Level 3** | **Unsafe Supervision** | Supervisory actions or inactions that contribute to the conditions for unsafe acts. See breakdown below. |
+| **Level 4** | **Organizational Influences** | The highest-level factors that shape the operational environment. See breakdown below. |
 
-**Level 2 — Preconditions for Unsafe Acts**
-The conditions that set the stage for unsafe acts. Three categories:
-- **Environmental Factors:** Physical environment (weather, terrain, workspace) and technological environment (equipment design, GCS interface, automation)
-- **Conditions of Operators:** Adverse mental states (complacency, distraction, channelized attention), adverse psychological states (stress, anxiety, anger), and physical/mental limitations (fatigue, illness, impairment)
-- **Personal Factors:** Routine (personal readiness, fitness for duty) and Crew Resource Management (communication, coordination, teamwork)
+**Level 2 — Preconditions Breakdown:**
 
-**Level 3 — Unsafe Supervision**
-Supervisory actions or inactions that contribute to the conditions for unsafe acts:
-- **Inadequate Supervision** — Failure to provide guidance, oversight, or training
-- **Planned Inappropriate Operations** — Authorizing operations that exceed crew capabilities, equipment limitations, or regulatory boundaries
-- **Failure to Correct Problem** — Knowing about a safety issue and not addressing it
-- **Supervisory Violations** — Supervisors who themselves violate rules or authorize violations
+| Category | Description |
+|----------|-------------|
+| **Environmental Factors** | Physical environment (weather, terrain, workspace) and technological environment (equipment design, GCS interface, automation) |
+| **Conditions of Operators** | Adverse mental states (complacency, distraction, channelized attention), adverse psychological states (stress, anxiety, anger), and physical/mental limitations (fatigue, illness, impairment) |
+| **Personal Factors** | Routine (personal readiness, fitness for duty) and Crew Resource Management (communication, coordination, teamwork) |
 
-**Level 4 — Organizational Influences**
-The highest-level factors that shape the operational environment:
-- **Resource Management** — Budget, equipment, staffing, and time pressure decisions
-- **Organizational Climate** — The culture of safety (or lack thereof) within the organization
-- **Organizational Process** — SOPs, training programs, oversight processes, and operational tempo
+**Level 3 — Unsafe Supervision Breakdown:**
+
+| Category | Description |
+|----------|-------------|
+| **Inadequate Supervision** | Failure to provide guidance, oversight, or training |
+| **Planned Inappropriate Operations** | Authorizing operations that exceed crew capabilities, equipment limitations, or regulatory boundaries |
+| **Failure to Correct Problem** | Knowing about a safety issue and not addressing it |
+| **Supervisory Violations** | Supervisors who themselves violate rules or authorize violations |
+
+**Level 4 — Organizational Influences Breakdown:**
+
+| Category | Description |
+|----------|-------------|
+| **Resource Management** | Budget, equipment, staffing, and time pressure decisions |
+| **Organizational Climate** | The culture of safety (or lack thereof) within the organization |
+| **Organizational Process** | SOPs, training programs, oversight processes, and operational tempo |
 
 > **Scenario for HFACS Analysis:** *A pilot conducting a BVLOS pipeline survey crashes the RPA into a power line. Investigation reveals: (L1) The pilot was focused on GCS telemetry and missed the power line on the terrain display (channelized attention — perceptual error). (L2) The pilot had been working 12 hours and was fatigued (adverse mental state / physical limitation). (L3) The supervisor scheduled the mission as the last task of a 14-hour work day (planned inappropriate operations). (L4) The company routinely schedules back-to-back missions to maximize billable hours (organizational process / resource management). At which level should corrective action focus?*
 
@@ -317,18 +294,20 @@ The highest-level factors that shape the operational environment:
 
 Transport Canada identifies twelve common human factors preconditions for errors and violations. These are available as TC aviation safety posters and should be memorized:
 
-1. Lack of Communication
-2. Complacency
-3. Lack of Knowledge
-4. Distraction
-5. Lack of Teamwork
-6. Fatigue
-7. Lack of Resources
-8. Pressure
-9. Lack of Assertiveness
-10. Stress
-11. Lack of Awareness
-12. Norms (acceptance of deviation from standards)
+| # | Factor | Description |
+|---|--------|-------------|
+| 1 | **Lack of Communication** | Failure to transmit, receive, or understand critical information between crew members, ATC, or stakeholders |
+| 2 | **Complacency** | Self-satisfaction with existing conditions, leading to relaxed vigilance and missed warning signs |
+| 3 | **Lack of Knowledge** | Insufficient training, education, or experience to perform tasks safely and correctly |
+| 4 | **Distraction** | Attention diverted from the primary task by external events, internal thoughts, or interruptions |
+| 5 | **Lack of Teamwork** | Failure to work cooperatively toward common goals; poor coordination between crew members |
+| 6 | **Fatigue** | Physical or mental exhaustion that degrades alertness, judgment, and reaction time |
+| 7 | **Lack of Resources** | Insufficient tools, equipment, documentation, personnel, or time to complete tasks safely |
+| 8 | **Pressure** | Real or perceived demands to meet schedules, budgets, or expectations that compromise safety |
+| 9 | **Lack of Assertiveness** | Failure to speak up about safety concerns due to hierarchy, intimidation, or conflict avoidance |
+| 10 | **Stress** | Mental or emotional strain from personal, professional, or environmental factors |
+| 11 | **Lack of Awareness** | Failure to perceive or recognize hazards, conditions, or the consequences of actions |
+| 12 | **Norms** | Acceptance of deviation from standards as "the way we do things here" — normalized non-compliance |
 
 ---
 
@@ -374,23 +353,30 @@ The perception that the aircraft is "disposable" (compared to a manned aircraft)
 
 TEM provides a practical framework for managing threats and errors in real-time operations:
 
-**Threats** are events or conditions external to the pilot that increase operational complexity and require management. Examples: deteriorating weather, unexpected air traffic, terrain masking of C2 link, client pressure to complete a mission.
+| Concept | Definition | Examples |
+|---------|------------|----------|
+| **Threats** | Events or conditions external to the pilot that increase operational complexity and require management | Deteriorating weather, unexpected air traffic, terrain masking of C2 link, client pressure |
+| **Errors** | Pilot actions or inactions that deviate from intentions or expectations. Errors are inevitable — the goal is to detect and manage them. | Incorrect waypoint entry, missed checklist item, misread telemetry |
+| **Undesired Aircraft States** | Conditions where the aircraft is outside normal operational parameters | Deviation from planned route, altitude exceedance, proximity to obstacles, controlled airspace incursion, loss of C2 link |
 
-**Errors** are pilot actions or inactions that deviate from intentions or expectations. Errors are inevitable — the goal is to detect and manage them before they lead to an undesired aircraft state.
+**The TEM Process:**
 
-**Undesired Aircraft States** are conditions where the aircraft is outside normal operational parameters: deviation from planned route, altitude exceedance, unintended proximity to obstacles, controlled airspace incursion, or loss of C2 link.
-
-The TEM process: **Anticipate** threats during planning → **Recognize** threats and errors during operations → **Manage** threats and errors before they become undesired states → **Recover** from undesired states if they occur.
+| Step | Action |
+|------|--------|
+| **Anticipate** | Identify threats during planning |
+| **Recognize** | Detect threats and errors during operations |
+| **Manage** | Address threats and errors before they become undesired states |
+| **Recover** | Return from undesired states if they occur |
 
 ### 5.2 Building Situational Awareness
 
 Situational awareness has three levels:
 
-**Level 1 — Perception:** What is happening right now? (Reading telemetry, observing weather, hearing traffic calls)
-
-**Level 2 — Comprehension:** What does it mean? (Interpreting the telemetry, understanding the weather trend, recognizing the traffic conflict)
-
-**Level 3 — Projection:** What will happen next? (Predicting how conditions will evolve, anticipating where the traffic will be in 30 seconds, projecting whether battery will be sufficient for RTH)
+| Level | Question | Examples |
+|-------|----------|----------|
+| **Level 1 — Perception** | What is happening right now? | Reading telemetry, observing weather, hearing traffic calls |
+| **Level 2 — Comprehension** | What does it mean? | Interpreting the telemetry, understanding the weather trend, recognizing the traffic conflict |
+| **Level 3 — Projection** | What will happen next? | Predicting how conditions will evolve, anticipating where traffic will be in 30 seconds, projecting whether battery will be sufficient for RTH |
 
 In BVLOS, Level 1 SA is entirely dependent on instruments and technology. If your telemetry display doesn't show a piece of information, you don't have it. This makes the design and monitoring of your GCS display a critical human factors consideration.
 
@@ -406,22 +392,24 @@ In BVLOS, Level 1 SA is entirely dependent on instruments and technology. If you
 
 CRM is a training and management system focusing on non-technical skills that are essential for safe operations. In RPAS, CRM applies to interactions between the pilot, visual observers, payload operators, and any other crew members.
 
-The four pillars of RPAS CRM:
+**The Four Pillars of RPAS CRM:**
 
-**Adherence to SOPs** — Standard Operating Procedures exist to ensure consistent, safe performance. Deviations from SOPs should be deliberate, communicated, and documented — never casual.
-
-**Proper Use of Checklists** — Checklists prevent omission errors. In BVLOS operations, where the consequences of a missed step may not become apparent until the aircraft is kilometres away, checklists are critical. When a checklist is interrupted (e.g., by a phone call from the client), the pilot should go back at least one item before the interruption point and resume from there.
-
-**Communication** — Clear, concise, unambiguous communication between crew members. Use standardized phraseology when possible. Close the loop — confirm that the message was received and understood. In multi-crew BVLOS operations, communication between the pilot and visual observers is the DAA system — a communication failure IS a DAA failure.
-
-**Coordination** — During the flight review, candidates will be required to coordinate with the VO for normal procedures (pre-flight check, take-off, landing) and emergency procedures (fly-away, lost link, traffic detection and avoidance).
+| Pillar | Description |
+|--------|-------------|
+| **Adherence to SOPs** | Standard Operating Procedures exist to ensure consistent, safe performance. Deviations from SOPs should be deliberate, communicated, and documented — never casual. |
+| **Proper Use of Checklists** | Checklists prevent omission errors. In BVLOS operations, where the consequences of a missed step may not become apparent until the aircraft is kilometres away, checklists are critical. When interrupted, go back at least one item before the interruption point. |
+| **Communication** | Clear, concise, unambiguous communication between crew members. Use standardized phraseology. Close the loop — confirm message received and understood. In BVLOS, communication between pilot and VOs IS the DAA system. |
+| **Coordination** | During the flight review, candidates coordinate with the VO for normal procedures (pre-flight, take-off, landing) and emergency procedures (fly-away, lost link, traffic avoidance). |
 
 ### 6.2 Interpersonal Relations
 
 TP 15530 requires that L1C pilots be able to:
-- **Resolve differences peacefully** — Disagreements about operational decisions must be resolved constructively, not through authority or intimidation.
-- **Promote open communications** — Create an environment where any crew member feels safe raising safety concerns without fear of retribution.
-- **Place safety requirements over hierarchy/position/politics** — The most junior visual observer who sees traffic has the same authority to call "STOP" as the most senior pilot. Safety is not hierarchical.
+
+| Requirement | Description |
+|-------------|-------------|
+| **Resolve differences peacefully** | Disagreements about operational decisions must be resolved constructively, not through authority or intimidation |
+| **Promote open communications** | Create an environment where any crew member feels safe raising safety concerns without fear of retribution |
+| **Place safety over hierarchy** | The most junior visual observer who sees traffic has the same authority to call "STOP" as the most senior pilot. Safety is not hierarchical |
 
 ---
 
@@ -488,33 +476,34 @@ Risk ratings of "High" typically require the mission to be cancelled or fundamen
 
 Every RPOC holder must establish safety processes that include:
 
-**Goals:** Setting goals for the improvement of aviation safety, measuring the attainment of those goals, and addressing instances when those goals are not met.
-
-**Hazards:** Identifying and documenting hazards to aviation safety and evaluating, managing, and documenting the associated risks.
-
-**Mitigation Evaluation:** Evaluating the effectiveness of measures taken to mitigate or remove the hazards and associated risks.
-
-**Internal Reporting:** Internally reporting and analyzing hazards, incidents, and accidents, and taking corrective actions to prevent their recurrence.
+| Process | Description |
+|---------|-------------|
+| **Goals** | Setting goals for the improvement of aviation safety, measuring the attainment of those goals, and addressing instances when those goals are not met |
+| **Hazards** | Identifying and documenting hazards to aviation safety and evaluating, managing, and documenting the associated risks |
+| **Mitigation Evaluation** | Evaluating the effectiveness of measures taken to mitigate or remove the hazards and associated risks |
+| **Internal Reporting** | Internally reporting and analyzing hazards, incidents, and accidents, and taking corrective actions to prevent their recurrence |
 
 ### 9.2 Safety Management System (SMS) — The Four Pillars
 
 A complete SMS is built on four pillars:
 
-**Policy** — The organization's commitment to safety, documented and communicated. Includes a non-punitive safety reporting policy that encourages crew members to report hazards without fear of discipline.
-
-**Safety Risk Management** — The systematic process of identifying hazards, assessing risks, and implementing mitigations. This is the operational application of the risk management cycle.
-
-**Safety Assurance** — Monitoring and measurement of safety performance. Includes auditing, investigation, and continuous improvement. Ensures that mitigations are actually working.
-
-**Safety Promotion** — Training, communication, and culture-building that keeps safety awareness high across the organization. Includes CRM training, safety bulletins, lessons-learned sharing, and recurrent training.
+| Pillar | Description |
+|--------|-------------|
+| **Policy** | The organization's commitment to safety, documented and communicated. Includes a non-punitive safety reporting policy that encourages crew members to report hazards without fear of discipline. |
+| **Safety Risk Management** | The systematic process of identifying hazards, assessing risks, and implementing mitigations. This is the operational application of the risk management cycle. |
+| **Safety Assurance** | Monitoring and measurement of safety performance. Includes auditing, investigation, and continuous improvement. Ensures that mitigations are actually working. |
+| **Safety Promotion** | Training, communication, and culture-building that keeps safety awareness high across the organization. Includes CRM training, safety bulletins, lessons-learned sharing, and recurrent training. |
 
 ### 9.3 Training Requirements (CARs 901.219)
 
 The RPOC training program must include:
-- **Indoctrination training** — Familiarization with the organization's safety policies, procedures, and culture
-- **Initial and annual training** — Skills and knowledge development for all operational roles
-- **Competency evaluation** — Assessment to evaluate the effectiveness of training (not just attendance)
-- **Documentation** — Training program documented in the RPAS Operations Manual
+
+| Requirement | Description |
+|-------------|-------------|
+| **Indoctrination training** | Familiarization with the organization's safety policies, procedures, and culture |
+| **Initial and annual training** | Skills and knowledge development for all operational roles |
+| **Competency evaluation** | Assessment to evaluate the effectiveness of training (not just attendance) |
+| **Documentation** | Training program documented in the RPAS Operations Manual |
 
 ---
 
