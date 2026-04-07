@@ -444,6 +444,8 @@ Wind is caused by differences in air pressure from uneven heating of Earth's sur
 
 ![Urban airflow patterns showing wind effects around buildings](/images/meteorology/urban-airflow.jpg)
 
+![CFD model showing wind velocity magnitude around urban buildings](/images/meteorology/urban-aiurflow.webp)
+
 Transport Canada's Urban Airflow guidance identifies five key wind effects near buildings (SDSTV): Speed, Direction, Shear, Turbulence, and Vorticity. Wind speed at 400 ft AGL (122 m) is approximately 1.5 times the weather station's reported hourly wind speed at 10 m. At building rooftop level, vortex shedding creates side-to-side oscillation that can destabilize multirotor aircraft. The venturi effect between buildings can double the local wind speed. While L1C operations are typically in rural/unpopulated areas, understanding urban airflow is valuable for pre-positioning, transit, and Advanced operations.
 
 ---
